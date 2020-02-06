@@ -1,0 +1,4 @@
+D:\Freelancing\SohailFyp\ShadiBox\RepositoriesImplementation\bin\Debug\RepositoriesImplementation.dll
+D:\Freelancing\SohailFyp\ShadiBox\RepositoriesImplementation\bin\Debug\RepositoriesImplementation.pdb
+D:\Freelancing\SohailFyp\ShadiBox\RepositoriesImplementation\obj\Debug\RepositoriesImplementation.dll
+D:\Freelancing\SohailFyp\ShadiBox\RepositoriesImplementation\obj\Debug\RepositoriesImplementation.pdb

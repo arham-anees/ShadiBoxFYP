@@ -1,0 +1,5 @@
+D:\Freelancing\SohailFyp\ShadiBox\Mapper\bin\Debug\Mapper.dll
+D:\Freelancing\SohailFyp\ShadiBox\Mapper\bin\Debug\Mapper.pdb
+D:\Freelancing\SohailFyp\ShadiBox\Mapper\obj\Debug\Mapper.csprojAssemblyReference.cache
+D:\Freelancing\SohailFyp\ShadiBox\Mapper\obj\Debug\Mapper.dll
+D:\Freelancing\SohailFyp\ShadiBox\Mapper\obj\Debug\Mapper.pdb

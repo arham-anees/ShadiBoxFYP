@@ -1,0 +1,5 @@
+D:\Freelancing\SohailFyp\ShadiBox\Repositories\bin\Debug\Repositories.dll
+D:\Freelancing\SohailFyp\ShadiBox\Repositories\bin\Debug\Repositories.pdb
+D:\Freelancing\SohailFyp\ShadiBox\Repositories\obj\Debug\Repositories.csprojAssemblyReference.cache
+D:\Freelancing\SohailFyp\ShadiBox\Repositories\obj\Debug\Repositories.dll
+D:\Freelancing\SohailFyp\ShadiBox\Repositories\obj\Debug\Repositories.pdb

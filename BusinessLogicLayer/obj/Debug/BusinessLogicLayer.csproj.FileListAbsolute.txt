@@ -1,0 +1,5 @@
+D:\Freelancing\SohailFyp\ShadiBox\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+D:\Freelancing\SohailFyp\ShadiBox\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+D:\Freelancing\SohailFyp\ShadiBox\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojAssemblyReference.cache
+D:\Freelancing\SohailFyp\ShadiBox\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+D:\Freelancing\SohailFyp\ShadiBox\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

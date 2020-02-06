@@ -1,0 +1,5 @@
+D:\Freelancing\SohailFyp\ShadiBox\PersistenceLayer\bin\Debug\PersistenceLayer.dll
+D:\Freelancing\SohailFyp\ShadiBox\PersistenceLayer\bin\Debug\PersistenceLayer.pdb
+D:\Freelancing\SohailFyp\ShadiBox\PersistenceLayer\obj\Debug\PersistenceLayer.csprojAssemblyReference.cache
+D:\Freelancing\SohailFyp\ShadiBox\PersistenceLayer\obj\Debug\PersistenceLayer.dll
+D:\Freelancing\SohailFyp\ShadiBox\PersistenceLayer\obj\Debug\PersistenceLayer.pdb

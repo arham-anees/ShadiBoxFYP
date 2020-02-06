@@ -1,0 +1,4 @@
+D:\Freelancing\SohailFyp\ShadiBox\BusinessObjectLayer\bin\Debug\BusinessObjectLayer.dll
+D:\Freelancing\SohailFyp\ShadiBox\BusinessObjectLayer\bin\Debug\BusinessObjectLayer.pdb
+D:\Freelancing\SohailFyp\ShadiBox\BusinessObjectLayer\obj\Debug\BusinessObjectLayer.dll
+D:\Freelancing\SohailFyp\ShadiBox\BusinessObjectLayer\obj\Debug\BusinessObjectLayer.pdb

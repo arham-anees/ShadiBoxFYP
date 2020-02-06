@@ -1,0 +1,4 @@
+D:\Freelancing\SohailFyp\ShadiBox\UnitOfWork\bin\Debug\UnitOfWork.dll
+D:\Freelancing\SohailFyp\ShadiBox\UnitOfWork\bin\Debug\UnitOfWork.pdb
+D:\Freelancing\SohailFyp\ShadiBox\UnitOfWork\obj\Debug\UnitOfWork.dll
+D:\Freelancing\SohailFyp\ShadiBox\UnitOfWork\obj\Debug\UnitOfWork.pdb
