@@ -51,10 +51,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="iBooking.cs" />
+    <Compile Include="iBookingReponse.cs" />
+    <Compile Include="iBookingRequest.cs" />
+    <Compile Include="iCity.cs" />
+    <Compile Include="iFunctionTime.cs" />
+    <Compile Include="iProfileSection.cs" />
+    <Compile Include="iRentType.cs" />
+    <Compile Include="iReview.cs" />
+    <Compile Include="iRole.cs" />
+    <Compile Include="iSectionContent.cs" />
+    <Compile Include="iSectionContentType.cs" />
+    <Compile Include="iSectionHead.cs" />
+    <Compile Include="iServiceCategory.cs" />
+    <Compile Include="iServiceProvider.cs" />
+    <Compile Include="iServiceType.cs" />
+    <Compile Include="iUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

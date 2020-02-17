@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="BusinessObjectLayer.iFunctionTime" Collapsed="true">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>iFunctionTime.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iCity" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>iCity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iRentType">
+    <Position X="6.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>iRentType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iSectionContentType">
+    <Position X="9.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>iSectionContentType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iSectionHead">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>iSectionHead.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iServiceType">
+    <Position X="12.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>iServiceType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iServiceCategory">
+    <Position X="14.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>iServiceCategory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iServiceProvider">
+    <Position X="12.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEKAACAACAAAAAIAAAwAAYAACAAAAACAAAAIAAAAAA=</HashCode>
+      <FileName>iServiceProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iUser">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAQAAAAQAAAAAAAACAAAAIAAAAAA=</HashCode>
+      <FileName>iUser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iSectionContent">
+    <Position X="16.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAQAQAAAAAAA=</HashCode>
+      <FileName>iSectionContent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iProfileSection">
+    <Position X="18.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAABAAAAAAAAAAAAAAEAQAAAAAAAAA=</HashCode>
+      <FileName>iProfileSection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iReview">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAIAAAAAAAAAAAAAAAAAAABAQAAIAAAAAA=</HashCode>
+      <FileName>iReview.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iRole">
+    <Position X="22" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>iRole.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iBooking">
+    <Position X="15.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAIAAAAIAAAAAAAAAAAABAQAAAAAAAAA=</HashCode>
+      <FileName>iBooking.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iBookingRequest">
+    <Position X="18.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAIAAAAIAAAAAAAAAAAABAQAAIAEAAAA=</HashCode>
+      <FileName>iBookingRequest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessObjectLayer.iBookingReponse">
+    <Position X="13.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAEAAAAAAAAAAAAAAAAAAACAAAABAAAAIAAAAAA=</HashCode>
+      <FileName>iBookingReponse.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
