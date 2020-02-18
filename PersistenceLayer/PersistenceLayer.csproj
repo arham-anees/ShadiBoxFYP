@@ -51,11 +51,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppDbContext.cs" />
+    <Compile Include="Migrations\202002181233151_city.cs" />
+    <Compile Include="Migrations\202002181233151_city.designer.cs">
+      <DependentUpon>202002181233151_city.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{fa2ea4b8-41f3-4997-b6ba-4c7d0960557d}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessObjectLayer\BusinessObjectLayer.csproj">
+      <Project>{710e3c6e-c995-468d-b986-5a8aeefbafec}</Project>
+      <Name>BusinessObjectLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mapper\Mapper.csproj">
+      <Project>{c63e9f87-8d91-4978-884b-4fecd858850a}</Project>
+      <Name>Mapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002181233151_city.resx">
+      <DependentUpon>202002181233151_city.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
