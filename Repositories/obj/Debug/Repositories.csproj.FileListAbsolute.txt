@@ -3,3 +3,14 @@ D:\Freelancing\SohailFyp\ShadiBox\Repositories\bin\Debug\Repositories.pdb
 D:\Freelancing\SohailFyp\ShadiBox\Repositories\obj\Debug\Repositories.csprojAssemblyReference.cache
 D:\Freelancing\SohailFyp\ShadiBox\Repositories\obj\Debug\Repositories.dll
 D:\Freelancing\SohailFyp\ShadiBox\Repositories\obj\Debug\Repositories.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\Repositories.dll.config
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\Repositories.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\Repositories.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\EntityFramework.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\EntityFramework.SqlServer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\EntityFramework.xml
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\EntityFramework.SqlServer.xml
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\obj\Debug\Repositories.csprojAssemblyReference.cache
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\obj\Debug\Repositories.csproj.CopyComplete
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\obj\Debug\Repositories.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\obj\Debug\Repositories.pdb

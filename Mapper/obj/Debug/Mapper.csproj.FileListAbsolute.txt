@@ -3,3 +3,14 @@ D:\Freelancing\SohailFyp\ShadiBox\Mapper\bin\Debug\Mapper.pdb
 D:\Freelancing\SohailFyp\ShadiBox\Mapper\obj\Debug\Mapper.csprojAssemblyReference.cache
 D:\Freelancing\SohailFyp\ShadiBox\Mapper\obj\Debug\Mapper.dll
 D:\Freelancing\SohailFyp\ShadiBox\Mapper\obj\Debug\Mapper.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\Mapper.dll.config
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\Mapper.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\Mapper.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\EntityFramework.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\EntityFramework.SqlServer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\EntityFramework.xml
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\EntityFramework.SqlServer.xml
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\obj\Debug\Mapper.csprojAssemblyReference.cache
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\obj\Debug\Mapper.csproj.CopyComplete
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\obj\Debug\Mapper.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\obj\Debug\Mapper.pdb

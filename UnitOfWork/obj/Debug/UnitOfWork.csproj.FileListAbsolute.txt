@@ -2,3 +2,14 @@ D:\Freelancing\SohailFyp\ShadiBox\UnitOfWork\bin\Debug\UnitOfWork.dll
 D:\Freelancing\SohailFyp\ShadiBox\UnitOfWork\bin\Debug\UnitOfWork.pdb
 D:\Freelancing\SohailFyp\ShadiBox\UnitOfWork\obj\Debug\UnitOfWork.dll
 D:\Freelancing\SohailFyp\ShadiBox\UnitOfWork\obj\Debug\UnitOfWork.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\UnitOfWork.dll.config
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\UnitOfWork.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\UnitOfWork.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\EntityFramework.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\EntityFramework.SqlServer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\EntityFramework.xml
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\EntityFramework.SqlServer.xml
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\obj\Debug\UnitOfWork.csprojAssemblyReference.cache
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\obj\Debug\UnitOfWork.csproj.CopyComplete
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\obj\Debug\UnitOfWork.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\obj\Debug\UnitOfWork.pdb

@@ -3,3 +3,14 @@ D:\Freelancing\SohailFyp\ShadiBox\PersistenceLayer\bin\Debug\PersistenceLayer.pd
 D:\Freelancing\SohailFyp\ShadiBox\PersistenceLayer\obj\Debug\PersistenceLayer.csprojAssemblyReference.cache
 D:\Freelancing\SohailFyp\ShadiBox\PersistenceLayer\obj\Debug\PersistenceLayer.dll
 D:\Freelancing\SohailFyp\ShadiBox\PersistenceLayer\obj\Debug\PersistenceLayer.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\PersistenceLayer.dll.config
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\PersistenceLayer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\PersistenceLayer.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\EntityFramework.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\EntityFramework.xml
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.csprojAssemblyReference.cache
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.csproj.CopyComplete
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.pdb

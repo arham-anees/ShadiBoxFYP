@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mapper.cCityMapper" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cCityMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cUserMapper" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cUserMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cBookingMapper" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cBookingMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cBookingRequest" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cBookingRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cBookingResponse" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cBookingResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cFuncionMapper" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cFuncionMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cProfileSectionMapper" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cProfileSectionMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cRentTypeMapper" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cRentTypeMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cReviewMapper" Collapsed="true">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cReviewMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cRoleMapper" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cRoleMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cSectionContentMapper" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cSectionContentMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cSectionContentTypeMapper" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cSectionContentTypeMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cSectionHeadMapper" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cSectionHeadMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cServiceProviderMapper" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cServiceProviderMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cServiceTypeMapper" Collapsed="true">
+    <Position X="8" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cServiceTypeMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mapper.cServiceCategoryMapper">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cServiceCategoryMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
