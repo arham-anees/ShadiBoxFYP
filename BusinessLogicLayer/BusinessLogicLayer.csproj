@@ -51,11 +51,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cBooking.cs" />
+    <Compile Include="cBookingRequest.cs" />
+    <Compile Include="cBookingResponse.cs" />
+    <Compile Include="cCity.cs" />
+    <Compile Include="cFunctionTime.cs" />
+    <Compile Include="cProfileSection.cs" />
+    <Compile Include="cRentType.cs" />
+    <Compile Include="cReview.cs" />
+    <Compile Include="cRole.cs" />
+    <Compile Include="cSectionContent.cs" />
+    <Compile Include="cSectionContentType.cs" />
+    <Compile Include="cSectionHead.cs" />
+    <Compile Include="cServiceCategory.cs" />
+    <Compile Include="cServiceProvider.cs" />
+    <Compile Include="cServiceType.cs" />
+    <Compile Include="cUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjectLayer\BusinessObjectLayer.csproj">
+      <Project>{710e3c6e-c995-468d-b986-5a8aeefbafec}</Project>
+      <Name>BusinessObjectLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -14,21 +14,21 @@
       <FileName>iCity.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BusinessObjectLayer.iRentType">
+  <Interface Name="BusinessObjectLayer.iRentType" Collapsed="true">
     <Position X="6.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>iRentType.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BusinessObjectLayer.iSectionContentType">
+  <Interface Name="BusinessObjectLayer.iSectionContentType" Collapsed="true">
     <Position X="9.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>iSectionContentType.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BusinessObjectLayer.iSectionHead">
+  <Interface Name="BusinessObjectLayer.iSectionHead" Collapsed="true">
     <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -56,7 +56,7 @@
       <FileName>iServiceProvider.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BusinessObjectLayer.iUser">
+  <Interface Name="BusinessObjectLayer.iUser" Collapsed="true">
     <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAACAAAAAAAQAAAAQAAAAAAAACAAAAIAAAAAA=</HashCode>

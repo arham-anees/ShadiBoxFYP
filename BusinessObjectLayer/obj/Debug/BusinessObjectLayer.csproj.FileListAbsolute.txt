@@ -2,3 +2,14 @@ D:\Freelancing\SohailFyp\ShadiBox\BusinessObjectLayer\bin\Debug\BusinessObjectLa
 D:\Freelancing\SohailFyp\ShadiBox\BusinessObjectLayer\bin\Debug\BusinessObjectLayer.pdb
 D:\Freelancing\SohailFyp\ShadiBox\BusinessObjectLayer\obj\Debug\BusinessObjectLayer.dll
 D:\Freelancing\SohailFyp\ShadiBox\BusinessObjectLayer\obj\Debug\BusinessObjectLayer.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\bin\Debug\BusinessObjectLayer.dll.config
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\bin\Debug\BusinessObjectLayer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\bin\Debug\BusinessObjectLayer.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\bin\Debug\EntityFramework.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\bin\Debug\EntityFramework.xml
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\obj\Debug\BusinessObjectLayer.csprojAssemblyReference.cache
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\obj\Debug\BusinessObjectLayer.csproj.CopyComplete
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\obj\Debug\BusinessObjectLayer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\BusinessObjectLayer\obj\Debug\BusinessObjectLayer.pdb
