@@ -23,13 +23,15 @@ namespace BusinessLogicLayer {
 		    set => _Content = value;
 	    }
 
-	    public iServiceProvider ServiceProvider
+	    public int ServiceProviderId { get; set; }
+	    public virtual iServiceProvider ServiceProvider
 	    {
 		    get => _ServiceProvider;
 		    set => _ServiceProvider = value;
 	    }
 
-	    public iSectionContentType ContentType
+	    public int ContentTypeId { get; set; }
+	    public virtual iSectionContentType ContentType
 	    {
 		    get => _ContentType;
 		    set => _ContentType = value;

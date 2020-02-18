@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using BusinessObjectLayer;
@@ -56,7 +57,9 @@ namespace BusinessLogicLayer {
 		    set => _Phone = value;
 	    }
 
-	    public iRentType RentType
+	    public int RentTypeId { get; set; }
+			[ForeignKey("RentTypeId")]
+	    public virtual iRentType RentType
 	    {
 		    get => _RentType;
 		    set => _RentType = value;
@@ -68,13 +71,17 @@ namespace BusinessLogicLayer {
 		    set => _Rent = value;
 	    }
 
-	    public iCity City
+	    public int CityId { get; set; }
+			[ForeignKey("CityId")]
+	    public virtual iCity City
 	    {
 		    get => _City;
 		    set => _City = value;
 	    }
 
-	    public iServiceType ServiceType
+	    public int ServiceTypeId { get; set; }
+			[ForeignKey("ServiceTypeId")]
+	    public virtual iServiceType ServiceType
 	    {
 		    get => _ServiceType;
 		    set => _ServiceType = value;
@@ -86,13 +93,15 @@ namespace BusinessLogicLayer {
 		    set => _DateAddedOn = value;
 	    }
 
-	    public iUser AddedBy
+	    public int UserAddedById { get; set; }
+			[ForeignKey("UserAddedById")]
+	    public virtual iUser AddedBy
 	    {
 		    get => _AddedBy;
 		    set => _AddedBy = value;
 	    }
 
-	    public List<iServiceCategory> ServiceCategories
+	    public virtual List<iServiceCategory> ServiceCategories
 	    {
 		    get => _ServiceCategories;
 		    set => _ServiceCategories = value;

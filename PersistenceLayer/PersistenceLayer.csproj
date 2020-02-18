@@ -56,6 +56,46 @@
     <Compile Include="Migrations\202002181233151_city.designer.cs">
       <DependentUpon>202002181233151_city.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002181251490_functionTime.cs" />
+    <Compile Include="Migrations\202002181251490_functionTime.designer.cs">
+      <DependentUpon>202002181251490_functionTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181343118_rentType.cs" />
+    <Compile Include="Migrations\202002181343118_rentType.designer.cs">
+      <DependentUpon>202002181343118_rentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181347186_role.cs" />
+    <Compile Include="Migrations\202002181347186_role.designer.cs">
+      <DependentUpon>202002181347186_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181354209_sectionContentType.cs" />
+    <Compile Include="Migrations\202002181354209_sectionContentType.designer.cs">
+      <DependentUpon>202002181354209_sectionContentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181356018_sectionHead.cs" />
+    <Compile Include="Migrations\202002181356018_sectionHead.designer.cs">
+      <DependentUpon>202002181356018_sectionHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181359170_serviceCategories.cs" />
+    <Compile Include="Migrations\202002181359170_serviceCategories.designer.cs">
+      <DependentUpon>202002181359170_serviceCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181414204_serviceTypes.cs" />
+    <Compile Include="Migrations\202002181414204_serviceTypes.designer.cs">
+      <DependentUpon>202002181414204_serviceTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181557584_user.cs" />
+    <Compile Include="Migrations\202002181557584_user.designer.cs">
+      <DependentUpon>202002181557584_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181625010_serviceProvider.cs" />
+    <Compile Include="Migrations\202002181625010_serviceProvider.designer.cs">
+      <DependentUpon>202002181625010_serviceProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181656404_sectionContent.cs" />
+    <Compile Include="Migrations\202002181656404_sectionContent.designer.cs">
+      <DependentUpon>202002181656404_sectionContent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -80,6 +120,36 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202002181233151_city.resx">
       <DependentUpon>202002181233151_city.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181251490_functionTime.resx">
+      <DependentUpon>202002181251490_functionTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181343118_rentType.resx">
+      <DependentUpon>202002181343118_rentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181347186_role.resx">
+      <DependentUpon>202002181347186_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181354209_sectionContentType.resx">
+      <DependentUpon>202002181354209_sectionContentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181356018_sectionHead.resx">
+      <DependentUpon>202002181356018_sectionHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181359170_serviceCategories.resx">
+      <DependentUpon>202002181359170_serviceCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181414204_serviceTypes.resx">
+      <DependentUpon>202002181414204_serviceTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181557584_user.resx">
+      <DependentUpon>202002181557584_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181625010_serviceProvider.resx">
+      <DependentUpon>202002181625010_serviceProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181656404_sectionContent.resx">
+      <DependentUpon>202002181656404_sectionContent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

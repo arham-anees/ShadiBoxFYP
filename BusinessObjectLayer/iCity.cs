@@ -17,5 +17,7 @@ namespace BusinessObjectLayer {
         /// this is description of city
         /// </summary>
         string Description { get; set; }
+
+        List<iServiceProvider> ServiceProviders { get; set; }
     }
 }

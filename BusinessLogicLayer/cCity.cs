@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using BusinessObjectLayer;
@@ -9,6 +10,7 @@ namespace BusinessLogicLayer {
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;
+	    private List<iServiceProvider> _ServiceProviders;
 
 	    public int Id
 	    {
@@ -26,6 +28,12 @@ namespace BusinessLogicLayer {
 	    {
 		    get => _Description;
 		    set => _Description = value;
+	    }
+
+	    public virtual List<iServiceProvider> ServiceProviders
+	    {
+		    get => _ServiceProviders;
+		    set => _ServiceProviders = value;
 	    }
     }
 }

@@ -9,6 +9,7 @@ namespace BusinessLogicLayer {
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;
+	    private List<iServiceProvider> _ServiceProviders;
 
 	    public int Id
 	    {
@@ -26,6 +27,12 @@ namespace BusinessLogicLayer {
 	    {
 		    get => _Description;
 		    set => _Description = value;
+	    }
+
+	    public List<iServiceProvider> ServiceProviders
+	    {
+		    get => _ServiceProviders;
+		    set => _ServiceProviders = value;
 	    }
     }
 }

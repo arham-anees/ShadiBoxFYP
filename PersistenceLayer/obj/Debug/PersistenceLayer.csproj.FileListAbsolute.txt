@@ -25,3 +25,13 @@ D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\BusinessL
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\BusinessLogicLayer.dll.config
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.city.resources
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.csproj.GenerateResource.cache
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.functionTime.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.rentType.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.role.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.sectionContentType.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.sectionHead.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.serviceCategories.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.serviceTypes.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.user.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.serviceProvider.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.sectionContent.resources

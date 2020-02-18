@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using BusinessObjectLayer;
+using BusinessLogicLayer;
 
 namespace Mapper {
-    public class cSectionContentMapper :EntityTypeConfiguration<iSectionContent> {
+  public class cSectionContentMapper :EntityTypeConfiguration<cSectionContent> {
+	  public cSectionContentMapper()
+	  {
+		  this.HasKey(x => x.Id);
+
+		  //this.HasRequired(x => x.ContentType)
+			 // .WithMany(x=>(ICollection<cSectionContent>) x.SectionContents)
+			 // .HasForeignKey(x=>x.ContentTypeId);
+	  }
     }
 }

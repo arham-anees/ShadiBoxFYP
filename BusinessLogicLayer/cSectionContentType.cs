@@ -27,5 +27,7 @@ namespace BusinessLogicLayer {
 		    get => _Description;
 		    set => _Description = value;
 	    }
+
+	    public virtual ICollection<iSectionContent> SectionContents { get; set; }
     }
 }

@@ -55,7 +55,7 @@
     <Compile Include="cBookingRequest.cs" />
     <Compile Include="cBookingResponse.cs" />
     <Compile Include="cCityMapper.cs" />
-    <Compile Include="cFuncionMapper.cs" />
+    <Compile Include="cFunctionTimeMapper.cs" />
     <Compile Include="cProfileSectionMapper.cs" />
     <Compile Include="cRentTypeMapper.cs" />
     <Compile Include="cReviewMapper.cs" />

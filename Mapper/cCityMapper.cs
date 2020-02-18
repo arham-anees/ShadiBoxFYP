@@ -21,6 +21,7 @@ namespace Mapper {
 			this.Property(x => x.Description)
 				.IsOptional()
 				.HasMaxLength(100);
+
 		}
 	}
 }
