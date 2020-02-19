@@ -5,11 +5,11 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cServiceCategory :iServiceCategory{
+    public class cServiceCategory {
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;
-	    private List<iServiceProvider> _ServiceProviders;
+	    private ICollection<cServiceProvider> _ServiceProviders;
 
 	    public int Id
 	    {
@@ -29,7 +29,7 @@ namespace BusinessLogicLayer {
 		    set => _Description = value;
 	    }
 
-	    public List<iServiceProvider> ServiceProviders
+	    public ICollection<cServiceProvider> ServiceProviders
 	    {
 		    get => _ServiceProviders;
 		    set => _ServiceProviders = value;

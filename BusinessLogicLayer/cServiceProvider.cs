@@ -6,20 +6,20 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cServiceProvider :iServiceProvider{
+    public class cServiceProvider {
 	    private int _Id;
 	    private string _Name;
 	    private string _Address;
 	    private string _CoverPicture;
 	    private string _Email;
 	    private string _Phone;
-	    private iRentType _RentType;
+	    private cRentType _RentType;
 	    private double _Rent;
-	    private iCity _City;
-	    private iServiceType _ServiceType;
+	    private cCity _City;
+	    private cServiceType _ServiceType;
 	    private DateTime _DateAddedOn;
-	    private iUser _AddedBy;
-	    private List<iServiceCategory> _ServiceCategories;
+	    private cUser _AddedBy;
+	    private ICollection<cServiceCategory> _ServiceCategories;
 
 	    public int Id
 	    {
@@ -59,7 +59,7 @@ namespace BusinessLogicLayer {
 
 	    public int RentTypeId { get; set; }
 			[ForeignKey("RentTypeId")]
-	    public virtual iRentType RentType
+	    public virtual cRentType RentType
 	    {
 		    get => _RentType;
 		    set => _RentType = value;
@@ -72,16 +72,14 @@ namespace BusinessLogicLayer {
 	    }
 
 	    public int CityId { get; set; }
-			[ForeignKey("CityId")]
-	    public virtual iCity City
+	    public virtual cCity City
 	    {
 		    get => _City;
 		    set => _City = value;
 	    }
 
 	    public int ServiceTypeId { get; set; }
-			[ForeignKey("ServiceTypeId")]
-	    public virtual iServiceType ServiceType
+	    public virtual cServiceType ServiceType
 	    {
 		    get => _ServiceType;
 		    set => _ServiceType = value;
@@ -94,14 +92,13 @@ namespace BusinessLogicLayer {
 	    }
 
 	    public int UserAddedById { get; set; }
-			[ForeignKey("UserAddedById")]
-	    public virtual iUser AddedBy
+	    public virtual cUser AddedBy
 	    {
 		    get => _AddedBy;
 		    set => _AddedBy = value;
 	    }
 
-	    public virtual List<iServiceCategory> ServiceCategories
+	    public virtual ICollection<cServiceCategory> ServiceCategories
 	    {
 		    get => _ServiceCategories;
 		    set => _ServiceCategories = value;

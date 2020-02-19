@@ -8,7 +8,7 @@ namespace Mapper {
 
 		public cUserMapper()
 		{
-			this.ToTable("tUser");
+			this.ToTable("tUsers");
 			this.HasKey(x => x.Id);
 			this.Property(x => x.Email)
 				.IsOptional()

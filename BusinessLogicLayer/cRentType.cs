@@ -5,7 +5,7 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cRentType :iRentType{
+    public class cRentType {
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;

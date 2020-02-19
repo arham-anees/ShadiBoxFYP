@@ -5,7 +5,7 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cUser :iUser{
+    public class cUser {
 	    private int _Id;
 	    private string _Name;
 	    private string _Phone;

@@ -5,10 +5,10 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cReview :iReview{
+    public class cReview {
 	    private int _Id;
-	    private iUser _User;
-	    private iServiceProvider _ServiceProvider;
+	    private cUser _User;
+	    private cServiceProvider _ServiceProvider;
 	    private int _StarCount;
 	    private string _Message;
 	    private DateTime _Date;
@@ -20,14 +20,14 @@ namespace BusinessLogicLayer {
 	    }
 
 	    public int UserId { get; set; }
-	    public virtual iUser User
+	    public virtual cUser User
 	    {
 		    get => _User;
 		    set => _User = value;
 	    }
 
 	    public int ServiceProviderId { get; set; }
-	    public virtual iServiceProvider ServiceProvider
+	    public virtual cServiceProvider ServiceProvider
 	    {
 		    get => _ServiceProvider;
 		    set => _ServiceProvider = value;

@@ -5,7 +5,7 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cSectionHead :iSectionHead{
+    public class cSectionHead {
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;

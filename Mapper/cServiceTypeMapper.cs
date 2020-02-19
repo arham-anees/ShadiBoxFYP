@@ -5,6 +5,7 @@ namespace Mapper {
   public class cServiceTypeMapper :EntityTypeConfiguration<cServiceType> {
 	  public cServiceTypeMapper()
 	  {
+		  this.ToTable("tServiceTypes");
 			this.HasKey(x => x.Id);
 			this.HasIndex(x => x.Name)
 				.IsUnique(true);

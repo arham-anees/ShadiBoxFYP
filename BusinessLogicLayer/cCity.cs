@@ -6,11 +6,10 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cCity:iCity {
+    public class cCity {
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;
-	    private List<iServiceProvider> _ServiceProviders;
 
 	    public int Id
 	    {
@@ -29,11 +28,7 @@ namespace BusinessLogicLayer {
 		    get => _Description;
 		    set => _Description = value;
 	    }
+		
 
-	    public virtual List<iServiceProvider> ServiceProviders
-	    {
-		    get => _ServiceProviders;
-		    set => _ServiceProviders = value;
-	    }
     }
 }

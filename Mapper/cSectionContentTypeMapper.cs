@@ -5,6 +5,7 @@ namespace Mapper {
 	public class cSectionContentTypeMapper :EntityTypeConfiguration<cSectionContentType> {
 	    public cSectionContentTypeMapper()
 	    {
+		    this.ToTable("tSectionContentTypes");
 			this.HasKey(x => x.Id);
 			this.HasIndex(x => x.Name)
 				.IsUnique(true);

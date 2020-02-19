@@ -5,6 +5,7 @@ namespace Mapper {
 	public class cBookingRequestMapper :EntityTypeConfiguration<cBookingRequest> {
 	    public cBookingRequestMapper()
 	    {
+		    this.ToTable("tBookingRequests");
 		    this.HasKey(x => x.Id);
 
 		    this.HasRequired(x => x.User).WithMany().HasForeignKey(x => x.UserId).WillCascadeOnDelete(false);

@@ -10,6 +10,7 @@ namespace Mapper {
     public class cBookingMapper :EntityTypeConfiguration<cBooking> {
 	    public cBookingMapper()
 	    {
+		    this.ToTable("tBookings");
 		    this.HasKey(x => x.Id);
 
 		    this.HasRequired(x => x.User).WithMany().HasForeignKey(x => x.UserId).WillCascadeOnDelete(false);

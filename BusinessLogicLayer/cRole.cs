@@ -5,11 +5,11 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cRole :iRole{
+    public class cRole {
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;
-	    private List<iUser> _Users;
+	    private ICollection<cUser> _Users;
 
 	    public int Id
 	    {
@@ -29,7 +29,7 @@ namespace BusinessLogicLayer {
 		    set => _Description = value;
 	    }
 
-	    public List<iUser> Users
+	    public virtual ICollection<cUser> Users
 	    {
 		    get => _Users;
 		    set => _Users = value;

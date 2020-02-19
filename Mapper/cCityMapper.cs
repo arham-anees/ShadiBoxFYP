@@ -11,6 +11,7 @@ namespace Mapper {
 	public class cCityMapper :EntityTypeConfiguration<cCity> {
 		public cCityMapper()
 		{
+			this.ToTable("tCities");
 			this.HasKey(x => x.Id);
 			this.HasIndex(x => x.Name)
 				.IsUnique(true);

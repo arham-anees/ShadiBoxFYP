@@ -10,6 +10,7 @@ namespace Mapper {
     public class cRentTypeMapper :EntityTypeConfiguration<cRentType> {
 	    public cRentTypeMapper()
 	    {
+		    this.ToTable("tRentTypes");
 			this.HasKey(x => x.Id);
 			this.HasIndex(x => x.Name)
 				.IsUnique(true);

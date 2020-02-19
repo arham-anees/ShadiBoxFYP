@@ -5,11 +5,11 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cSectionContent :iSectionContent{
+    public class cSectionContent {
 	    private int _Id;
 	    private string _Content;
-	    private iServiceProvider _ServiceProvider;
-	    private iSectionContentType _ContentType;
+	    private cServiceProvider _ServiceProvider;
+	    private cSectionContentType _ContentType;
 
 	    public int Id
 	    {
@@ -24,14 +24,14 @@ namespace BusinessLogicLayer {
 	    }
 
 	    public int ServiceProviderId { get; set; }
-	    public virtual iServiceProvider ServiceProvider
+	    public virtual cServiceProvider ServiceProvider
 	    {
 		    get => _ServiceProvider;
 		    set => _ServiceProvider = value;
 	    }
 
 	    public int ContentTypeId { get; set; }
-	    public virtual iSectionContentType ContentType
+	    public virtual cSectionContentType ContentType
 	    {
 		    get => _ContentType;
 		    set => _ContentType = value;

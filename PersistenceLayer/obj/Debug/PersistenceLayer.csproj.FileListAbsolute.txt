@@ -37,3 +37,7 @@ D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\Persisten
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.sectionContent.resources
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.review.resources
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.booking.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.relationships.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.relationshipMistakesCorrection0.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.relationshipMistakesCorrection1.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.tablesRenaming.resources

@@ -8,7 +8,9 @@ using BusinessObjectLayer;
 
 namespace Mapper {
 	public class cServiceCategoryMapper : EntityTypeConfiguration<cServiceCategory> {
-		public cServiceCategoryMapper() {
+		public cServiceCategoryMapper()
+		{
+			this.ToTable("tServiceCategories");
 			this.HasKey(x => x.Id);
 			this.HasIndex(x => x.Name)
 				.IsUnique(true);

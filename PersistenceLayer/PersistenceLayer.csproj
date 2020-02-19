@@ -104,6 +104,22 @@
     <Compile Include="Migrations\202002190446313_booking.designer.cs">
       <DependentUpon>202002190446313_booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002190655123_relationships.cs" />
+    <Compile Include="Migrations\202002190655123_relationships.designer.cs">
+      <DependentUpon>202002190655123_relationships.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002190706559_relationshipMistakesCorrection0.cs" />
+    <Compile Include="Migrations\202002190706559_relationshipMistakesCorrection0.designer.cs">
+      <DependentUpon>202002190706559_relationshipMistakesCorrection0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002190713223_relationshipMistakesCorrection1.cs" />
+    <Compile Include="Migrations\202002190713223_relationshipMistakesCorrection1.designer.cs">
+      <DependentUpon>202002190713223_relationshipMistakesCorrection1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002190729569_tablesRenaming.cs" />
+    <Compile Include="Migrations\202002190729569_tablesRenaming.designer.cs">
+      <DependentUpon>202002190729569_tablesRenaming.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -164,6 +180,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002190446313_booking.resx">
       <DependentUpon>202002190446313_booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002190655123_relationships.resx">
+      <DependentUpon>202002190655123_relationships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002190706559_relationshipMistakesCorrection0.resx">
+      <DependentUpon>202002190706559_relationshipMistakesCorrection0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002190713223_relationshipMistakesCorrection1.resx">
+      <DependentUpon>202002190713223_relationshipMistakesCorrection1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002190729569_tablesRenaming.resx">
+      <DependentUpon>202002190729569_tablesRenaming.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

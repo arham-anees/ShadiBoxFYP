@@ -5,7 +5,7 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cFunctionTime :iFunctionTime{
+    public class cFunctionTime{
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;

@@ -6,11 +6,13 @@ namespace Mapper {
   public class cSectionContentMapper :EntityTypeConfiguration<cSectionContent> {
 	  public cSectionContentMapper()
 	  {
+		  this.ToTable("tSectionContents");
 		  this.HasKey(x => x.Id);
 
-		  //this.HasRequired(x => x.ContentType)
-			 // .WithMany(x=>(ICollection<cSectionContent>) x.SectionContents)
-			 // .HasForeignKey(x=>x.ContentTypeId);
-	  }
+			this.HasRequired(x => x.ContentType)
+				.WithMany()
+				.HasForeignKey(x => x.ContentTypeId)
+				.WillCascadeOnDelete(false);
+		}
     }
 }

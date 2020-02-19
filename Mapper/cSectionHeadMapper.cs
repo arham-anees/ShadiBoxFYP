@@ -5,6 +5,7 @@ namespace Mapper {
   public class cSectionHeadMapper :EntityTypeConfiguration<cSectionHead> {
 	  public cSectionHeadMapper()
 	  {
+		  this.ToTable("tSectionHeads");
 			this.HasKey(x => x.Id);
 			this.HasIndex(x => x.Name)
 				.IsUnique(true);

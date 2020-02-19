@@ -10,6 +10,7 @@ namespace Mapper {
     public class cFunctionTimeMapper :EntityTypeConfiguration<cFunctionTime> {
 	    public cFunctionTimeMapper()
 	    {
+		    this.ToTable("tFunctionTimes");
 		    this.HasKey(x => x.Id);
 		    this.HasIndex(x => x.Name);
 

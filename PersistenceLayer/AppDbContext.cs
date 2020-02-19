@@ -28,6 +28,7 @@ namespace PersistenceLayer {
 		public DbSet<cBooking> Bookings { get; set; }
 		public DbSet<cBookingResponse> BookingsResponses { get; set; }
 		public DbSet<cBookingRequest> BookingsRequests { get; set; }
+		public DbSet<cProfileSection> ProfileSections { get; set; }
 
 
 		#endregion
@@ -44,6 +45,7 @@ namespace PersistenceLayer {
 				.Add(new cServiceProviderMapper())
 				.Add(new cUserMapper())
 				.Add(new cRentTypeMapper())
+				.Add(new cProfileSectionMapper())
 				.Add(new cSectionContentMapper())
 				.Add(new cReviewMapper())
 				.Add(new cBookingMapper())

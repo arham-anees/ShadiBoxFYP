@@ -10,6 +10,7 @@ namespace Mapper {
     public class cRoleMapper :EntityTypeConfiguration<cRole> {
 	    public cRoleMapper()
 	    {
+		    this.ToTable("tRoles");
 			this.HasKey(x => x.Id);
 			this.HasIndex(x => x.Name)
 				.IsUnique(true);

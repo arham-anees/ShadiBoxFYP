@@ -13,8 +13,14 @@ namespace Mapper {
 		    this.ToTable("tReviews");
 		    this.HasKey(x => x.Id);
 
-		    //this.HasRequired(x => x.ServiceProvider).WithMany().HasForeignKey(x => x.ServiceProviderId);
-		    //this.HasRequired(x => x.User).WithMany().HasForeignKey(x => x.UserId);
-	    }
+			this.HasRequired(x => x.ServiceProvider)
+				.WithMany()
+				.HasForeignKey(x => x.ServiceProviderId)
+				.WillCascadeOnDelete(false);
+			this.HasRequired(x => x.User)
+				.WithMany()
+				.HasForeignKey(x => x.UserId)
+				.WillCascadeOnDelete(false);
+		}
     }
 }
