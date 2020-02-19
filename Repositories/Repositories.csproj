@@ -51,11 +51,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cBookingRepository.cs" />
+    <Compile Include="cBookingRequestRepository.cs" />
+    <Compile Include="cBookingResponseRepository.cs" />
+    <Compile Include="cCityRepository.cs" />
+    <Compile Include="cProfileSectionRepository.cs" />
+    <Compile Include="cRepository.cs" />
+    <Compile Include="cReviewRepository.cs" />
+    <Compile Include="cSectionContentRepository.cs" />
+    <Compile Include="cServiceProviderRepository.cs" />
+    <Compile Include="cUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{fa2ea4b8-41f3-4997-b6ba-4c7d0960557d}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersistenceLayer\PersistenceLayer.csproj">
+      <Project>{e3973407-9019-46e1-82a6-197b6b3dd5ce}</Project>
+      <Name>PersistenceLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

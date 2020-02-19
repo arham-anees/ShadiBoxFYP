@@ -14,3 +14,12 @@ D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\obj\Debug\Repositories.
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\obj\Debug\Repositories.csproj.CopyComplete
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\obj\Debug\Repositories.dll
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\obj\Debug\Repositories.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\BusinessLogicLayer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\PersistenceLayer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\Mapper.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\BusinessLogicLayer.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\BusinessLogicLayer.dll.config
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\PersistenceLayer.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\PersistenceLayer.dll.config
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\Mapper.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Repositories\bin\Debug\Mapper.dll.config

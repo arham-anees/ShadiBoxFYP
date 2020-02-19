@@ -13,3 +13,15 @@ D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\obj\Debug\UnitOfWork.cspr
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\obj\Debug\UnitOfWork.csproj.CopyComplete
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\obj\Debug\UnitOfWork.dll
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\obj\Debug\UnitOfWork.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\PersistenceLayer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\Repositories.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\BusinessLogicLayer.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\Mapper.dll
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\PersistenceLayer.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\PersistenceLayer.dll.config
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\Repositories.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\Repositories.dll.config
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\BusinessLogicLayer.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\BusinessLogicLayer.dll.config
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\Mapper.pdb
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\UnitOfWork\bin\Debug\Mapper.dll.config
