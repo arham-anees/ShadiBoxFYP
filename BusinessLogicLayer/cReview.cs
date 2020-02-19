@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cReview {
+	public class cReview {
 	    private int _Id;
 	    private cUser _User;
 	    private cServiceProvider _ServiceProvider;

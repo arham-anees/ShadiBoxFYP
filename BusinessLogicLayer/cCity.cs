@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using BusinessObjectLayer;
-
-namespace BusinessLogicLayer {
-    public class cCity {
+﻿namespace BusinessLogicLayer {
+	public class cCity {
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;

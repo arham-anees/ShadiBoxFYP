@@ -79,10 +79,6 @@
       <Project>{FA2EA4B8-41F3-4997-B6BA-4C7D0960557D}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BusinessObjectLayer\BusinessObjectLayer.csproj">
-      <Project>{710e3c6e-c995-468d-b986-5a8aeefbafec}</Project>
-      <Name>BusinessObjectLayer</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

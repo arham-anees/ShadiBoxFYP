@@ -14,9 +14,6 @@ D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\obj\Debug\Mapper.csprojAssemb
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\obj\Debug\Mapper.csproj.CopyComplete
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\obj\Debug\Mapper.dll
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\obj\Debug\Mapper.pdb
-D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\BusinessObjectLayer.dll
-D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\BusinessObjectLayer.pdb
-D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\BusinessObjectLayer.dll.config
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\BusinessLogicLayer.dll
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\BusinessLogicLayer.pdb
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\Mapper\bin\Debug\BusinessLogicLayer.dll.config

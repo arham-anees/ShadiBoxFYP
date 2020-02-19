@@ -74,12 +74,6 @@
     <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusinessObjectLayer\BusinessObjectLayer.csproj">
-      <Project>{710e3c6e-c995-468d-b986-5a8aeefbafec}</Project>
-      <Name>BusinessObjectLayer</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

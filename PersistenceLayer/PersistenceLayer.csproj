@@ -132,10 +132,6 @@
       <Project>{fa2ea4b8-41f3-4997-b6ba-4c7d0960557d}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BusinessObjectLayer\BusinessObjectLayer.csproj">
-      <Project>{710e3c6e-c995-468d-b986-5a8aeefbafec}</Project>
-      <Name>BusinessObjectLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Mapper\Mapper.csproj">
       <Project>{c63e9f87-8d91-4978-884b-4fecd858850a}</Project>
       <Name>Mapper</Name>

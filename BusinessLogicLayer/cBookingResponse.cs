@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cBookingResponse {
+	public class cBookingResponse {
 	    private int _Id;
 	    private cBookingRequest _BookingRequest;
 	    private DateTime _Date;

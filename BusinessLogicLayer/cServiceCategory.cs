@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BusinessObjectLayer;
+﻿using System.Collections.Generic;
 
 namespace BusinessLogicLayer {
-    public class cServiceCategory {
+	public class cServiceCategory {
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;

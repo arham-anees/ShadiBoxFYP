@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BusinessObjectLayer;
+﻿using System.Collections.Generic;
 
 namespace BusinessLogicLayer {
-    public class cSectionContentType{
+	public class cSectionContentType{
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;
@@ -28,6 +24,6 @@ namespace BusinessLogicLayer {
 		    set => _Description = value;
 	    }
 
-	    public virtual ICollection<iSectionContent> SectionContents { get; set; }
+	    public virtual ICollection<cSectionContent> SectionContents { get; set; }
     }
 }

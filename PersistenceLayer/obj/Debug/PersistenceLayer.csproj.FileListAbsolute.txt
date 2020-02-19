@@ -14,10 +14,7 @@ D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\Persisten
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.csproj.CopyComplete
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.dll
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.pdb
-D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\BusinessObjectLayer.dll
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\Mapper.dll
-D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\BusinessObjectLayer.pdb
-D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\BusinessObjectLayer.dll.config
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\Mapper.pdb
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\Mapper.dll.config
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\bin\Debug\BusinessLogicLayer.dll

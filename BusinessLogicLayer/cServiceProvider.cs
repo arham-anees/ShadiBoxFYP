@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cServiceProvider {
+	public class cServiceProvider {
 	    private int _Id;
 	    private string _Name;
 	    private string _Address;

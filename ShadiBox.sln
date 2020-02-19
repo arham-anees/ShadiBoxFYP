@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoriesImplementation"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWork", "UnitOfWork\UnitOfWork.csproj", "{2C19115E-0F69-4766-86B8-2824D8C6D63E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjectLayer", "BusinessObjectLayer\BusinessObjectLayer.csproj", "{710E3C6E-C995-468D-B986-5A8AEEFBAFEC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{941F2AF0-5359-4CD3-9F8C-66FF1B8BF552}"
 EndProject
 Global
@@ -49,10 +47,6 @@ Global
 		{2C19115E-0F69-4766-86B8-2824D8C6D63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C19115E-0F69-4766-86B8-2824D8C6D63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C19115E-0F69-4766-86B8-2824D8C6D63E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{710E3C6E-C995-468D-B986-5A8AEEFBAFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{710E3C6E-C995-468D-B986-5A8AEEFBAFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{710E3C6E-C995-468D-B986-5A8AEEFBAFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{710E3C6E-C995-468D-B986-5A8AEEFBAFEC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{941F2AF0-5359-4CD3-9F8C-66FF1B8BF552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{941F2AF0-5359-4CD3-9F8C-66FF1B8BF552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{941F2AF0-5359-4CD3-9F8C-66FF1B8BF552}.Release|Any CPU.ActiveCfg = Release|Any CPU

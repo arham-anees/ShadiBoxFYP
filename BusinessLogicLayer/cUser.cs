@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BusinessObjectLayer;
-
-namespace BusinessLogicLayer {
-    public class cUser {
+﻿namespace BusinessLogicLayer {
+	public class cUser {
 	    private int _Id;
 	    private string _Name;
 	    private string _Phone;

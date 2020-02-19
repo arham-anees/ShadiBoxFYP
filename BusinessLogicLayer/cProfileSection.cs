@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BusinessObjectLayer;
-
-namespace BusinessLogicLayer {
-    public class cProfileSection{
+﻿namespace BusinessLogicLayer {
+	public class cProfileSection{
 	    private int _Id;
 	    private cServiceProvider _ServiceProvider;
 	    private cSectionHead _SectionHead;

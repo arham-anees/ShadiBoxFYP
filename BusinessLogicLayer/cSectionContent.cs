@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BusinessObjectLayer;
-
-namespace BusinessLogicLayer {
-    public class cSectionContent {
+﻿namespace BusinessLogicLayer {
+	public class cSectionContent {
 	    private int _Id;
 	    private string _Content;
 	    private cServiceProvider _ServiceProvider;
