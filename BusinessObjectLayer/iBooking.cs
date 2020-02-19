@@ -9,6 +9,7 @@ namespace BusinessObjectLayer {
         iUser User { get; set; }
         iServiceProvider ServiceProvider { get; set; }
         iFunctionTime FunctionTime { get; set; }
+	      iBookingReponse BookingResponse { get; set; }
         DateTime Date { get; set; }
         DateTime BookingDate { get; set; }
     }

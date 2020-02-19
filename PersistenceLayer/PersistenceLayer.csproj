@@ -96,6 +96,14 @@
     <Compile Include="Migrations\202002181656404_sectionContent.designer.cs">
       <DependentUpon>202002181656404_sectionContent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002190440439_review.cs" />
+    <Compile Include="Migrations\202002190440439_review.designer.cs">
+      <DependentUpon>202002190440439_review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002190446313_booking.cs" />
+    <Compile Include="Migrations\202002190446313_booking.designer.cs">
+      <DependentUpon>202002190446313_booking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -150,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002181656404_sectionContent.resx">
       <DependentUpon>202002181656404_sectionContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002190440439_review.resx">
+      <DependentUpon>202002190440439_review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002190446313_booking.resx">
+      <DependentUpon>202002190446313_booking.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

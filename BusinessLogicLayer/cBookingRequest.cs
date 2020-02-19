@@ -6,14 +6,14 @@ using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
     
-	public class cBookingRequest :iBookingRequest{
+	public class cBookingRequest {
 		private int _Id;
-		private iUser _User;
-		private iServiceProvider _ServiceProvider;
+		private cUser _User;
+		private cServiceProvider _ServiceProvider;
 		private DateTime _Date;
 		private DateTime _BookingDate;
 		private int _NumberOfGuests;
-		private iFunctionTime _FunctionTime;
+		private cFunctionTime _FunctionTime;
 		private string _Message;
 
 		public int Id
@@ -22,13 +22,15 @@ namespace BusinessLogicLayer {
 			set => _Id = value;
 		}
 
-		public iUser User
+		public int UserId { get; set; }
+		public virtual cUser User
 		{
 			get => _User;
 			set => _User = value;
 		}
 
-		public iServiceProvider ServiceProvider
+		public int ServiceProviderId { get; set; }
+		public virtual cServiceProvider ServiceProvider
 		{
 			get => _ServiceProvider;
 			set => _ServiceProvider = value;
@@ -52,7 +54,8 @@ namespace BusinessLogicLayer {
 			set => _NumberOfGuests = value;
 		}
 
-		public iFunctionTime FunctionTime
+		public int FunctionTimeId { get; set; }
+		public virtual cFunctionTime FunctionTime
 		{
 			get => _FunctionTime;
 			set => _FunctionTime = value;

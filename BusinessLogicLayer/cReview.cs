@@ -19,13 +19,15 @@ namespace BusinessLogicLayer {
 		    set => _Id = value;
 	    }
 
-	    public iUser User
+	    public int UserId { get; set; }
+	    public virtual iUser User
 	    {
 		    get => _User;
 		    set => _User = value;
 	    }
 
-	    public iServiceProvider ServiceProvider
+	    public int ServiceProviderId { get; set; }
+	    public virtual iServiceProvider ServiceProvider
 	    {
 		    get => _ServiceProvider;
 		    set => _ServiceProvider = value;

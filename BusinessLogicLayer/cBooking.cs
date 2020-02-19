@@ -5,13 +5,14 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cBooking :iBooking {
+    public class cBooking  {
 	    private int _Id;
-	    private iUser _User;
-	    private iServiceProvider _ServiceProvider;
-	    private iFunctionTime _FunctionTime;
+	    private cUser _User;
+	    private cServiceProvider _ServiceProvider;
+	    private cFunctionTime _FunctionTime;
 	    private DateTime _Date;
 	    private DateTime _BookingDate;
+	    private cBookingResponse _BookingResponse;
 
 	    public int Id
 	    {
@@ -19,22 +20,32 @@ namespace BusinessLogicLayer {
 		    set => _Id = value;
 	    }
 
-	    public iUser User
+	    public int UserId { get; set; }
+	    public virtual cUser User
 	    {
 		    get => _User;
 		    set => _User = value;
 	    }
 
-	    public iServiceProvider ServiceProvider
+	    public int ServiceProviderId { get; set; }
+	    public virtual cServiceProvider ServiceProvider
 	    {
 		    get => _ServiceProvider;
 		    set => _ServiceProvider = value;
 	    }
 
-	    public iFunctionTime FunctionTime
+	    public int FunctionTimeId { get; set; }
+	    public virtual cFunctionTime FunctionTime
 	    {
 		    get => _FunctionTime;
 		    set => _FunctionTime = value;
+	    }
+
+	    public int BookingResponseId { get; set; }
+	    public virtual cBookingResponse BookingResponse
+	    {
+		    get => _BookingResponse;
+		    set => _BookingResponse = value;
 	    }
 
 	    public DateTime Date

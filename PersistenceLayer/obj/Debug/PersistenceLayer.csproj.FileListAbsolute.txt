@@ -35,3 +35,5 @@ D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\Persisten
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.user.resources
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.serviceProvider.resources
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.sectionContent.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.review.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.booking.resources

@@ -5,9 +5,9 @@ using System.Text;
 using BusinessObjectLayer;
 
 namespace BusinessLogicLayer {
-    public class cBookingResponse :iBookingReponse{
+    public class cBookingResponse {
 	    private int _Id;
-	    private iBookingRequest _BookingRequest;
+	    private cBookingRequest _BookingRequest;
 	    private DateTime _Date;
 	    private bool _IsAccepted;
 	    private string _Message;
@@ -18,7 +18,8 @@ namespace BusinessLogicLayer {
 		    set => _Id = value;
 	    }
 
-	    public iBookingRequest BookingRequest
+	    public int BookingRequestId { get; set; }
+	    public virtual cBookingRequest BookingRequest
 	    {
 		    get => _BookingRequest;
 		    set => _BookingRequest = value;
