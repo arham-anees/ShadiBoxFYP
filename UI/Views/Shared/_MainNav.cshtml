@@ -1,0 +1,459 @@
+﻿
+<div class="main-section-for-home-page">
+    <img src="~/Content/userassets/pictures/slider_images/205441c0db85b3533e3d30c81830ba03.jpg" style="width: -webkit-fill-available;" class="desktop">
+    <img src="~/Content/userassets/pictures/slider_images/aa7d9ec8718456e5f7e19c8cf610e9d7.jpg" style="width: -webkit-fill-available;" class="tab">
+    <img src="~/Content/userassets/pictures/slider_images/ca9dc79ff4a9408012218ba49d15e44d.jpg" style="width: -webkit-fill-available;" class="mobile">
+    <div class="main-content-over-lay"></div>
+    <div class="content-for-main-page">
+        <div class="container" style="height: 100%; padding: 0;">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <header id="home_nav" class="botom-padding-for-navbar">
+                <div class="navbar-header responsive_header " id="logo">
+                    <button type="button" class="navbar-toggle collapsed nav_bars_btn" data-toggle="collapse" data-target="#menu">
+                        <img src="~/Content/assets/web/images/nav.png" class="img-responsive nav_bars_img" width="35px" height="35px" style="margin-top: -10px;">
+                    </button>
+                    <a href="@Url.Action("Index","Home")"><img src="~/Content/assets/web/images/logo.png" class="img-responsive" alt="logo"></a>
+                </div>
+                        @RenderPage("_NavBarItems.cshtml")
+                </header>
+                        <center class="slider-data">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <style type="text/css">
+                                        .search-form-category {
+                                            height: 153px;
+                                            overflow-y: scroll;
+                                        }
+
+
+                                        .form-field {
+                                            margin-top: 10px;
+                                        }
+
+                                        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                                            color: #706a68;
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                            text-transform: uppercase;
+                                            font-family: none;
+                                        }
+
+                                        ::-moz-placeholder { /* Firefox 19+ */
+                                            color: #706a68;
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                            text-transform: uppercase;
+                                            font-family: none;
+                                        }
+
+                                        :-ms-input-placeholder { /* IE 10+ */
+                                            color: #706a68;
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                            text-transform: uppercase;
+                                            font-family: none;
+                                        }
+
+                                        :-moz-placeholder { /* Firefox 18- */
+                                            color: #706a68;
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                            text-transform: uppercase;
+                                            font-family: none;
+                                        }
+
+                                        .tag_ul li {
+                                            margin-right: 7px !important;
+                                        }
+                                    </style>
+                                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                                        <div class="find-section" id="finder_section_for_home_page">
+                                            <div class="row">
+                                                <div class="col-md-offset-1 col-md-10 finder-block">
+                                                    <div class="finder-caption">
+                                                        <h1>Your Ultimate Wedding Planner!</h1>
+                                                        <p>Find the best wedding vendors for your big day.</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <ul class="nav tag_ul">
+                                                                <li class="active"><a href="#by_category" data-toggle="tab"> Search By Category</a></li>
+                                                                <li><a href="#by_business" data-toggle="tab"> Search By Name</a></li>
+                                                                <!--  <li><a href="#by_shop" data-toggle="tab"> Shop </a></li> -->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="finder-form-transparent" style="border-top: 3px solid #ff1985;">
+                                                        <div class="tab-content">
+                                                            <div class="tab-pane active" id="by_category">
+                                                                <form>
+                                                                    <div class="row">
+                                                                        <div class="col-md-11 col-sm-10 col-xs-12" style="padding-left: 0;">
+                                                                            <div class="row">
+                                                                                <div class="form-group form-field col-md-4 col-sm-4 col-xs-12" style="padding-right: 0px;">
+
+                                                                                    <select class="form-control input-lg select2-category" id="category" name="category" onchange="get_cities_areas(this);">
+                                                                                        <option value="">All Categories</option>
+                                                                                        <option value="Venues">Venues</option>
+
+                                                                                        <option value="Photographers">Photographers</option>
+
+                                                                                        <option value="Caterers">Caterers</option>
+
+                                                                                        <option value="Car Rentals">Car Rentals</option>
+
+                                                                                        <option value="Decorators">Decorators</option>
+
+                                                                                        <option value="Event Managers">Event Managers</option>
+
+                                                                                        <option value="Salons">Salons</option>
+
+                                                                                        <option value="Cakes">Cakes</option>
+
+                                                                                        <option value="Invitations">Invitations</option>
+
+                                                                                    </select>
+
+                                                                                </div>
+                                                                                <div class="form-group form-field col-md-4 col-sm-4 col-xs-12" style="margin-top: 10px; padding-right: 0px;">
+
+                                                                                    <select class="form-control input-lg select2-city" id="city_name" name="city_name" onchange="get_cities_areas(this);">
+                                                                                        <option value="">All Cities</option>
+                                                                                        <option value="Faisalabad">Faisalabad</option>
+
+                                                                                        <option value="Gujranwala">Gujranwala</option>
+
+                                                                                        <option value="Lahore">Lahore</option>
+
+                                                                                        <option value="Multan">Multan</option>
+
+                                                                                        <option value="Rawalpindi">Rawalpindi</option>
+
+                                                                                        <option value="Sialkot">Sialkot</option>
+
+                                                                                        <option value="Karachi">Karachi</option>
+
+                                                                                        <option value="Islamabad">Islamabad</option>
+
+                                                                                        <option value="Peshawar">Peshawar</option>
+
+                                                                                    </select>
+
+                                                                                </div>
+                                                                                <div class="form-group form-field  col-md-4 col-sm-4 col-xs-12 area-field " style="margin-top: 10px;">
+
+                                                                                    <select class="form-control input-lg select2-area" id="area" name="area">
+                                                                                        <option value="-1" disabled="disabled">Please select city first</option>
+                                                                                        <option value="-1">Area</option>
+                                                                                        <option value="2">Bahria Town</option>
+
+                                                                                        <option value="5">Eden Canal Villas</option>
+
+                                                                                        <option value="6">Eden Homes</option>
+
+                                                                                        <option value="9">Thokar Niaz Baig</option>
+
+                                                                                        <option value="13">Allama Iqbal Town</option>
+
+                                                                                        <option value="15">Sabzazar</option>
+
+                                                                                        <option value="16">Samanabad</option>
+
+                                                                                        <option value="17">Ichhra</option>
+
+                                                                                        <option value="18">Wahdat Colony</option>
+
+                                                                                        <option value="19">Gulshan E Ravi</option>
+
+                                                                                        <option value="21">Band Road</option>
+
+                                                                                        <option value="22">Sanda Khurd</option>
+
+                                                                                        <option value="24">Islam Pura</option>
+
+                                                                                        <option value="26">Bilal Gang</option>
+
+                                                                                        <option value="28">Karim Park</option>
+
+                                                                                        <option value="29">Ravi Road</option>
+
+                                                                                        <option value="31">Shad Bagh</option>
+
+                                                                                        <option value="37">Baghban Pura</option>
+
+                                                                                        <option value="40">Shalimar Town</option>
+
+                                                                                        <option value="47">Mughal Pura</option>
+
+                                                                                        <option value="54">New PAF Colony</option>
+
+                                                                                        <option value="58">Burj Colony</option>
+
+                                                                                        <option value="59">Canal Road</option>
+
+                                                                                        <option value="60">Canal View Colony</option>
+
+                                                                                        <option value="63">Tech Society</option>
+
+                                                                                        <option value="71">New Garden Town</option>
+
+                                                                                        <option value="72">Muslim Town</option>
+
+                                                                                        <option value="73">Shadman Colony</option>
+
+                                                                                        <option value="75">Shah Jamal</option>
+
+                                                                                        <option value="76">Johar Town</option>
+
+                                                                                        <option value="77">PIA Society</option>
+
+                                                                                        <option value="81">Peco Road</option>
+
+                                                                                        <option value="82">Faisal Town</option>
+
+                                                                                        <option value="83">Model Town</option>
+
+                                                                                        <option value="85">Wafaqi Colony</option>
+
+                                                                                        <option value="86">Township</option>
+
+                                                                                        <option value="87">Kot Lakhpat</option>
+
+                                                                                        <option value="95">Punjab Govt Employs Coparative Society</option>
+
+                                                                                        <option value="96">Raiwind Road</option>
+
+                                                                                        <option value="97">Lake City</option>
+
+                                                                                        <option value="101">Main Khayaban Road</option>
+
+                                                                                        <option value="106">NFC Town</option>
+
+                                                                                        <option value="107">Wapda Town</option>
+
+                                                                                        <option value="109">Nespak Society</option>
+
+                                                                                        <option value="110">Anar Kali</option>
+
+                                                                                        <option value="111">Mall Road</option>
+
+                                                                                        <option value="113">Davis Road</option>
+
+                                                                                        <option value="114">Garhi Shahu</option>
+
+                                                                                        <option value="116">Dharampura</option>
+
+                                                                                        <option value="117">Mayo Hospital</option>
+
+                                                                                        <option value="118">Gawal Mandi</option>
+
+                                                                                        <option value="123">Jail Road</option>
+
+                                                                                        <option value="124">Mazang</option>
+
+                                                                                        <option value="128">Gulberg 1</option>
+
+                                                                                        <option value="129">Gulberg 2</option>
+
+                                                                                        <option value="130">Gulberg 3</option>
+
+                                                                                        <option value="132">Askari Colony</option>
+
+                                                                                        <option value="133">Gulbahar Colony</option>
+
+                                                                                        <option value="134">Madina Colony</option>
+
+                                                                                        <option value="135">Walton Road</option>
+
+                                                                                        <option value="136">Ghazi Road</option>
+
+                                                                                        <option value="137">Chungi Amer Sadhu</option>
+
+                                                                                        <option value="141">Abdalian Housing Society</option>
+
+                                                                                        <option value="142">Bedian Road</option>
+
+                                                                                        <option value="143">Alfalah Town</option>
+
+                                                                                        <option value="145">Cavalry Ground</option>
+
+                                                                                        <option value="146">Super Town</option>
+
+                                                                                        <option value="148">Punjab Society Near Dha</option>
+
+                                                                                        <option value="149">Sui Gas Society</option>
+
+                                                                                        <option value="150">State Life Society</option>
+
+                                                                                        <option value="151">DHA 1</option>
+
+                                                                                        <option value="152">DHA 2</option>
+
+                                                                                        <option value="153">DHA 3</option>
+
+                                                                                        <option value="154">DHA 4</option>
+
+                                                                                        <option value="155">DHA 5</option>
+
+                                                                                        <option value="156">DHA 6</option>
+
+                                                                                        <option value="158">DHA 8</option>
+
+                                                                                        <option value="159">Lidhar</option>
+
+                                                                                        <option value="162">Airport Road</option>
+
+                                                                                        <option value="163">Cantt</option>
+
+                                                                                        <option value="178">Barki Road</option>
+
+                                                                                        <option value="179">Paragon City</option>
+
+                                                                                        <option value="182">Architects Engineers Society</option>
+
+                                                                                        <option value="183">Civic Center</option>
+
+                                                                                        <option value="190">Aurangzeb Block</option>
+
+                                                                                        <option value="197">Ali Block</option>
+
+                                                                                        <option value="198">Garden Block</option>
+
+                                                                                        <option value="203">Gulberg 4</option>
+
+                                                                                        <option value="204">Ferozpur Road</option>
+
+                                                                                        <option value="205">CMA Colony</option>
+
+                                                                                        <option value="207">Saddar</option>
+
+                                                                                        <option value="209">Upper Mall Scheme</option>
+
+                                                                                        <option value="211">Quaid e Azam Industrial Estate</option>
+
+                                                                                        <option value="215">Sarwar Road</option>
+
+                                                                                        <option value="216">Taj Bagh</option>
+
+                                                                                        <option value="218">Moon Market</option>
+
+                                                                                        <option value="220">Shaikh Zayed Hospital</option>
+
+                                                                                        <option value="221">Gulshan Block</option>
+
+                                                                                        <option value="222">Shaukat Khanum Hospital</option>
+
+                                                                                        <option value="229">Izmir Town</option>
+
+                                                                                        <option value="233">Main Gulberg Boulevard</option>
+
+                                                                                        <option value="235">M M Alam Road</option>
+
+                                                                                        <option value="237">Multan Road</option>
+
+                                                                                        <option value="249">Maraghzar Colony</option>
+
+                                                                                        <option value="251">Mustafa Town</option>
+
+                                                                                        <option value="257">Rachna Block</option>
+
+                                                                                        <option value="259">Sutlej Block</option>
+
+                                                                                        <option value="262">Zeenat Block</option>
+
+                                                                                        <option value="271">Tufail Road</option>
+
+                                                                                        <option value="280">Valencia Town Block A1</option>
+
+                                                                                        <option value="284">Valencia Town Block F</option>
+
+                                                                                        <option value="289">Valencia Town Block K1</option>
+
+                                                                                        <option value="1595">Edgerton Road </option>
+
+                                                                                        <option value="1600">Allama Iqbal Road</option>
+
+                                                                                        <option value="1605">Abbott Road</option>
+
+                                                                                        <option value="1608">HBFC Society</option>
+
+                                                                                        <option value="1962">Daroghe Wala</option>
+
+                                                                                        <option value="1967">Poonch Road</option>
+
+                                                                                        <option value="2821">Batapur</option>
+
+                                                                                    </select>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-1 col-sm-2 col-xs-12" style="padding-left: 0; padding-right: 0;">
+
+                                                                            <div class="form-group form-field col-md-12 col-sm-12 col-xs-12 " style="padding-left: 0px !important; padding-right: 0px !important;">
+                                                                                <button type="button" id="index-search-vendor" class="btn btn-pink btn-lg btn-block" style="min-height: 46px; max-height: 46px; padding-left: 5px; padding-right: 5px;">
+                                                                                    Find
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </form>
+                                                            </div>
+                                                            <div class="tab-pane " id="by_business">
+                                                                <form>
+                                                                    <div class="row">
+
+                                                                        <div class="form-group col-md-8 col-sm-12 " style="margin-top: 10px;">
+                                                                            <input type="text" autocomplete="off" onkeyup="search_vendors(this);" style="color: #706a68;" class="form-control business-search-text-field required" value="" id="busines_name" name="busines_name" placeholder="BUSINESS NAME *" />
+                                                                        </div>
+                                                                        <div class="form-group col-md-8 col-sm-12 dropdown_for_business" id="searched_vendors" style="z-index: 5;">
+
+                                                                        </div>
+                                                                        <div class="form-group col-md-4 col-sm-12" style="margin-top: 10px;">
+                                                                            <a id="search_by_business" href="#">
+                                                                                <button type="button" id="index-search-vendor" class="btn btn-pink btn-lg btn-block">View Profile</button>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="tab-pane " id="by_shop">
+                                                                <form>
+                                                                    <div class="row">
+
+                                                                        <div class="form-group col-md-8 col-sm-12 " style="margin-top: 10px;">
+                                                                            <input type="text" autocomplete="off" onkeyup="search_shop(this);" class="form-control business-search-text-field required" value="" id="product_name" name="product_name" placeholder="Enter Product Name *" />
+                                                                        </div>
+                                                                        <div class="form-group col-md-8 col-sm-12 dropdown_for_business" id="searched_products">
+
+                                                                        </div>
+                                                                        <div class="form-group col-md-4 col-sm-12" style="margin-top: 10px;">
+                                                                            <a id="search_by_products" href="#">
+                                                                                <button type="button" id="index-search-product" class="btn btn-pink btn-lg btn-block">Find Product</button>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p class="image-courtesy"><a class="" style="color: #fff;" href="profile/the-wedding-stories-298.html">Photograph by The Wedding Stories </a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -16,12 +16,32 @@ namespace UI {
 			bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
 									"~/Scripts/modernizr-*"));
 
-			bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-								"~/Scripts/bootstrap.js"));
+			//bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+			//					"~/Scripts/bootstrap.js"));
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 								"~/Content/bootstrap.css",
-								"~/Content/site.css"));
+								"~/Content/css/bootstrap.min.css",
+								"~/Content/css/datepicker.css",
+								"~/Content/css/flaticon.css",
+								"~/Content/css/font-awesome.min.css",
+								"~/Content/css/fontello.css",
+								"~/Content/css/index-style.css",
+								"~/Content/css/magnific-popup.css",
+								"~/Content/css/menumaker.css",
+								"~/Content/css/owl.carousel.css",
+								"~/Content/css/owl.transitions.css",
+								"~/Content/css/select2-bootstrap.css",
+								"~/Content/css/style.css",
+								"~/Content/css/new/final_style_sheet.css",
+								"~/Content/css/new/jquerysctipttop.css",
+								"~/Content/css/new/modal-video.min.css",
+								"~/Content/css/new/new-style.css",
+								"~/Content/css/new/owl.carousel.css",
+								"~/Content/css/new/owl.theme.css",
+								"~/Content/css/new/popup.css",
+								"~/Content/css/new/select2-bootstrap.css",
+								"~/Content/css/new/style.css"));
 		}
 	}
 }

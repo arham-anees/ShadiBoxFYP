@@ -1,0 +1,17 @@
+﻿<div style="box-shadow: 0px 5px 10px #ccc; background-color: #ff1985; padding:1px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 responsive_header_div">
+                <header id="home_nav" class="botom-padding-for-navbar">
+                <div class="navbar-header responsive_header " id="logo">
+                    <button type="button" class="navbar-toggle collapsed nav_bars_btn" data-toggle="collapse" data-target="#menu">
+                        <img src="~/Content/assets/web/images/nav.png" class="img-responsive nav_bars_img" width="35px" height="35px" style="margin-top: -10px;">
+                    </button>
+                    <a href="@Url.Action("Index","Home")"><img src="~/Content/assets/web/images/logo-2-white.png" class="img-responsive" alt="logo"></a>
+                </div>
+                    @RenderPage("_NavBarItems.cshtml")
+                </header>
+            </div>
+        </div>
+    </div>
+</div>

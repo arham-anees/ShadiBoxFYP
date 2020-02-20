@@ -6,37 +6,208 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+
+
+    <link rel="image_src" href="~/Content/assets/web/images/slider/slider-5.jpg" />
+    <link href="~/Content/assets/web/images/favicon.png" rel="icon" type="image/x-icon" /><!-- favicon -->
+    <!-- theme style -->
+    <link href="~/Content/assets/web/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> <!-- bootstrap css -->
+    <!-- revolution -->
+
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/web/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/web/revolution/css/layers.css">
+
+    <link href="~/Content/assets/web/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> <!-- fontawesome css -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"> <!-- google fonts -->
+    <link href="~/Content/assets/web/css/menumaker.css" rel="stylesheet" type="text/css" /> <!-- menu css -->
+    <link href="~/Content/assets/web/css/owl.carousel.css" rel="stylesheet" type="text/css" /> <!-- owl carousel css -->
+    <link href="~/Content/assets/web/css/magnific-popup.css" rel="stylesheet" type="text/css" /> <!-- magnify popup css -->
+    <link href="~/Content/assets/web/css/datepicker.css" rel="stylesheet" type="text/css" /> <!-- datepicker css -->
+    <link href="~/Content/assets/web/css/flaticon.css" rel="stylesheet" type="text/css " /> <!-- flaticon css -->
+    <link href="~/Content/assets/web/css/index-style.css" rel="stylesheet" type="text/css" /> <!-- custom css -->
+    <link href="~/Content/assets/web/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/assets/web/css/new/new-style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/assets/web/css/new/jquerysctipttop.css" rel="stylesheet" type="text/css" /> <!-- custom css -->
+    <!-- end theme style -->
+
+
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/web/css/new/final_style_sheet.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/web/css/new/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/web/css/new/style.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/web/css/new/owl.carousel.css">
+
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/web/css/owl.transitions.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/web/css/fontello.css">
+
+
+
+    <!-- //select 2 css -->
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css">
+    <link rel="stylesheet" href="~/Content/assets/web/css/new/select2-bootstrap.css">
+
+    <link rel="stylesheet" href="~/Content/assets/web/css/new/popup.css">
+
+
+    <!-- <script type="text/javascript" src="https://www.shadibox.com/assets/web/js/jquery.min.js"></script> -->
+
+
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/web/js/view-loader.js"></script>
+
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/web/css/select2-bootstrap.css">
+    <script src="../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.js"></script>
+    <script type="text/javascript" src="~/Content/assets/web/js/new/newWaterfall.js"></script>
+
+    <script type="text/javascript" src="~/Content/assets/web/js/new/rating.js"></script>
+
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.1/css/star-rating.min.css">
+    <script src="../cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.1/js/star-rating.min.js"></script>
+
+
+
+
+    <script data-ad-client="ca-pub-4464815263489735" async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+@RenderPage("_MainNav.cshtml")
+<div class="container-fluid body-content">
+    @RenderBody()
+    <hr />
+    <footer>
+
+        <script type="text/javascript">
+
+            $(function() {
+
+                $(window).bind("resize",
+                    "load",
+                    function() {
+                        console.log($(this).width());
+                        if ($(this).width() < 500) {
+                            $('.column').removeClass('col-xs-offset-1 col-xs-10').addClass('col-xs-12');
+                        } else {
+                            $('.column').addClass('col-xs-offset-1 col-xs-10').removeClass('col-xs-12');
+                        }
+                    }).trigger('resize');
+            });
+
+            $(function() {
+
+                $(window).bind("resize",
+                    "load",
+                    function() {
+                        console.log($(this).width());
+                        if ($(this).width() < 500) {
+                            $('.column1').removeClass('col-xs-offset-2 col-xs-8').addClass('col-xs-12');
+                        } else {
+                            $('.column1').addClass('col-xs-offset-2 col-xs-8').removeClass('col-xs-12');
+                        }
+                    }).trigger('resize');
+            });
+        </script>
+        <section id="footer" class="footer-main-block" style="background-image: url('assets/web/images/footer-Patterns.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="about-widget footer-widget">
+
+                            <h4 class="footer-heading">About Shadibox</h4>
+                            <div class="about-dtl">
+
+                                <p>ShadiBox allows users to find and book pre-qualified, trusted, and reviewed wedding vendors, get special prices, and find wedding inspirations to realize your dream wedding.</p>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                                    <h4 class="footer-heading">Contact Shadibox</h4>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <a style="color: #777; font-size: 18px;padding-right:15px;" href="tel:+924235777457"><i class="fa fa-phone"></i>&nbsp; (+92) 42 35777 457 </a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <a href="tel:+923003160242" style="font-size: 18px; color: #777;"><i class="fa fa-mobile"></i>&nbsp; (+92) 300 3160 242 </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="links-widget footer-widget">
+                                    <h4 class="footer-heading">Useful Links</h4>
+                                    <ul>
+                                        <li><a href="deals.html">Deals</a></li>
+                                        <li><a href="blog/index.html">Blog</a></li>
+                                        <li><a href="shop/index.html">Shop</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="contact-us.html">Contact Us</a></li>
+                                        <li><h4 class="footer-heading" style="margin-bottom: 10px;">Join Us</h4></li>
+                                        <li onclick="open_vendor_signup();"><a style="line-height: 2;" href="#vendorsignup">Business Sign Up</a></li>
+                                        <li onclick="open_vendor_signin();"><a style="line-height: 2;" href="#vendorsignin">Business Log In</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 pad-0">
+                                <div class="links-widget footer-widget">
+                                    <h4 class="footer-heading">Categories</h4>
+                                    <ul>
+                                        <li><a href="vendors/venues.html">Venues</a></li>
+                                        <li><a href="vendors/photographers.html">Photographers</a></li>
+                                        <li><a href="vendors/caterers.html">Caterers</a></li>
+                                        <li><a href="vendors/car-rentals.html">Car Rentals</a></li>
+                                        <li><a href="vendors/decorators.html">Decorators</a></li>
+                                        <li><a href="vendors/event-managers.html">Event Managers</a></li>
+                                        <li><a href="vendors/salons.html">Salons</a></li>
+                                        <li><a href="vendors/cakes.html">Cakes</a></li>
+                                        <li><a href="vendors/invitations.html">Invitations</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="subscribe-widget footer-widget">
+                            <h4 class="footer-heading">ShadiBox Partners</h4>
+                            <ul class="social-icons" style="margin-bottom: 10px;">
+                                <li><img class="our-partners" src="~/Content/assets/web/images/partners/partner-2.png"> </li>
+                                <li><img class="our-partners" src="~/Content/assets/web/images/partners/partner-1.png"></li>
+
+                                <li> </li>
+                            </ul>
+                            <h4 class="footer-heading">Social Media</h4>
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com/shadiboxofficial/" class="facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/ShadiBox" class="twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/shadibox/" class="pinterest" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-block text-center">
+                <p>&copy;&nbsp; 2018 ShadiBox All rights reserved.</p>
+                <p>
+                <script type="text/javascript">console.log(document.referrer);</script></p>
+            </div>
+        </section>
+    </footer>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
 </body>
 </html>
+
+<script>
+    document.getElementsByTagName('html')[0].className = "";
+</script>
