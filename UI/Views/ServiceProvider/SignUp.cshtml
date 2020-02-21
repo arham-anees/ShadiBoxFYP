@@ -1,0 +1,229 @@
+﻿@using UI.Models
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link rel="stylesheet" href="~/Content/css/formsStyle.css" />
+<div id="account-overlay">
+    <div id="container">
+        <section class="form-section">
+            <div class="row attuh-from">
+                <div class="col-md-12 col-sm-12 col-xs-12 no-padding authentication_from" id="vendor_signup_form">
+                    <div class="col-md-8 col-sm-8 col-xs-12 auth_form_body">
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice mobile_form_changer">
+                            <div class="col-md-12 col-sm-12 col-xs-12 change_form">
+                                <span style="color: #606060">Are you customer?</span>
+                                <button class="btn btn-sm customer_signin_btn"  style="height: 40px;">Customer Log In</button>
+                            </div>
+                        </div>
+                        <form id="vendor-signup" method="post">
+                            <div class="form-left-part-portion">
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <h3 class="text-center"><span style="font-size: 15px; text-transform: uppercase;">Vendor Sign Up</span> </h3>
+                                    <br><br>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 "> <h4 id="vendor-signup-message"></h4></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <input autocomplete="off" type="text" class="form-control required" value="" id="Business_Name" name="Business_Name" placeholder="ENTER YOUR BUSINESS NAME *">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 slice">
+                                    <input autocomplete="off" type="email" class="form-control required" value="" id="Sign_Up_Vendor_Email" name="Sign_Up_Vendor_Email" placeholder="Email *">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 slice">
+                                    <input autocomplete="off" type="text" class="form-control required" value="" id="Sign_Up_Vendor_Phone" name="Vendor_Phone" placeholder="Phone *">
+                                </div>
+                                @*<div class="col-md-6 col-sm-6 col-xs-12 slice">
+                                    <input autocomplete="off" type="password" class="form-control required" value="" id="Sign_Up_Vendor_Password" name="Vednor_Password" placeholder="Password *">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 slice">
+                                    <input autocomplete="off" type="password" class="form-control required" value="" id="VendorConfirmPassword" name="VendorConfirmPassword" placeholder="Confirm Password *">
+                                </div>*@
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <div id="vendor_signup_city_div">
+                                        <select class="form-control select2-city vendor-signup-city" name="Vendor_City" id="Vendor_City">
+                                            <option>Select City</option>
+                                            @foreach (var item in cHelper.GetCities())
+                                            {
+                                                <option value="@item.Id">@item.Name</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <div id="vendor_signup_city_div">
+                                        <select class="form-control select2-category" name="Vendor_Category" id="Vendor_Category">
+                                            <option>Select Business Category</option>
+                                            @foreach (var item in cHelper.GetServiceCategories())
+                                            {
+                                                <option value="@item.Id">@item.Name</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <button type="submit" id="signupuser" class="btn btn-large form-btn"> Sign Up</button>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice ">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                                        <h4 class="sm-heading" style="text-align: right;">
+                                            Already have an account? <a href="#" style="color: #606060;"><span class="signup_link" onclick="open_vendor_signin_form();">Log In</span></a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice pc_form_changer">
+                            <div class="col-md-12 col-sm-12 col-xs-12 change_form">
+                                <span style="color: #606060">Are you customer?</span>
+                                <button class="btn btn-sm customer_signin_btn btn-pink" onclick="open_customer_signin_form();" style="height: 40px;">Customer Log In</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-0 auth_form_img no-padding">
+                        <div class="col-md-12 form-image-vendor no-padding"> </div>
+                    </div>
+                </div>
+            @* <div class="col-md-12 col-sm-12 col-xs-12 no-padding authentication_from" id="vendor_signin_form">
+                    <div class="col-md-8 col-sm-8 col-xs-12 auth_form_body">
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice mobile_form_changer">
+                            <div class="col-md-12 col-sm-12 col-xs-12 change_form">
+                                <span style="color: #606060">Are you customer?</span>
+                                <button class="btn btn-sm customer_signin_btn" onclick="open_customer_signin_form();" style="height: 40px;">Customer Log In</button>
+                            </div>
+                        </div>
+                        <form id="vendor-login" method="post" action="https://www.shadibox.com/home/vendor_login">
+                            <div class="form-left-part-portion">
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <h3 class="text-center vendor-signin-heading-pc">
+                                        <span style="font-size: 15px;text-transform: uppercase;  color: #000;">Vendor Log In</span><br>
+                                        <span style="font-size: 25px;">"Join hands with Shadibox and grow your business"</span>
+                                    </h3>
+                                    <h3 class="text-center vendor-signin-heading-mobile"><span style="font-size: 15px; text-transform: uppercase;">Vendor Log In</span></h3>
+                                    <br><br>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 "> <h4 id="vendor-login-message"></h4></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <input autocomplete="off" type="email" class="form-control required" value="" id="Vendor_Email" name="Vendor_Email" placeholder="Email *">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <input autocomplete="off" type="password" class="form-control required" value="" id="Vendor_Password" name="Vendor_Password" placeholder="Password *">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <button class="btn btn-large form-btn btn-pink" type="submit" id="loginvendor" name="loginvendor"> Log In</button>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 no-padding">
+                                        <h4 class="sm-heading">
+                                            <a href="#" style="color: #ff1985;text-align: left;" onclick="open_vendor_forget_password_from()">Forgot Password?</a>
+                                        </h4>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 no-padding">
+                                        <h4 class="sm-heading" style="text-align: right;">
+                                            New to Shadibox? <a href="#" style="color: #606060;"><span class="signup_link" onclick="open_vendor_signup_form()">Sign Up</span></a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice pc_form_changer ">
+                            <div class="col-md-12 col-sm-12 col-xs-12 change_form">
+                                <span style="color: #606060">Are you customer?</span>
+                                <button class="btn btn-sm customer_signin_btn" onclick="open_customer_signin_form();" style="height: 40px;">Customer Log In</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-0 auth_form_img no-padding">
+                        <div class="col-md-12 form-image-vendor no-padding"> </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 no-padding authentication_from" id="vendor_forget_password_form">
+            <div class="col-md-8 col-sm-8 col-xs-12 auth_form_body">
+                <div class="col-md-12 col-sm-12 col-xs-12 slice mobile_form_changer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 change_form">
+                        <span style="color: #606060">Are you customer?</span>
+                        <button class="btn btn-sm customer_signin_btn" onclick="open_customer_signin_form();" style="height: 40px;">Customer Log In</button>
+                    </div>
+                </div>
+                <form id="change_vendor_password" method="post" action="https://www.shadibox.com/home/change_vendor_password">
+                    <div class="form-left-part-portion">
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                            <h3 class="text-center"><span style="font-size: 15px; text-transform: uppercase;">Vendor forgot password</span></h3><br> <br>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 "> <h4 id="vendor-change-password-message"></h4></div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                            <input autocomplete="off" type="email" class="form-control required" value="" id="Vendor_Change_Password_Email" name="Vendor_Change_Password_Email" placeholder="Enter Email for a link *">
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                            <button type="submit" id="change_password_vendor" name="change_password_vendor" class="btn btn-large form-btn btn-pink"> Get Change Password Link</button>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                            <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <h4 class="sm-heading" style="text-align: right;">
+                                    You know your password? <a href="#" style="color: #606060;"><span class="signup_link" onclick="open_vendor_signin_form();">Log In</span></a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-md-12 col-sm-12 col-xs-12 slice pc_form_changer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 change_form">
+                        <span style="color: #606060">Are you customer?</span>
+                        <button class="btn btn-sm customer_signin_btn" onclick="open_customer_signin_form();" style="height: 40px;">Customer Log In</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-0 auth_form_img no-padding">
+                <div class="col-md-12 form-image-vendor no-padding"> </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 no-padding authentication_from" id="vendor_password_reset_form">
+            <div class="col-md-8 col-sm-8 col-xs-12 auth_form_body">
+                <div class="col-md-12 col-sm-12 col-xs-12 slice mobile_form_changer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 change_form">
+                        <span style="color: #606060">Are you customer?</span>
+                        <button class="btn btn-sm customer_signin_btn" onclick="open_customer_signin_form();" style="height: 40px;">Customer Log In</button>
+                    </div>
+                </div>
+                <form id="reset_vendor_password_from" method="post" action="https://www.shadibox.com/home/reset_vendor_password">
+                    <input type="hidden" name="token" id="vendor_token" value="">
+                    <div class="form-left-part-portion">
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                            <h3 class="text-center"><span style="font-size: 15px; text-transform: uppercase;">Vendor reset password</span></h3><br> <br>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 "> <h4 id="reset-vendor-password-message"></h4></div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                            <input autocomplete="off" autocomplete="off" type="password" class="form-control required" value="" id="VendorNewPassword" name="VendorNewPassword" placeholder="Type your new password *">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                            <input autocomplete="off" autocomplete="off" type="password" class="form-control required" value="" id="VendorNewPasswordConfirm" name="VendorNewPasswordConfirm" placeholder="Confirm new password *">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                            <button type="submit" name="reset_vendor_password_button" class="btn btn-large form-btn">Reset Password</button>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                            <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <h4 class="sm-heading" style="text-align: right;">
+                                    <a href="#" style="color: #606060;"> <span class="signup_link" onclick="open_vendor_signin_form();">Log In</span></a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-md-12 col-sm-12 col-xs-12 slice pc_form_changer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 change_form">
+                        <span style="color: #606060">Are you customer?</span>
+                        <button class="btn btn-sm customer_signin_btn" onclick="open_customer_signin_form();" style="height: 40px;">Customer Log In</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-0 auth_form_img no-padding">
+                <div class="col-md-12 form-image-vendor no-padding"> </div>
+            </div>
+        </div>*@
+            </div>
+        </section>
+
+    </div>
+</div>

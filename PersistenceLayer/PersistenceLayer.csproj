@@ -120,6 +120,10 @@
     <Compile Include="Migrations\202002190729569_tablesRenaming.designer.cs">
       <DependentUpon>202002190729569_tablesRenaming.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002210423494_unknownChanges.cs" />
+    <Compile Include="Migrations\202002210423494_unknownChanges.designer.cs">
+      <DependentUpon>202002210423494_unknownChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -188,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002190729569_tablesRenaming.resx">
       <DependentUpon>202002190729569_tablesRenaming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002210423494_unknownChanges.resx">
+      <DependentUpon>202002210423494_unknownChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

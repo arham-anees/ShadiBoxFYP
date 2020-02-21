@@ -6,10 +6,11 @@ using System.Web.Mvc;
 
 namespace UI.Controllers
 {
-    public class VendorController : Controller
+    public class ServiceProviderController : Controller
     {
-	    public ActionResult Index()
+	    public ActionResult Index(int? categoryId,int? cityId)
 	    {
+        //todo: refine collection send to view
 		    return View();
 	    }
 	    

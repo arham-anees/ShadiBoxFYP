@@ -59,6 +59,7 @@
     <Compile Include="cRepository.cs" />
     <Compile Include="cReviewRepository.cs" />
     <Compile Include="cSectionContentRepository.cs" />
+    <Compile Include="cServiceCategoryRepository.cs" />
     <Compile Include="cServiceProviderRepository.cs" />
     <Compile Include="cUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

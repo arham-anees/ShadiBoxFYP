@@ -38,3 +38,4 @@ D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\Persisten
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.relationshipMistakesCorrection0.resources
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.relationshipMistakesCorrection1.resources
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.tablesRenaming.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.unknownChanges.resources

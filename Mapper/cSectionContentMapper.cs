@@ -9,10 +9,10 @@ namespace Mapper {
 		  this.ToTable("tSectionContents");
 		  this.HasKey(x => x.Id);
 
-			this.HasRequired(x => x.ContentType)
-				.WithMany()
-				.HasForeignKey(x => x.ContentTypeId)
-				.WillCascadeOnDelete(false);
+			//this.HasRequired(x => x.ContentType)
+			//	.WithMany()
+			//	.HasForeignKey(x => x.ContentTypeId)
+			//	.WillCascadeOnDelete(false);
 		}
     }
 }

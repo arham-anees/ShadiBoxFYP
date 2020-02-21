@@ -1,0 +1,90 @@
+﻿@model UI.ViewModels.SignUpViewModel
+
+@{
+    ViewBag.Title = "Customer Sign Up";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/css/formsStyle.css" />
+<div id="account-overlay">
+    <div id="container">
+        <section class="form-section">
+            <div class="row attuh-from">
+
+                <div class="col-md-12 col-sm-12 col-xs-12 no-padding authentication_from" id="customer_signup_form">
+                    <div class="col-md-8 col-sm-8 col-xs-12 auth_form_body">
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice mobile_form_changer">
+                            <div class="col-md-12 col-sm-12 col-xs-12 change_form">
+                                <span style="color: #606060">Are you Vendor?</span>
+                                <button class="btn btn-sm business_signin_btn" onclick="open_vendor_signin_form();" style="height: 40px;">Business Log In</button>
+                            </div>
+                        </div>
+                        @using (Html.BeginForm("SignUp", "Account", FormMethod.Post))
+                        {
+                            <div class="form-left-part-portion">
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <h3 class="text-center"><span style="font-size: 15px; text-transform: uppercase;">Customer Sign Up</span> </h3>
+                                    <br><br>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 slice">
+                                    <button class="btn btn-large form-btn fb-btn" onclick="login()" type="button"><i style="font-size: 25px;" class="fa fa-facebook"></i> Sign Up with Facebook</button>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 slice">
+                                    <a href="javascript:;">
+                                        <button type="button" style="height: 50px;" class="btn btn-block btn-social btn-google google_auth"><span class="fa fa-google"></span> Sign in with Google </button>
+                                    </a>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 "><h4 id="status"></h4> <h4 id="user-signup-message"></h4></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    @Html.TextBoxFor(x=>x.Name,new {@type="text",@Placeholder="Full Name *",@class="form-control required",@required=true})
+                                    @Html.ValidationMessageFor(x=>x.Name)
+                                    @*<input type="text" name="User_Name" id="User_Name" class="form-control required" placeholder="Full Name" autocomplete="off">*@
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    @Html.TextBoxFor(x=>x.Email,new {@type="email",@Placeholder="Email *",@class="form-control required",@required=true})
+                                    @Html.ValidationMessageFor(x=>x.Email)
+                                    @*<input autocomplete="off" type="email" class="form-control required" value="" id="Sign_Up_User_Email" name="User_Email" placeholder="Email *">*@
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    @Html.TextBoxFor(x=>x.Phone,new {@type="text",@Placeholder="Phone *",@class="form-control required",@required=true})
+                                    @Html.ValidationMessageFor(x=>x.Phone)
+                                    @*<input autocomplete="off" type="text" class="form-control required" value="" id="Sign_Up_User_Phone" name="User_Phone" placeholder="Phone *">*@
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    @Html.TextBoxFor(x=>x.Password,new {@type="password",@Placeholder="Password *",@class="form-control required",@required=true})
+                                    @Html.ValidationMessageFor(x=>x.Password)
+                                    @*<input autocomplete="off" type="password" class="form-control required" value="" id="Sign_Up_User_Password" name="User_Password" placeholder="Password *">*@
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    @Html.TextBoxFor(x=>x.ConfirmPassword,new {@type="password",@Placeholder="Confirm Password *",@class="form-control required",@required=true})
+                                    @Html.ValidationMessageFor(x=>x.ConfirmPassword)
+                                    @*<input autocomplete="off" type="password" class="form-control required" value="" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password *">*@
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <button class="btn btn-large form-btn" type="submit" id="signupuser" name="signupuser"> Sign Up</button>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                                        <h4 class="sm-heading" style="text-align: right;">
+                                            Already have an account? <a href="@Url.Action("Login", "Account")" style="color: #606060;"><span class="signup_link">Log In</span></a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <div class="col-md-12 col-sm-12 col-xs-12 slice pc_form_changer">
+                            <div class="col-md-12 col-sm-12 col-xs-12 change_form">
+                                <span style="color: #606060">Are you Vendor?</span>
+                                <button class="btn btn-sm business_signin_btn" style="height: 40px;">Business Log In</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-0 auth_form_img no-padding">
+                        <div class="col-md-12 form-image no-padding"> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
