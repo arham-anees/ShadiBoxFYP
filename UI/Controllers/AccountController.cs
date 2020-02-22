@@ -13,12 +13,12 @@ using UnitOfWork;
 namespace UI.Controllers {
 	public class AccountController : Controller {
 		#region SIGN IN
-
-
-
-		// GET: Account
+		
 		[HttpGet]
-		public ActionResult Login() {
+		public ActionResult Login()
+		{
+			if (cHelper.CurrentUser != null)
+				return RedirectToAction("Index", "Home");
 			return View();
 		}
 
@@ -47,9 +47,7 @@ namespace UI.Controllers {
 		#endregion
 
 		#region SIGN UP
-
-
-
+		
 		[HttpGet]
 		public ActionResult SignUp() {
 			return View();
@@ -72,14 +70,19 @@ namespace UI.Controllers {
 							unit.UserRepository.Add(user);
 							unit.SaveChanges();
 						}
+						LoginViewModel loginViewModel = new LoginViewModel();
+						loginViewModel.Username = signUpViewModel.Username;
+						loginViewModel.Password = signUpViewModel.Password;
+						return Login(loginViewModel);
+						return RedirectToAction("Index", "Home");
 					}
-					catch (Exception)
+					catch (Exception e)
 					{
-						//todo:catch exception
+						signUpViewModel.ErrorMessage = e.Message;
 					}
 				}
 			}
-			return View();
+			return View(signUpViewModel);
 		}
 		#endregion
 

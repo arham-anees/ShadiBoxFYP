@@ -37,9 +37,20 @@ namespace UnitOfWork {
 
 		#endregion
 
+
+
 		public cUnitOfWork(AppDbContext context)
 		{
 			_Context = context;
+			UserRepository = new cUserRepository(_Context);
+			BookingRepository = new cBookingRepository(_Context);
+			BookingResponseRepository = new cBookingResponseRepository(_Context);
+			BookingRequestRepository = new cBookingRequestRepository(_Context);
+			CityRepository = new cCityRepository(_Context);
+			ProfileSectionRepository = new cProfileSectionRepository(_Context);
+			ReviewRepository = new cReviewRepository(_Context);
+			SectionContentRepository = new cSectionContentRepository(_Context);
+			ServiceProviderRepository = new cServiceProviderRepository(_Context);
 		}
 
 		public void SaveChanges()

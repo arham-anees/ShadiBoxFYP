@@ -23,9 +23,14 @@
         </li>
     </ul>
     <ul class="nav abt_nav navbar-nav navbar-right">
+        @if (cHelper.CurrentUser == null) {
+            <li class=""><a href="@Url.Action("SignUp", "ServiceProvider")">JOIN AS VENDOR</a></li>
+            <li class=""><a href="@Url.Action("Login", "Account")" class="li_res">LOG IN</a></li>
+        }
+        else {
 
-        <li class=""><a href="@Url.Action("SignUp","ServiceProvider")">JOIN AS VENDOR</a></li>
-        <li class=""><a href="@Url.Action("Login","Account")" class="li_res">LOG IN</a></li>
+            <li class=""><a href="@Url.Action("ResetPassword", "Account")" class="li_res">@cHelper.CurrentUser.Username</a></li>
+        }
     </ul>
 
 </div>

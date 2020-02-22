@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,8 +28,9 @@ namespace Repositories {
 
 		public override cUser Add(cUser user)
 		{
-			if (this.IsUsernameUnique(user.Username))
-				_Context.Users.Add(user);
+			if (!this.IsUsernameUnique(user.Username))
+				throw new InvalidDataException("Username already exists");
+			_Context.Users.Add(user);
 			return user;
 			
 		}
@@ -52,7 +54,7 @@ namespace Repositories {
 
 		private bool IsUsernameUnique(string username)
 		{
-			return _Context.Users.Where(x => x.Username == username).Any();
+			return !_Context.Users.Where(x => x.Username == username).Any();
 		}
 	}
 }

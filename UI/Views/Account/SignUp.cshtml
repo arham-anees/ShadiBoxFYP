@@ -34,7 +34,12 @@
                                         <button type="button" style="height: 50px;" class="btn btn-block btn-social btn-google google_auth"><span class="fa fa-google"></span> Sign in with Google </button>
                                     </a>
                                 </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12 "><h4 id="status"></h4> <h4 id="user-signup-message"></h4></div>
+                                @if (Model != null && Model.ErrorMessage != null)
+                                {
+                                    <div class="col-md-12 col-sm-12 col-xs-12 "><h4 id="status"></h4> <h4 id="user-signup-message alert alert-danger">
+                                        @Model.ErrorMessage
+                                    </h4></div>
+                                }
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
                                     @Html.TextBoxFor(x=>x.Name,new {@type="text",@Placeholder="Full Name *",@class="form-control required",@required=true})
                                     @Html.ValidationMessageFor(x=>x.Name)
