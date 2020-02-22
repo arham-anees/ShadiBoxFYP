@@ -6,7 +6,7 @@
 }
 
 
-<link rel="stylesheet" href="~/Content/css/formsStyle.css"/>
+<link rel="stylesheet" href="~/Content/css/formsStyle.css" />
 <div id="account-overlay">
     <div id="container">
         <section class="form-section">
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <div class="form-left-part-portion">
-                            @using(Html.BeginForm("Login","Account",FormMethod.Post)){ 
+                            @using (Html.BeginForm("Login", "Account", FormMethod.Post)) {
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
                                     <h3 class="text-center customer_login_heading_pc">
                                         <span style="font-size: 15px; text-transform: uppercase; color: #000;">Customer Log In</span><br>
@@ -29,13 +29,20 @@
                                     <h3 class="text-center customer_login_heading_mobile"><span style="font-size: 15px; text-transform: uppercase;">Customer Log In</span> </h3>
                                     <br><br>
                                 </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12 "><h4 id="status"></h4> <h4 id="user-login-message"></h4></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 alert alert-danger alert-dismissible">
+                                    <h4 id="status"></h4>
+                                    @if (Model != null && Model.ErrorMessage != null) {
+                                        <h4 id="user-login-message">
+                                            @Model.ErrorMessage
+                                        </h4>
+                                    }
+                                </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
-                                    @Html.TextBoxFor(x=>x.Username,new {@type="email",@id="User_Email",@Placeholder="Username",@class="form-control required"})
+                                    @Html.TextBoxFor(x => x.Username, new { @type = "text", @id = "User_Email", @Placeholder = "Username", @class = "form-control required", @required=true })
                                     @*<input type="email" name="User_Email" id="User_Email" placeholder="Email" class="form-control required">*@
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
-                                    @Html.TextBoxFor(x=>x.Password,new {@type="password",@id="User_Password",@Placeholder="Password",@class="form-control required"})
+                                    @Html.TextBoxFor(x => x.Password, new { @type = "password", @id = "User_Password", @Placeholder = "Password", @class = "form-control required" , @required=true})
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
                                     <button type="submit" class="btn btn-large form-btn btn-pink" id="loginuser" name="loginuser"> Log In</button>
@@ -43,7 +50,7 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
                                     <div class="col-md-6 col-sm-6 col-xs-6 no-padding">
                                         <h4 class="sm-heading">
-                                            <a href="@Url.Action("ForgotPassword","Account")" style="color: #ff1985;text-align: left;" >Forgot Password?</a>
+                                            <a href="@Url.Action("ForgotPassword","Account")" style="color: #ff1985;text-align: left;">Forgot Password?</a>
                                         </h4>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-6 no-padding">

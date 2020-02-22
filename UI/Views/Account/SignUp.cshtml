@@ -51,9 +51,14 @@
                                     @*<input autocomplete="off" type="text" class="form-control required" value="" id="Sign_Up_User_Phone" name="User_Phone" placeholder="Phone *">*@
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
-                                    @Html.TextBoxFor(x=>x.Password,new {@type="password",@Placeholder="Password *",@class="form-control required",@required=true})
+                                    @Html.TextBoxFor(x=>x.Username,new {@type="password",@Placeholder="Username *",@class="form-control required",@required=true})
                                     @Html.ValidationMessageFor(x=>x.Password)
                                     @*<input autocomplete="off" type="password" class="form-control required" value="" id="Sign_Up_User_Password" name="User_Password" placeholder="Password *">*@
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    @Html.TextBoxFor(x=>x.Password,new {@type="password",@Placeholder="Password *",@class="form-control required",@required=true})
+                                    @Html.ValidationMessageFor(x=>x.ConfirmPassword)
+                                    @*<input autocomplete="off" type="password" class="form-control required" value="" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password *">*@
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
                                     @Html.TextBoxFor(x=>x.ConfirmPassword,new {@type="password",@Placeholder="Confirm Password *",@class="form-control required",@required=true})

@@ -18,6 +18,12 @@ namespace UI.Models {
 
 		#endregion
 
+		#region PROPERTIES
+
+		public static cUser CurrentUser { get; set; }
+
+		#endregion
+
 		#region METHODS
 
 		public static ICollection<cServiceCategory> GetServiceCategories()

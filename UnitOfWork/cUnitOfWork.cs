@@ -7,7 +7,7 @@ using PersistenceLayer;
 using Repositories;
 
 namespace UnitOfWork {
-	public class cUnitOfWork {
+	public class cUnitOfWork:IDisposable {
 
 		#region FIELDS
 
@@ -45,6 +45,11 @@ namespace UnitOfWork {
 		public void SaveChanges()
 		{
 			_Context.SaveChanges();
+		}
+
+		public void Dispose()
+		{
+			_Context?.Dispose();
 		}
 	}
 }

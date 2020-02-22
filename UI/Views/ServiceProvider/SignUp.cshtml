@@ -1,7 +1,8 @@
 ﻿@using UI.Models
+@model UI.ViewModels.SignUpServiceViewModel
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Register Service";
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 <link rel="stylesheet" href="~/Content/css/formsStyle.css" />
@@ -17,7 +18,8 @@
                                 <button class="btn btn-sm customer_signin_btn"  style="height: 40px;">Customer Log In</button>
                             </div>
                         </div>
-                        <form id="vendor-signup" method="post">
+                        @using (Html.BeginForm("SignUp", "ServiceProvider", FormMethod.Post))
+                        {
                             <div class="form-left-part-portion">
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
                                     <h3 class="text-center"><span style="font-size: 15px; text-transform: uppercase;">Vendor Sign Up</span> </h3>
@@ -25,13 +27,19 @@
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 "> <h4 id="vendor-signup-message"></h4></div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
-                                    <input autocomplete="off" type="text" class="form-control required" value="" id="Business_Name" name="Business_Name" placeholder="ENTER YOUR BUSINESS NAME *">
+                                    @Html.TextBoxFor(x=>x.ServiceName,new {@class="form-control required",@type="text",@placeholder="Service Name"})
+                                    @Html.ValidationMessageFor(x=>x.ServiceName)
+                                    @*<input autocomplete="off" type="text" class="form-control required" value="" id="Business_Name" name="Business_Name" placeholder="ENTER YOUR BUSINESS NAME *">*@
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12 slice">
-                                    <input autocomplete="off" type="email" class="form-control required" value="" id="Sign_Up_Vendor_Email" name="Sign_Up_Vendor_Email" placeholder="Email *">
+                                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control required", @type = "email", @placeholder = "Email" })
+                                    @Html.ValidationMessageFor(x => x.Email)
+                                    @*<input autocomplete="off" type="email" class="form-control required" value="" id="Sign_Up_Vendor_Email" name="Sign_Up_Vendor_Email" placeholder="Email *">*@
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12 slice">
-                                    <input autocomplete="off" type="text" class="form-control required" value="" id="Sign_Up_Vendor_Phone" name="Vendor_Phone" placeholder="Phone *">
+                                    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control required", @type = "text", @placeholder = "Phone" })
+                                    @Html.ValidationMessageFor(x => x.Phone)
+                                    @*<input autocomplete="off" type="text" class="form-control required" value="" id="Sign_Up_Vendor_Phone" name="Vendor_Phone" placeholder="Phone *">*@
                                 </div>
                                 @*<div class="col-md-6 col-sm-6 col-xs-12 slice">
                                     <input autocomplete="off" type="password" class="form-control required" value="" id="Sign_Up_Vendor_Password" name="Vednor_Password" placeholder="Password *">
@@ -43,7 +51,7 @@
                                     <div id="vendor_signup_city_div">
                                         <select class="form-control select2-city vendor-signup-city" name="Vendor_City" id="Vendor_City">
                                             <option>Select City</option>
-                                            @foreach (var item in cHelper.GetCities())
+                                            @foreach (var item in Model.Cities)
                                             {
                                                 <option value="@item.Id">@item.Name</option>
                                             }
@@ -54,7 +62,7 @@
                                     <div id="vendor_signup_city_div">
                                         <select class="form-control select2-category" name="Vendor_Category" id="Vendor_Category">
                                             <option>Select Business Category</option>
-                                            @foreach (var item in cHelper.GetServiceCategories())
+                                            @foreach (var item in Model.ServiceCategories)
                                             {
                                                 <option value="@item.Id">@item.Name</option>
                                             }
@@ -72,7 +80,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        }
                         <div class="col-md-12 col-sm-12 col-xs-12 slice pc_form_changer">
                             <div class="col-md-12 col-sm-12 col-xs-12 change_form">
                                 <span style="color: #606060">Are you customer?</span>

@@ -137,6 +137,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\ServiceProfileViewModel.cs" />
+    <Compile Include="ViewModels\SignUpServiceViewModel.cs" />
     <Compile Include="ViewModels\SignUpViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1865,7 +1867,6 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Shared\_ThinNav.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
-    <Content Include="Views\ServiceProvider\Login.cshtml" />
     <Content Include="Views\ServiceProvider\Index.cshtml" />
     <Content Include="Views\ServiceProvider\Profile.cshtml" />
     <Content Include="Views\ServiceProvider\SignUp.cshtml" />

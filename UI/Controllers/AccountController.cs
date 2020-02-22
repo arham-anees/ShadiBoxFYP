@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BusinessLogicLayer;
+using PersistenceLayer;
+using Repositories;
+using UI.Models;
 using UI.ViewModels;
+using UnitOfWork;
 
 namespace UI.Controllers {
 	public class AccountController : Controller {
@@ -20,9 +25,24 @@ namespace UI.Controllers {
 		[HttpPost]
 		public ActionResult Login(LoginViewModel loginViewModel) {
 			if (ModelState.IsValid) {
-
+				try
+				{
+					cUserRepository userRepository = new cUserRepository(new AppDbContext());
+					var user = userRepository.Authenticate(loginViewModel.Username, loginViewModel.Password);
+					if (user != null)
+					{
+						cHelper.CurrentUser = user;
+						return RedirectToAction("Index", "Home");
+					}
+					else
+						loginViewModel.ErrorMessage = "Invalid Username and password";
+				}
+				catch (Exception e)
+				{
+					loginViewModel.ErrorMessage = e.Message;
+				}
 			}
-			return View();
+			return View(loginViewModel);
 		}
 		#endregion
 
@@ -37,7 +57,27 @@ namespace UI.Controllers {
 		[HttpPost]
 		public ActionResult SignUp(SignUpViewModel signUpViewModel) {
 			if (ModelState.IsValid) {
-
+				if (signUpViewModel.Password == signUpViewModel.ConfirmPassword)
+				{
+					try
+					{
+						cUser user = new cUser();
+						user.Name = signUpViewModel.Name;
+						user.Email = signUpViewModel.Email;
+						user.Phone = signUpViewModel.Phone;
+						user.Password = signUpViewModel.Password;
+						user.Username = signUpViewModel.Username;
+						using (var unit = new cUnitOfWork(new AppDbContext()))
+						{
+							unit.UserRepository.Add(user);
+							unit.SaveChanges();
+						}
+					}
+					catch (Exception)
+					{
+						//todo:catch exception
+					}
+				}
 			}
 			return View();
 		}

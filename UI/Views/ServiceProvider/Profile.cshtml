@@ -1,4 +1,5 @@
-﻿
+﻿@model UI.ViewModels.ServiceProfileViewModel
+
 @{
     ViewBag.Title = "title";
     Layout = "../Shared/_Layout2.cshtml";
@@ -58,32 +59,35 @@
                     </li>
                 </ol>
             </div>
-            <h2 class="banner-heading">Infocus By Zain</h2>
+            <h2 class="banner-heading">@Model.ServiceName</h2>
             <div class="breadcrumb-block">
                 <ol class="breadcrumb">
                     <li>
-                        City : Lahore&nbsp;|&nbsp;Category : Photographers&nbsp;|&nbsp;Types : Professional&nbsp;|&nbsp;Starting From :
-                        20,000
+                        City : @Model.City &nbsp;|&nbsp;Category : @Model.Category &nbsp;|&nbsp;Types : @Model.ServiceType &nbsp;|&nbsp;Starting From :
+                        @Model.Rent
                     </li>
                 </ol>
             </div>
             <div class="breadcrumb-block">
                 <ol class="breadcrumb">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="star-rating">
-                                <style type="text/css">
-                                    .stars-rating:after {
-                                        width: 0%;
-                                    }
-                                </style>
-                                <div style="font-size: 25px;">
-                                    <span class="stars-container stars-rating">★★★★★</span>
-                                    <span style="font-size: 20px;vertical-align: bottom;">&nbsp; ( NR )</span>
-                                </div>
+                    <li>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="star-rating">
+                                    <style type="text/css">
+                                        .stars-rating:after {
+                                            width: 0%;
+                                        }
+                                    </style>
+                                    <div style="font-size: 25px;">
+                                        <span class="stars-container stars-rating">★★★★★</span>
+                                        <span style="font-size: 20px; vertical-align: bottom;">&nbsp; ( NR )</span>
+                                    </div>
 
+                                </div>
                             </div>
                         </div>
+                    </li>
                 </ol>
             </div>
         </div>
@@ -93,10 +97,13 @@
     <div class="container">
         <nav class="breadcrumb" style="margin-bottom: 0px !important; height: 36px;">
 
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../vendors.html">Vendors</a></li>
-            <li><a href="../vendors/photographers.html">Photographers</a></li>
-            <li class="active"><a href="infocus-by-zain-689.html">Infocus by Zain</a></li>
+            <li><a href="@Url.Action("Index","Home")">Home</a></li>
+            <li><a href="@Url.Action("Index","ServiceProvider")">Vendors</a></li>
+            <li><a href="@Url.Action("Index", "ServiceProvider",
+                             new {categoryId = Model._ServiceProvider.ServiceCategories.FirstOrDefault().Id})">
+                @Model.Category
+            </a></li>
+            <li class="active"><a href="">@Model.ServiceName</a></li>
 
 
         </nav>
@@ -359,16 +366,10 @@
             <div class="row" id="navbar-row">
                 <div class="col-md-12">
                     <ul class="new-listing-nav-tabs tabs" id="profile_nav_bar" style="background-color: #faf9f5;">
-
-                        <li><a href="#about" class="active btn btn-default"><span class="badge">About Vendor</span></a></li>
-                        <li><a href="#services" class="btn btn-default"><span class="badge">Services</span></a></li>
-                        <li><a href="#questions" class="btn btn-default"><span class="badge">Questions</span></a></li>
-                        <li><a href="#portfolio" class="btn btn-default"><span class="badge">Portfolio</span></a></li>
-                        <li><a href="#albums" class="btn btn-default"><span class="badge">Albums</span></a></li>
-                        <li><a href="#videos" class="btn btn-default"><span class="badge">Videos</span></a></li>
-                        <li><a href="#packages" class="btn btn-default"><span class="badge">Packages</span></a></li>
+                        @foreach (var item in Model.ProfileSection) {
+                            <li><a href="#@item.SectionHead.Name" class="active btn btn-default"><span class="badge">@item.SectionHead.Name</span></a></li>
+                        }
                     </ul>
-
                 </div>
             </div>
         </div>

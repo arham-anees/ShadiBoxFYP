@@ -20,6 +20,16 @@ namespace Repositories {
 		{
 			return _Context.ProfileSections;
 		}
+		
+		public IQueryable<cProfileSection> GetAll(int serviceProviderId)
+		{
+			return GetAll().Where(x => x.ServiceProviderId == serviceProviderId);
+		}
+		
+		public ICollection<cProfileSection> GetByCategory(int categoryId)
+		{
+			return GetAll().ToList();// GetAll().ToList().Where(x => x.ServiceProvider.ServiceCategories.Where(y=>y.Id==categoryId)??);
+		}
 
 		public override cProfileSection Get(int id)
 		{
