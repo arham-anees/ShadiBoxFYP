@@ -25,7 +25,7 @@ namespace UI.ViewModels {
 
 		public string Category
 		{
-			get => _ServiceProvider.ServiceCategories.FirstOrDefault().Name;
+			get => _ServiceProvider.Name;
 		}
 
 		public string ServiceType

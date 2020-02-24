@@ -4,8 +4,10 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Mvc;
+using BusinessLogicLayer;
 using PersistenceLayer;
 using Repositories;
+using UI.Models;
 using UI.ViewModels;
 
 namespace UI.Controllers {
@@ -24,7 +26,24 @@ namespace UI.Controllers {
 
 		public ActionResult Index(int? categoryId, int? cityId) {
 			//todo: refine collection send to view
-			return View();
+			IndexServiceProviderViewModel viewModel=new IndexServiceProviderViewModel();
+			viewModel.ServiceCategories = cHelper.GetServiceCategories();
+			viewModel.Cities = cHelper.GetCities();
+			try {
+				var serviceProviders = _ProviderRepository.GetAll();
+				if (categoryId.HasValue)
+					serviceProviders = serviceProviders.Where(x => x.ServiceCategoryId == categoryId.Value);
+				if (cityId.HasValue)
+					serviceProviders = serviceProviders.Where(x => x.CityId == cityId.Value);
+
+				viewModel.ServiceProviders = serviceProviders.ToList();
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e);
+				throw;
+			}
+			return View(viewModel);
 		}
 
 		public ActionResult Profile(int id) {
@@ -48,7 +67,9 @@ namespace UI.Controllers {
 		[HttpPost]
 		public ActionResult SignUp(SignUpServiceViewModel signUpServiceViewModel) {
 			if (ModelState.IsValid) {
-
+				cServiceProvider serviceProvider=new cServiceProvider();
+				serviceProvider.CityId = signUpServiceViewModel.CityId;
+				serviceProvider.ServiceCategoryId = signUpServiceViewModel.CategoryId;
 			}
 			return View(signUpServiceViewModel);
 		}

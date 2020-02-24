@@ -124,6 +124,10 @@
     <Compile Include="Migrations\202002210423494_unknownChanges.designer.cs">
       <DependentUpon>202002210423494_unknownChanges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002220949192_serviceProviderToCategoryRelationModified.cs" />
+    <Compile Include="Migrations\202002220949192_serviceProviderToCategoryRelationModified.designer.cs">
+      <DependentUpon>202002220949192_serviceProviderToCategoryRelationModified.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -195,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002210423494_unknownChanges.resx">
       <DependentUpon>202002210423494_unknownChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002220949192_serviceProviderToCategoryRelationModified.resx">
+      <DependentUpon>202002220949192_serviceProviderToCategoryRelationModified.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

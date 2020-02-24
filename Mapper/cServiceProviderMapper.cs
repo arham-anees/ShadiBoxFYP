@@ -16,6 +16,7 @@ namespace Mapper {
 			this.HasRequired(x => x.City).WithMany().HasForeignKey(x=>x.CityId).WillCascadeOnDelete(false);
 			this.HasRequired(x => x.RentType).WithMany().HasForeignKey(x=>x.RentTypeId).WillCascadeOnDelete(false);
 			this.HasRequired(x => x.ServiceType).WithMany().HasForeignKey(x => x.ServiceTypeId).WillCascadeOnDelete(false);
+			this.HasRequired(x => x.ServiceCategory).WithMany().HasForeignKey(x => x.ServiceCategoryId).WillCascadeOnDelete(false);
 			this.HasRequired(x => x.AddedBy).WithMany().HasForeignKey(x=>x.UserAddedById).WillCascadeOnDelete(false);
 		}
 	}

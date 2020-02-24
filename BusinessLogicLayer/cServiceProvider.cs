@@ -16,7 +16,7 @@ namespace BusinessLogicLayer {
 	    private cServiceType _ServiceType;
 	    private DateTime _DateAddedOn;
 	    private cUser _AddedBy;
-	    private ICollection<cServiceCategory> _ServiceCategories;
+	    private cServiceCategory _ServiceCategory;
 
 	    public int Id
 	    {
@@ -95,10 +95,7 @@ namespace BusinessLogicLayer {
 		    set => _AddedBy = value;
 	    }
 
-	    public virtual ICollection<cServiceCategory> ServiceCategories
-	    {
-		    get => _ServiceCategories;
-		    set => _ServiceCategories = value;
-	    }
-    }
+	    public virtual int ServiceCategoryId { get; set; }
+	    public virtual cServiceCategory ServiceCategory { get; set; }
+	}
 }

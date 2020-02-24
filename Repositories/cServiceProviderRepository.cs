@@ -43,5 +43,14 @@ namespace Repositories {
 			_Context.ServiceProviders.Remove(t);
 			return t;
 		}
+
+		public ICollection<cServiceProvider> GetByCity(int cityId)
+		{
+			return GetAll().Where(x => x.CityId == cityId).ToList();
+		}
+		public ICollection<cServiceProvider> GetByCategory(int categoryId)
+		{
+			return GetAll().Where(x => x.ServiceCategoryId== categoryId).ToList();
+		}
 	}
 }
