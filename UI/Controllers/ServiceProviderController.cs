@@ -19,30 +19,27 @@ namespace UI.Controllers {
 		private cProfileSectionRepository _ProfileSectionRepository;
 
 		public ServiceProviderController() {
-
 			_Context = new AppDbContext();
 			_ProviderRepository = new cServiceProviderRepository(_Context);
 			_ProfileSectionRepository = new cProfileSectionRepository(_Context);
 		}
 
 		public ActionResult Index(int? categoryId, int? cityId) {
-			//todo: refine collection send to view
-			IndexServiceProviderViewModel viewModel=new IndexServiceProviderViewModel();
-			viewModel.ServiceCategories = cHelper.GetServiceCategories();
-			viewModel.Cities = cHelper.GetCities();
+			IndexServiceProviderViewModel viewModel = new IndexServiceProviderViewModel {
+				ServiceCategories = cHelper.GetServiceCategories(),
+				Cities = cHelper.GetCities()
+			};
 			try {
 				var serviceProviders = _ProviderRepository.GetAll();
 				if (categoryId.HasValue)
 					serviceProviders = serviceProviders.Where(x => x.ServiceCategoryId == categoryId.Value);
 				if (cityId.HasValue)
 					serviceProviders = serviceProviders.Where(x => x.CityId == cityId.Value);
-
 				viewModel.ServiceProviders = serviceProviders.ToList();
 			}
 			catch (Exception e)
 			{
 				Console.WriteLine(e);
-				throw;
 			}
 			return View(viewModel);
 		}
@@ -55,8 +52,6 @@ namespace UI.Controllers {
 			//serviceProfile.RelatedServiceProviders
 			return View(serviceProfile);
 		}
-
-
 
 		#region SIGN UP
 		[HttpGet]

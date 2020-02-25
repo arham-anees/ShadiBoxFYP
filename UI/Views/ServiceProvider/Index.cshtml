@@ -5,169 +5,6 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-
-
-<script>
-
-
-
-$(document).ready(function() {
-
-    setInterval(function()
-    {
-       $(".search-style").toggleClass('flip');
-
-    }, 3000);
-
-});
-
-</script>
-
-<style type="text/css">
-    .search-style {
-        -moz-transition: transform 1s;
-        -webkit-transition: transform 1s;
-        transition: transform 1s;
-    }
-
-    .flip {
-        transform: rotate(720deg) translate(1px);
-    }
-</style>
-
-<style type="text/css">
-    .section_for_page {
-        background-color: #faf9f5;
-    }
-
-    .stars-container {
-        position: relative;
-        display: inline-block;
-        color: transparent;
-    }
-
-        .stars-container:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: '★★★★★';
-            color: lightgray;
-        }
-
-        .stars-container:after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: '★★★★★';
-            color: #ff1985;
-            overflow: hidden;
-        }
-</style>
-
-
-<style type="text/css">
-    .breadcrumb li {
-        padding: 2px 0 2px 0;
-        color: white;
-    }
-
-        .breadcrumb li a {
-            color: black;
-            font-size: 12px;
-            padding: 0px;
-        }
-
-            .breadcrumb li a:hover {
-                color: #ff1985;
-            }
-
-        .breadcrumb li.active a {
-            color: #ff1985;
-        }
-</style>
-
-
-
-<style type="text/css">
-   .my-tag
-   {
-        position: absolute;
-        width: 92px;
-        height: 22px;
-        text-transform: uppercase;
-        color: #FFF;
-        font-size: 11px;
-        letter-spacing: 0.2px;
-        text-align: center;
-
-        line-height: 2.3;
-   }
-   .footer-links
-    {
-      color: #505050 !important;
-    }
-   .footer-links:hover
-    {
-      color:#ff1985 !important;
-    }
-    .like-button-parent
-    {
-      padding-bottom: 0 !important;
-    }
-
-    .search_box_append
-    {
-      padding: 5px 7%;
-      margin: 0px -11px;
-      background-color: #faf9f5;
-      border: 0 0 1px 0;
-      border-bottom: 3px solid #ff1985 !important;
-      border: 0;
-      position: fixed;
-      z-index: 100;
-      top: 0;
-      width: 100%;
-      margin-left: 0;
-      left: 0;
-    }
-
-    .search_box_append h4
-    {
-      margin-bottom: 5px;
-    }
-    .search_box_append .form-group
-    {
-      margin-bottom: 5px;
-    }
-
-    @@media only screen and (max-width: 767px){
-      .search_box_append
-      {
-        margin: 35px -11px !important;
-      }
-
-    }
-</style>
-
-
-<script type="text/javascript">
-
-    $(function(){
-      $(window).scroll(function(){
-
-        if($(this).scrollTop() >= 124){
-
-             $(".refine-search").addClass("search_box_append");
-        }
-        else
-        {
-          $(".refine-search").removeClass("search_box_append");
-        }
-      });
-    });
-
-</script>
-
 <section style="background-color:#faf9f5;">
     <div class="container">
         <nav class="breadcrumb" style="margin-bottom: 0px !important; height: 36px;">
@@ -177,13 +14,11 @@ $(document).ready(function() {
     </div>
 </section>
 
-
 <section id="category-listing" class="category-listing-main-block section_for_page web-section">
-
     <div class="container">
         <div class="refine-search">
             <h4 class="refine-search-heading">Refine Your Search</h4>
-            <form action="Index" method="post">
+            @using (Html.BeginForm("Index", "ServiceProvider", FormMethod.Post)) {
                 <div class="form-group">
                     <div class="row">
                         <div class="form-group form-field col-md-4 col-sm-4 col-xs-12 col-lg-4">
@@ -194,491 +29,59 @@ $(document).ready(function() {
                                     <option value="@item.Id">@item.Name</option>
                                 }
                             </select>
-
                         </div>
                         <div class="form-group form-field col-md-4 col-sm-4 col-xs-12 col-lg-4">
                             <input type="hidden" name="current_City" id="current_City" value="">
-                            <select class="form-control input-lg select2-city" id="city_name" value="" name="cityId">
+                            <select class="form-control input-lg select2-city" id="city_name" name="cityId">
                                 <option value="">All Cities</option>
                                 @foreach (var item in Model.Cities) {
                                     <option value="@item.Id">@item.Name</option>
                                 }
-
                             </select>
-
                         </div>
-
-                        @*<div class="form-group form-field  col-md-4 col-sm-4 col-xs-12 col-lg-4 ">
-
-                    <select class="form-control input-lg select2-area" id="area" name="area">
-                        <option value="-1">All Areas</option>
-                        <option value="2">Bahria Town</option>
-
-                        <option value="5">Eden Canal Villas</option>
-
-                        <option value="6">Eden Homes</option>
-
-                        <option value="9">Thokar Niaz Baig</option>
-
-                        <option value="13">Allama Iqbal Town</option>
-
-                        <option value="15">Sabzazar</option>
-
-                        <option value="16">Samanabad</option>
-
-                        <option value="17">Ichhra</option>
-
-                        <option value="18">Wahdat Colony</option>
-
-                        <option value="19">Gulshan E Ravi</option>
-
-                        <option value="21">Band Road</option>
-
-                        <option value="22">Sanda Khurd</option>
-
-                        <option value="24">Islam Pura</option>
-
-                        <option value="26">Bilal Gang</option>
-
-                        <option value="28">Karim Park</option>
-
-                        <option value="29">Ravi Road</option>
-
-                        <option value="31">Shad Bagh</option>
-
-                        <option value="37">Baghban Pura</option>
-
-                        <option value="40">Shalimar Town</option>
-
-                        <option value="47">Mughal Pura</option>
-
-                        <option value="54">New PAF Colony</option>
-
-                        <option value="58">Burj Colony</option>
-
-                        <option value="59">Canal Road</option>
-
-                        <option value="60">Canal View Colony</option>
-
-                        <option value="63">Tech Society</option>
-
-                        <option value="71">New Garden Town</option>
-
-                        <option value="72">Muslim Town</option>
-
-                        <option value="73">Shadman Colony</option>
-
-                        <option value="75">Shah Jamal</option>
-
-                        <option value="76">Johar Town</option>
-
-                        <option value="77">PIA Society</option>
-
-                        <option value="81">Peco Road</option>
-
-                        <option value="82">Faisal Town</option>
-
-                        <option value="83">Model Town</option>
-
-                        <option value="85">Wafaqi Colony</option>
-
-                        <option value="86">Township</option>
-
-                        <option value="87">Kot Lakhpat</option>
-
-                        <option value="95">Punjab Govt Employs Coparative Society</option>
-
-                        <option value="96">Raiwind Road</option>
-
-                        <option value="97">Lake City</option>
-
-                        <option value="101">Main Khayaban Road</option>
-
-                        <option value="106">NFC Town</option>
-
-                        <option value="107">Wapda Town</option>
-
-                        <option value="109">Nespak Society</option>
-
-                        <option value="110">Anar Kali</option>
-
-                        <option value="111">Mall Road</option>
-
-                        <option value="113">Davis Road</option>
-
-                        <option value="114">Garhi Shahu</option>
-
-                        <option value="116">Dharampura</option>
-
-                        <option value="117">Mayo Hospital</option>
-
-                        <option value="118">Gawal Mandi</option>
-
-                        <option value="123">Jail Road</option>
-
-                        <option value="124">Mazang</option>
-
-                        <option value="128">Gulberg 1</option>
-
-                        <option value="129">Gulberg 2</option>
-
-                        <option value="130">Gulberg 3</option>
-
-                        <option value="132">Askari Colony</option>
-
-                        <option value="133">Gulbahar Colony</option>
-
-                        <option value="134">Madina Colony</option>
-
-                        <option value="135">Walton Road</option>
-
-                        <option value="136">Ghazi Road</option>
-
-                        <option value="137">Chungi Amer Sadhu</option>
-
-                        <option value="141">Abdalian Housing Society</option>
-
-                        <option value="142">Bedian Road</option>
-
-                        <option value="143">Alfalah Town</option>
-
-                        <option value="145">Cavalry Ground</option>
-
-                        <option value="146">Super Town</option>
-
-                        <option value="148">Punjab Society Near Dha</option>
-
-                        <option value="149">Sui Gas Society</option>
-
-                        <option value="150">State Life Society</option>
-
-                        <option value="151">DHA 1</option>
-
-                        <option value="152">DHA 2</option>
-
-                        <option value="153">DHA 3</option>
-
-                        <option value="154">DHA 4</option>
-
-                        <option value="155">DHA 5</option>
-
-                        <option value="156">DHA 6</option>
-
-                        <option value="158">DHA 8</option>
-
-                        <option value="159">Lidhar</option>
-
-                        <option value="162">Airport Road</option>
-
-                        <option value="163">Cantt</option>
-
-                        <option value="178">Barki Road</option>
-
-                        <option value="179">Paragon City</option>
-
-                        <option value="182">Architects Engineers Society</option>
-
-                        <option value="183">Civic Center</option>
-
-                        <option value="190">Aurangzeb Block</option>
-
-                        <option value="197">Ali Block</option>
-
-                        <option value="198">Garden Block</option>
-
-                        <option value="203">Gulberg 4</option>
-
-                        <option value="204">Ferozpur Road</option>
-
-                        <option value="205">CMA Colony</option>
-
-                        <option value="207">Saddar</option>
-
-                        <option value="209">Upper Mall Scheme</option>
-
-                        <option value="211">Quaid e Azam Industrial Estate</option>
-
-                        <option value="215">Sarwar Road</option>
-
-                        <option value="216">Taj Bagh</option>
-
-                        <option value="218">Moon Market</option>
-
-                        <option value="220">Shaikh Zayed Hospital</option>
-
-                        <option value="221">Gulshan Block</option>
-
-                        <option value="222">Shaukat Khanum Hospital</option>
-
-                        <option value="229">Izmir Town</option>
-
-                        <option value="233">Main Gulberg Boulevard</option>
-
-                        <option value="235">M M Alam Road</option>
-
-                        <option value="237">Multan Road</option>
-
-                        <option value="249">Maraghzar Colony</option>
-
-                        <option value="251">Mustafa Town</option>
-
-                        <option value="257">Rachna Block</option>
-
-                        <option value="259">Sutlej Block</option>
-
-                        <option value="262">Zeenat Block</option>
-
-                        <option value="271">Tufail Road</option>
-
-                        <option value="280">Valencia Town Block A1</option>
-
-                        <option value="284">Valencia Town Block F</option>
-
-                        <option value="289">Valencia Town Block K1</option>
-
-                        <option value="1595">Edgerton Road </option>
-
-                        <option value="1600">Allama Iqbal Road</option>
-
-                        <option value="1605">Abbott Road</option>
-
-                        <option value="1608">HBFC Society</option>
-
-                        <option value="1962">Daroghe Wala</option>
-
-                        <option value="1967">Poonch Road</option>
-
-                        <option value="2821">Batapur</option>
-
-                    </select>
-
-                </div>*@
-
-                        <!--  <div class="col-md-3 col-sm-6" style="">
-                <div class="price-filter">
-                    <div class="price-slider-amount">
-                        <input type="text" class="form-control" value="" id="amount" name="price" placeholder="Add Your Price">
-                    </div>
-                    <div id="slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all slider-range">
-                        <div class="ui-slider-range ui-widget-header ui-corner-all">
-                        </div>
-                        <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
-                        <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
-                    </div>
-                </div>
-            </div> -->
                         <div class="col-md-3 col-sm-6">
                             <div class="search-btn">
                                 <button type="submit" id="index-search-vendor" class="btn btn-pink">Search</button>
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </form>
-
+            }
         </div>
         <div class="category-listing-block" style="padding-top: 30px;">
             <div class="row" id="records-div">
-
-                @for (int i = 0; i < 10; i++) {
-
-
+                @foreach (var item in Model.ServiceProviders) {
                     <div class="col-md-4 col-sm-6" style="padding: 5px;">
-                        <span class="like-button-parent" id="like-button" style="position: absolute; z-index: 1; text-align: right; width: 100%; padding: 30px; padding-top: 20px;">
-                            <div class="my-tag tags-clr-one" style="background-color: #ff1985;">Featured</div>
-                            <a href="javascript:;" class="like-button" data="689%2cVendor%2cYes.html" style="color: rgb(204, 204, 204) !important; margin-right: 30px; font-size: 20px;">
-                                <i class="fa fa-heart"></i>
-                            </a>
-                        </span>
-                        <a href="profile/infocus-by-zain-689.html" type="submit" class="analytics" data="689%2cVendor_Profile.html">
-                            <div class="category-listing-section" style="max-height: 338px; margin-bottom: 0px;">
+                        <a href="@Url.Action("Profile",@item.Id)" type="submit" class="analytics">
+                            <div class="category-listing-section" style="max-height: 338px; margin-bottom: 0;">
                                 <div class="category-listing-dtl">
                                     <div class="category-listing-img">
                                         <img src="~/Content/userassets/vandors/images/689/cc24e28fbb2c967de97dd55165447a5b.jpg" title="Infocus by Zain" style="height: 258px;" category="Photographers" class="loading img-responsive" alt="Infocus by Zain" url="profile/infocus-by-zain-689.html" address="2nd Floor Zainab Towers Model town Link Road Lahore. ">
                                     </div>
                                     <div class="category-info">
-                                        <h6 class="category-dtl-heading">Infocus by Zain</h6>
-                                        <div class="category-dtl-address"><i class="fa fa-map-marker" aria-hidden="true"></i> 2nd Floor Zainab Towers Model town Link Road Lahore. </div>
+                                        <h6 class="category-dtl-heading">@item.Name</h6>
+                                        <div class="category-dtl-address"><i class="fa fa-map-marker" aria-hidden="true"></i> @item.Address </div>
                                     </div>
                                 </div>
-
                                 <div class="category-listing-text">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="category-text-heading">
-                                                Photographers
+                                                @item.ServiceCategory.Name
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="category-price text-right">
-                                                20,000/<span style='font-size: 10px;'>Per Day</span>
-
+                                                @item.Rent/<span style='font-size: 10px;'>@item.RentType.Name</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </a>
-
                     </div>
-
                 }
-
             </div>
         </div>
-        <div class="pagination">
-
-        </div>
     </div>
-    <div class="ajax-load  section_for_page text-center" style="display:none; ">
-        <p><img src="assets/web/images/loader.gif"></p>
-    </div>
-    <br><br>
-    <input type="hidden" name="" id="first-loaded-records" value="9">
-
-
-    <div class="container">
-        <div class="row">
-        </div>
-    </div>
-    <section id="related_vendors" class="upcoming-wedding-main-block profile_section" style="background-color:#faf9f5; margin-bottom: -60px;">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm1-12">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <h4 class="footer-heading"><a style="text-decoration: none;" href="vendors/all/lahore.html">Vendors in Lahore</a></h4>
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/venues/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Venues in Lahore</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/photographers/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Photographers in Lahore</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/caterers/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Caterers in Lahore</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/car-rentals/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Car Rentals in Lahore</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/decorators/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Decorators in Lahore</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/event-managers/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Event Managers in Lahore</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/salons/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Salons in Lahore</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/cakes/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Cakes in Lahore</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/invitations/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Invitations in Lahore</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <h4 class="footer-heading"><a style="text-decoration: none;" href="vendors/all/lahore.html">Vendors in Islamabad</a></h4>
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/venues/islamabad.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Venues in Islamabad</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/photographers/islamabad.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Photographers in Islamabad</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/caterers/islamabad.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Caterers in Islamabad</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/car-rentals/islamabad.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Car Rentals in Islamabad</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/decorators/islamabad.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Decorators in Islamabad</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/event-managers/islamabad.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Event Managers in Islamabad</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/salons/islamabad.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Salons in Islamabad</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/cakes/islamabad.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Cakes in Islamabad</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/invitations/islamabad.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Invitations in Islamabad</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <h4 class="footer-heading"><a style="text-decoration: none;" href="vendors/all/lahore.html">Vendors in Karachi</a></h4>
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/venues/karachi.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Venues in Karachi</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/photographers/karachi.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Photographers in Karachi</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/caterers/karachi.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Caterers in Karachi</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/car-rentals/karachi.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Car Rentals in Karachi</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/decorators/karachi.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Decorators in Karachi</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/event-managers/karachi.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Event Managers in Karachi</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/salons/karachi.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Salons in Karachi</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/cakes/karachi.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Cakes in Karachi</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/invitations/karachi.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Invitations in Karachi</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <h4 class="footer-heading"><a style="text-decoration: none;" href="vendors.html">Vendors in Pakistan</a></h4>
-                        <div class="row">
-
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/venues.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Venues in Pakistan</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/photographers.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Photographers in Pakistan</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/caterers.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Caterers in Pakistan</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/car-rentals.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Car Rentals in Pakistan</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/decorators.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Decorators in Pakistan</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/event-managers.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Event Managers in Pakistan</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/salons.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Salons in Pakistan</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/cakes.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Cakes in Pakistan</a>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="vendors/invitations.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Invitations in Pakistan</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section><br><br><br>
 </section>

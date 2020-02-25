@@ -206,7 +206,7 @@
     }
 
     .profile-navbar-fixed li a {
-        background-color: #white;
+        background-color: #fff;
         margin-bottom: 0 !important;
         color: white;
     }
@@ -230,11 +230,10 @@
     }
 
     .profile_section {
-        padding: 0px 0 20px 0px !important;
+        padding: 0 0 20px 0 !important;
     }
 
-    .pakage_box {
-    }
+    
 
     .uper_box {
         background-color: rgba(57, 45, 72, 0.9);
@@ -298,7 +297,7 @@
     .next_video_1 {
         position: absolute;
         top: 4px;
-        right: 0px;
+        right: 0;
         height: 200px;
         width: 97%;
         left: 6px;
@@ -307,7 +306,7 @@
 
     .thumbnail-albums {
         border: none;
-        padding: 0px;
+        padding: 0;
         position: relative;
         transition: all .3s;
     }
@@ -324,7 +323,7 @@
     }
 
     .thumbnail-albums:hover {
-        box-shadow: 0px 2px 65px rgba(200, 197, 197, 1);
+        box-shadow: 0 2px 65px rgba(200, 197, 197, 1);
         margin-top: -2px;
     }
 
@@ -344,7 +343,7 @@
 
     .package_modal_btn_Close {
         color: #0e0404;
-        margin: -15px 5px 0px 0px;
+        margin: -15px 5px 0 0;
         font-size: 60px;
         cursor: pointer;
         position: absolute;
@@ -415,10 +414,10 @@
                     <div class="col-sm-6 col-xs-12" style="min-height: 100%;overflow: hidden; padding: 5px;">
                         @using (Html.BeginForm("AddContent", "Profile", FormMethod.Post))
                         {
-                            @Html.HiddenFor(x=>x._ServiceProvider);
-                            @Html.HiddenFor(x=>x.ServiceProviderId);
-                            @Html.HiddenFor(x=>x.NewContentTypeId,new{@value="3"});
-                            @Html.HiddenFor(x=>x.NewContentHeadId,new{@value="4"});
+                            @Html.HiddenFor(x=>x._ServiceProvider)
+                            @Html.HiddenFor(x=>x.ServiceProviderId)
+                            @Html.HiddenFor(x=>x.NewContentTypeId,new{@value="3"})
+                            @Html.HiddenFor(x=>x.NewContentHeadId,new{@value="4"})
                             <div class="" style="background-color: white;">
                                 <div class="uper_box" style="text-align: center; word-wrap: break-word;">
                                     <h3 style="font-size: 31px;" class="pricing-table-heading">@Html.TextBoxFor(x => x.NewPackageName, new {@placeholder = "Package Name",@style="color:#000"})</h3><br>
@@ -449,7 +448,7 @@
             <div class="container">
                 <div class="row">
                     <hr>
-                    <h3 class="vendor-profile-listing-heading">@item.Name</h3>
+                    <h3 class="vendor-profile-listing-heading" id="@item.Name">@item.Name</h3>
                     @foreach (var profileSection in Model.ProfileSection.Where(x => x.SectionHeadId == item.Id)) {
 
                         if (profileSection.SectionContent.ContentTypeId == 1)//text
@@ -470,7 +469,7 @@
                         {
                             <div class="col-lg-3 col-md-3 col-sm-3" style=" padding: 0; ">
                                 <div class="gallery-block" style="border: 5px solid transparent;">
-                                    <div class="thumbnail" style="height: 200px; padding: 0; margin-bottom: 0; border-radius: 0px;">
+                                    <div class="thumbnail" style="height: 200px; padding: 0; margin-bottom: 0; border-radius: 0;">
                                         <a href="" style="color: #ff1985;" title=" ">
                                             <img src="@profileSection.SectionContent.Content" class="img-responsive" alt="gallery" style="width: 100%; height: auto;min-height: 200px;">
                                         </a>
