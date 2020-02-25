@@ -52,7 +52,7 @@
             <div class="row" id="records-div">
                 @foreach (var item in Model.ServiceProviders) {
                     <div class="col-md-4 col-sm-6" style="padding: 5px;">
-                        <a href="@Url.Action("Profile",@item.Id)" type="submit" class="analytics">
+                        <a href="@Url.Action("Profile",new {@id=@item.Id})" type="submit" class="analytics">
                             <div class="category-listing-section" style="max-height: 338px; margin-bottom: 0;">
                                 <div class="category-listing-dtl">
                                     <div class="category-listing-img">

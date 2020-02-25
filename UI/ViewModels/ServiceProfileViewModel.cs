@@ -42,9 +42,14 @@ namespace UI.ViewModels {
 		{
 			get => _ProfileSection;
 		}
+		public IEnumerable<cSectionHead> ProfileSectionDistinct
+		{
+			get => _ProfileSection.GroupBy(x=>x.SectionHead).Select(x=>x.Key);
+		}
 
 		public ICollection<cServiceProvider> RelatedServiceProviders { get; set; }
 		public string NewService { get; set; }
+		public string NewComment { get; set; }
 
 		public class Booking
 		{

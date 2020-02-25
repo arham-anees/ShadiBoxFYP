@@ -94,5 +94,11 @@ namespace UI.Controllers {
 		}
 		#endregion
 
+
+		public ActionResult AddComment(ServiceProfileViewModel viewModel)
+		{
+
+			return RedirectToAction("Index", viewModel);
+		}
 	}
 }
