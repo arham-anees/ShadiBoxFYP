@@ -9,6 +9,7 @@ using PersistenceLayer;
 using Repositories;
 using UI.Models;
 using UI.ViewModels;
+using UnitOfWork;
 
 namespace UI.Controllers {
 	public class ServiceProviderController : Controller {
@@ -66,11 +67,34 @@ namespace UI.Controllers {
 
 		[HttpPost]
 		public ActionResult SignUp(SignUpServiceViewModel signUpServiceViewModel) {
-			if (ModelState.IsValid) {
-				cServiceProvider serviceProvider=new cServiceProvider();
-				serviceProvider.CityId = signUpServiceViewModel.CityId;
-				serviceProvider.ServiceCategoryId = signUpServiceViewModel.CategoryId;
+			try
+			{
+				if (ModelState.IsValid)
+				{
+					using (var unit = new cUnitOfWork(new AppDbContext())) {
+						cServiceProvider serviceProvider = new cServiceProvider();
+						serviceProvider.Name = signUpServiceViewModel.ServiceName;
+						serviceProvider.Email = signUpServiceViewModel.Email;
+						serviceProvider.Phone = signUpServiceViewModel.Phone;
+						serviceProvider.CityId = signUpServiceViewModel.CityId;
+						serviceProvider.ServiceCategoryId = signUpServiceViewModel.CategoryId;
+						serviceProvider.ServiceTypeId = signUpServiceViewModel.ServiceTypeId;
+						serviceProvider.RentTypeId = signUpServiceViewModel.RentTypeId;
+						serviceProvider.Rent = signUpServiceViewModel.Rent;
+						serviceProvider.UserAddedById = cHelper.CurrentUser.Id;
+						unit.ServiceProviderRepository.Add(serviceProvider);
+						unit.SaveChanges();
+
+						//todo: navigate to profile page
+						signUpServiceViewModel.SuccessMessage = "Service added successfully";
+					}
+				}
 			}
+			catch (Exception exception)
+			{
+				signUpServiceViewModel.ErrorMessage= exception.Message;
+			}
+
 			return View(signUpServiceViewModel);
 		}
 		#endregion

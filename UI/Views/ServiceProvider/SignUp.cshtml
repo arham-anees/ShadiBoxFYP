@@ -12,14 +12,17 @@
             <div class="row attuh-from">
                 <div class="col-md-12 col-sm-12 col-xs-12 no-padding authentication_from" id="vendor_signup_form">
                     <div class="col-md-8 col-sm-8 col-xs-12 auth_form_body">
-                        <div class="col-md-12 col-sm-12 col-xs-12 slice mobile_form_changer">
-                            <div class="col-md-12 col-sm-12 col-xs-12 change_form">
-                                <span style="color: #606060">Are you customer?</span>
-                                <button class="btn btn-sm customer_signin_btn"  style="height: 40px;">Customer Log In</button>
+                        @if (Model.ErrorMessage != null) {
+                            <div class="alert alert-danger">
+                                @Model.ErrorMessage
                             </div>
-                        </div>
-                        @using (Html.BeginForm("SignUp", "ServiceProvider", FormMethod.Post))
-                        {
+                        }
+                        @if (Model.SuccessMessage != null) {
+                            <div class="alert alert-success">
+                                @Model.SuccessMessage
+                            </div>
+                        }
+                        @using (Html.BeginForm("SignUp", "ServiceProvider", FormMethod.Post)) {
                             <div class="form-left-part-portion">
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
                                     <h3 class="text-center"><span style="font-size: 15px; text-transform: uppercase;">Vendor Sign Up</span> </h3>
@@ -27,8 +30,8 @@
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 "> <h4 id="vendor-signup-message"></h4></div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
-                                    @Html.TextBoxFor(x=>x.ServiceName,new {@class="form-control required",@type="text",@placeholder="Service Name"})
-                                    @Html.ValidationMessageFor(x=>x.ServiceName)
+                                    @Html.TextBoxFor(x => x.ServiceName, new { @class = "form-control required", @type = "text", @placeholder = "Service Name" })
+                                    @Html.ValidationMessageFor(x => x.ServiceName)
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12 slice">
                                     @Html.TextBoxFor(x => x.Email, new { @class = "form-control required", @type = "email", @placeholder = "Email" })
@@ -38,14 +41,32 @@
                                     @Html.TextBoxFor(x => x.Phone, new { @class = "form-control required", @type = "text", @placeholder = "Phone" })
                                     @Html.ValidationMessageFor(x => x.Phone)
                                 </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 slice">
+                                    @Html.TextBoxFor(x => x.Rent, new { @class = "form-control required", @type = "text", @placeholder = "Phone" })
+                                    @Html.ValidationMessageFor(x => x.Rent)
+                                </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
                                     <div id="vendor_signup_city_div">
-                                        @Html.DropDownListFor(x=>x.CityId,Model.CitiesSelectList,new {@class="form-control select2-city vendor-signup-city"})
+                                        @Html.DropDownListFor(x => x.CityId, Model.CitiesSelectList, new { @class = "form-control select2-city vendor-signup-city" })
+                                        @Html.ValidationMessageFor(x=>x.CityId,"This field is required")
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">
                                     <div id="vendor_signup_city_div">
-                                        @Html.DropDownListFor(x=>x.CategoryId,Model.CategoriesSelectList,new {@class="form-control select2-category"})
+                                        @Html.DropDownListFor(x => x.CategoryId, Model.CategoriesSelectList, new { @class = "form-control select2-category" })
+                                        @Html.ValidationMessageFor(x => x.CategoryId,"This field is required")
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <div id="vendor_signup_city_div">
+                                        @Html.DropDownListFor(x => x.ServiceTypeId, Model.ServiceTypesSelectList, new { @class = "form-control select2-city vendor-signup-city" })
+                                        @Html.ValidationMessageFor(x=>x.ServiceTypeId,"This field is required")
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 slice">
+                                    <div id="vendor_signup_city_div">
+                                        @Html.DropDownListFor(x => x.RentTypeId, Model.RentTypesSelectList, new { @class = "form-control select2-category" })
+                                        @Html.ValidationMessageFor(x => x.RentTypeId,"This field is required")
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 slice">

@@ -56,11 +56,15 @@
     <Compile Include="cBookingResponseRepository.cs" />
     <Compile Include="cCityRepository.cs" />
     <Compile Include="cProfileSectionRepository.cs" />
+    <Compile Include="cRentTypeRepository.cs" />
     <Compile Include="cRepository.cs" />
     <Compile Include="cReviewRepository.cs" />
     <Compile Include="cSectionContentRepository.cs" />
+    <Compile Include="cSectionContentTypeRepository.cs" />
+    <Compile Include="cSectionHeadRepository.cs" />
     <Compile Include="cServiceCategoryRepository.cs" />
     <Compile Include="cServiceProviderRepository.cs" />
+    <Compile Include="cServiceTypeRepository.cs" />
     <Compile Include="cUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

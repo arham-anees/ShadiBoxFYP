@@ -1,4 +1,5 @@
-﻿@model UI.ViewModels.ServiceProfileViewModel
+﻿@using UI.Models
+@model UI.ViewModels.ServiceProfileViewModel
 
 @{
     ViewBag.Title = "title";
@@ -29,22 +30,22 @@
         color: transparent;
     }
 
-        .stars-container:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: '★★★★★';
-            color: lightgray;
-        }
+    .stars-container:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '★★★★★';
+        color: lightgray;
+    }
 
-        .stars-container:after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: '★★★★★';
-            color: #ff1985;
-            overflow: hidden;
-        }
+    .stars-container:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '★★★★★';
+        color: #ff1985;
+        overflow: hidden;
+    }
 </style>
 <section id="page-banner" class="page-banner" style="background-image: url('../Content/userassets/vandors/images/689/6846d8628aa5a99e71a99ca6349aa65c.jpg');">
     <div class="overlay-bg"></div>
@@ -100,7 +101,7 @@
             <li><a href="@Url.Action("Index","Home")">Home</a></li>
             <li><a href="@Url.Action("Index","ServiceProvider")">Vendors</a></li>
             <li><a href="@Url.Action("Index", "ServiceProvider",
-                             new {categoryId = Model._ServiceProvider.ServiceCategories.FirstOrDefault().Id})">
+                             new {categoryId = Model._ServiceProvider.ServiceCategoryId})">
                 @Model.Category
             </a></li>
             <li class="active"><a href="">@Model.ServiceName</a></li>
@@ -108,8 +109,6 @@
 
         </nav>
     </div>
-
-
 </section>
 
 
@@ -119,19 +118,19 @@
         color: white;
     }
 
-        .breadcrumb li a {
-            color: black;
-            font-size: 12px;
-            padding: 0px;
-        }
+    .breadcrumb li a {
+        color: black;
+        font-size: 12px;
+        padding: 0px;
+    }
 
-            .breadcrumb li a:hover {
-                color: #ff1985;
-            }
+    .breadcrumb li a:hover {
+        color: #ff1985;
+    }
 
-        .breadcrumb li.active a {
-            color: #ff1985;
-        }
+    .breadcrumb li.active a {
+        color: #ff1985;
+    }
 </style>
 <style type="text/css">
     body {
@@ -211,10 +210,10 @@
         color: white;
     }
 
-        .profile-navbar-fixed li a span {
-            color: white;
-            !important;
-        }
+    .profile-navbar-fixed li a span {
+        color: white;
+        !important;
+    }
 
     .border {
         border-bottom: 4px solid #ff1985;
@@ -270,15 +269,15 @@
         background-color: transparent;
     }
 
-        .thumbnail > img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 100%;
-            -webkit-transform: translate(-50%,-50%);
-            -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-        }
+    .thumbnail > img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
 
 
     .next_img_1 > a {
@@ -339,9 +338,9 @@
         color: #505050 !important;
     }
 
-        .footer-links:hover {
-            color: #ff1985 !important;
-        }
+    .footer-links:hover {
+        color: #ff1985 !important;
+    }
 
     .package_modal_btn_Close {
         color: #0e0404;
@@ -360,6 +359,48 @@
         padding-top: 25%;
     }
 </style>
+<section id="vendor-profile" class="section-for-page vendor-profile-main-page  web-section profile_section">
+    <div class="" id="border">
+        <div class="container">
+            <div class="row" id="navbar-row">
+                <div class="col-md-12">
+                    <ul class="new-listing-nav-tabs tabs" id="profile_nav_bar" style="background-color: #faf9f5;">
+                        <!--BOOTSTRAP TABS-->
+                        
+                        <div class="">
+                            <div>
+
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="home">home</div>
+                                    <div role="tabpanel" class="tab-pane" id="profile">profile</div>
+                                    <div role="tabpanel" class="tab-pane" id="messages">messages</div>
+                                    <div role="tabpanel" class="tab-pane" id="settings">settings</div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        
+                        
+                        @if (cHelper.IsServiceProvider)
+                        {
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section id="vendor-profile" class="section-for-page vendor-profile-main-page  web-section profile_section">
     <div class="" id="border">
         <div class="container">
@@ -409,7 +450,7 @@
                                                             <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+92 300 3160 242">+92 300 3160 242</a>
                                                         </li>
                                                         <li>
-                                                            <i class="fa fa-globe" aria-hidden="true"></i> <a target="_blank" href="http://www.infocusbyzain.com/">http://www.infocusbyzain.com/</a>
+                                                            @*<i class="fa fa-globe" aria-hidden="true"></i> <a target="_blank" href="http://www.infocusbyzain.com/">http://www.infocusbyzain.com/</a>*@
                                                         </li>
                                                         <li>
                                                             <a href="javascript:;" style="color: black; font-weight: 600; font-family: sans-serif; font-style: italic;">When you call, don’t forget to mention that you found their profile on <span style="color: #ff1985;">ShadiBox.com</span></a>
@@ -446,7 +487,7 @@
 
                                 <div class="col-md-6">
                                     <div class="vendor-profile-img">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.1027930821297!2d74.31421721474092!3d31.46635838138756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391906abc20eb461%3A0x7dbbf63882d580b!2sZainab+Tower%2C+Model+Town+Link+Rd%2C+Lahore+54600%2C+Pakistan!5e0!3m2!1sen!2s!4v1522390120610" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                        @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.1027930821297!2d74.31421721474092!3d31.46635838138756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391906abc20eb461%3A0x7dbbf63882d580b!2sZainab+Tower%2C+Model+Town+Link+Rd%2C+Lahore+54600%2C+Pakistan!5e0!3m2!1sen!2s!4v1522390120610" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>*@
                                     </div>
                                 </div>
                             </div>
@@ -847,6 +888,29 @@
                                     <i style="color: #ff1783; " class="fa fa-check"></i>&nbsp;
 
                                     Wedding Filmography
+
+                                </h6>
+                            </div>
+
+                        </div>
+                    </div><div class="col-md-4" style="padding: 5px;">
+                        <div class="panel panel-default" style="min-height: 100%;height: 100%; margin-bottom: 0; padding: 5px;">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h6 class="panel-title question-heading">
+
+                                    @using (Html.BeginForm("", "", FormMethod.Post)) {
+                                        <div class="row">
+                                            <div class="col-sm-9">
+
+
+                                                @Html.TextBoxFor(x => x.NewService, new { @class = "form-control" })
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <input type="submit" value="Add" class="btn"/>
+                                            </div>
+                                        </div>
+
+                                    }
 
                                 </h6>
                             </div>
@@ -1394,232 +1458,235 @@
         padding-left: 25px;
     }
 </style>
+
+
 <section id="reviews" class="upcoming-wedding-main-block profile_section" style="background-color: #fff;; padding-top: 50px !important;">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-xs-12">
+            <div class="col-md-12 col-md-12 col-xs-12">
+                <div class="why-block" style="padding-bottom: 45px;">
+
+                    <h1 class="" style="text-align: center; font-size: 70px;">0</h1>
+                    <div style="text-align: center; margin-top: 10px; width: 100%;">
+                        <div class="star-rating">
+                            <style type="text/css">
+                                .stars-rating:after {
+                                    width: 0.0%;
+                                }
+                            </style>
+                            <div style="font-size: 25px;">
+                                <span class="stars-container stars-rating">★★★★★</span>
+                                <span style="font-size: 20px;vertical-align: bottom;"> </span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <h4 style="text-align: center; margin-top: 10px;">Total Reviews : 0</h4>
+                    <!-- <h4 style="text-align: center; margin-top: 10px;">Total Stars : 0</h4> -->
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="why-block" style="padding: 0px 0px; border: 0px;">
+                    <button class="form-control" style="text-align: center; background-color: #ff1985; color:#fff; height: 50px;" onclick="open_review_form();">WRITE A REVIEW</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-8 col-md-8 col-xs-12" id="previous-reviews" style="max-height: 600px; overflow-x: hidden; overflow-y: auto; min-height: 400px;">
+            <h3 id="no-review" style="text-align:center; margin-top:15%;">No review to show.</h3>          <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" id="show_more_button" style="display: none; padding-left: 0; padding-right: 0;">
+                <button style="width: 100%;" class="btn btn-pink" onclick="load_more_reviews(this);">Show more</button>
+            </div>
+        </div>
+
+    </div>
+</div><br><br>
+
+
+
+<section id="related_vendors" class="upcoming-wedding-main-block profile_section" style="background-color: #faf9f5;">
+    <div class="container">
+
+        <div class="row" id="">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <hr>
+                <h3 class="vendor-profile-listing-heading">YOU MAY CONSIDER THESE VENDORS</h3>
+                <div class="col-md-4 col-sm-6" style="padding: 5px;">
+                    <a href="caramel-clicks-311.html" type="submit" class="analytics" data="311%2cVendor_Profile.html">
+                        <div class="category-listing-section" style=" max-height: 338px;">
+                            <div class="category-listing-dtl">
+                                <div class="category-listing-img">
+                                    <img src="~/Content/userassets/vandors/images/311/c1e38f3c500d91864967198f3bad58d5.jpg" style="height: 258px;" class="img-responsive" alt="Vendor Image">
+                                </div>
+                                <div class="category-info">
+                                    <h6 class="category-dtl-heading">Caramel Clicks</h6>
+                                    <div class="category-dtl-address"><i class="fa fa-map-marker" aria-hidden="true"></i> Lahore, Pakistan</div>
+                                </div>
+                            </div>
+                            <div class="category-listing-text">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="category-text-heading">
+                                            Photographers
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="category-price text-right">RS.40,000/<span style='font-size:10px;'>Per Day</span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+
+
+                <div class="col-md-4 col-sm-6" style="padding: 5px;">
+                    <a href="coalescence-305.html" type="submit" class="analytics" data="305%2cVendor_Profile.html">
+                        <div class="category-listing-section" style=" max-height: 338px;">
+                            <div class="category-listing-dtl">
+                                <div class="category-listing-img">
+                                    <img src="~/Content/userassets/vandors/images/305/aa9ac4437b0c711bc6c87630f403d51c.jpg" style="height: 258px;" class="img-responsive" alt="Vendor Image">
+                                </div>
+                                <div class="category-info">
+                                    <h6 class="category-dtl-heading">Coalescence</h6>
+                                    <div class="category-dtl-address"><i class="fa fa-map-marker" aria-hidden="true"></i> Lahore, Pakistan</div>
+                                </div>
+                            </div>
+                            <div class="category-listing-text">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="category-text-heading">
+                                            Photographers
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="category-price text-right">RS.75,000/<span style='font-size:10px;'>Per Day</span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+
+
+                <div class="col-md-4 col-sm-6" style="padding: 5px;">
+                    <a href="fahad-malik-photography-farooq-studios-3513.html" type="submit" class="analytics" data="3513%2cVendor_Profile.html">
+                        <div class="category-listing-section" style=" max-height: 338px;">
+                            <div class="category-listing-dtl">
+                                <div class="category-listing-img">
+                                    <img src="~/Content/userassets/vandors/images/3513/26e1736ce5772aa480ca5dab4e8dedcd.jpg" style="height: 258px;" class="img-responsive" alt="Vendor Image">
+                                </div>
+                                <div class="category-info">
+                                    <h6 class="category-dtl-heading">Fahad Malik Photography Farooq Studios</h6>
+                                    <div class="category-dtl-address"><i class="fa fa-map-marker" aria-hidden="true"></i> </div>
+                                </div>
+                            </div>
+                            <div class="category-listing-text">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="category-text-heading">
+                                            Photographers
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="category-price text-right">RS.12,000/<span style='font-size:10px;'>-1</span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+<section id="related_vendors" class="upcoming-wedding-main-block profile_section" style="background-color: #fff;">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 col-md-4 col-xs-12">
-                <div class="col-md-12 col-md-12 col-xs-12">
-                    <div class="why-block" style="padding-bottom: 45px;">
-
-                        <h1 class="" style="text-align: center; font-size: 70px;">0</h1>
-                        <div style="text-align: center; margin-top: 10px; width: 100%;">
-                            <div class="star-rating">
-                                <style type="text/css">
-                                    .stars-rating:after {
-                                        width: 0.0%;
-                                    }
-                                </style>
-                                <div style="font-size: 25px;">
-                                    <span class="stars-container stars-rating">★★★★★</span>
-                                    <span style="font-size: 20px;vertical-align: bottom;"> </span>
-                                </div>
-
-                            </div>
+            <div class="col-lg-12 col-md-12 col-sm1-12">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h4 class="footer-heading"><a style="text-decoration: none;" href="../vendors/all/lahore.html">Vendors in Lahore </a></h4>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/venues/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Venues in Lahore</a>
                         </div>
-                        <h4 style="text-align: center; margin-top: 10px;">Total Reviews : 0</h4>
-                        <!-- <h4 style="text-align: center; margin-top: 10px;">Total Stars : 0</h4> -->
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/photographers/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Photographers in Lahore</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/caterers/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Caterers in Lahore</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/car-rentals/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Car Rentals in Lahore</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/decorators/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Decorators in Lahore</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/event-managers/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Event Managers in Lahore</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/salons/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Salons in Lahore</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/cakes/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Cakes in Lahore</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/invitations/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Invitations in Lahore</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="why-block" style="padding: 0px 0px; border: 0px;">
-                        <button class="form-control" style="text-align: center; background-color: #ff1985; color:#fff; height: 50px;" onclick="open_review_form();">WRITE A REVIEW</button>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h4 class="footer-heading"><a style="text-decoration: none;" href="../vendors.html">Vendors in Pakistan</a></h4>
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/venues.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Venues in Pakistan</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/photographers.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Photographers in Pakistan</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/caterers.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Caterers in Pakistan</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/car-rentals.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Car Rentals in Pakistan</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/decorators.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Decorators in Pakistan</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/event-managers.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Event Managers in Pakistan</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/salons.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Salons in Pakistan</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/cakes.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Cakes in Pakistan</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
+                            <a href="../vendors/invitations.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Invitations in Pakistan</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-sm-8 col-md-8 col-xs-12" id="previous-reviews" style="max-height: 600px; overflow-x: hidden; overflow-y: auto; min-height: 400px;">
-                <h3 id="no-review" style="text-align:center; margin-top:15%;">No review to show.</h3>          <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" id="show_more_button" style="display: none; padding-left: 0; padding-right: 0;">
-                    <button style="width: 100%;" class="btn btn-pink" onclick="load_more_reviews(this);">Show more</button>
-                </div>
-            </div>
-
-        </div>
-    </div><br><br>
-
-
-
-    <section id="related_vendors" class="upcoming-wedding-main-block profile_section" style="background-color: #faf9f5;">
-        <div class="container">
-
-            <div class="row" id="">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <hr>
-                    <h3 class="vendor-profile-listing-heading">YOU MAY CONSIDER THESE VENDORS</h3>
-                    <div class="col-md-4 col-sm-6" style="padding: 5px;">
-                        <a href="caramel-clicks-311.html" type="submit" class="analytics" data="311%2cVendor_Profile.html">
-                            <div class="category-listing-section" style=" max-height: 338px;">
-                                <div class="category-listing-dtl">
-                                    <div class="category-listing-img">
-                                        <img src="~/Content/userassets/vandors/images/311/c1e38f3c500d91864967198f3bad58d5.jpg" style="height: 258px;" class="img-responsive" alt="Vendor Image">
-                                    </div>
-                                    <div class="category-info">
-                                        <h6 class="category-dtl-heading">Caramel Clicks</h6>
-                                        <div class="category-dtl-address"><i class="fa fa-map-marker" aria-hidden="true"></i> Lahore, Pakistan</div>
-                                    </div>
-                                </div>
-                                <div class="category-listing-text">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="category-text-heading">
-                                                Photographers
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="category-price text-right">RS.40,000/<span style='font-size:10px;'>Per Day</span> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-
-
-
-                    <div class="col-md-4 col-sm-6" style="padding: 5px;">
-                        <a href="coalescence-305.html" type="submit" class="analytics" data="305%2cVendor_Profile.html">
-                            <div class="category-listing-section" style=" max-height: 338px;">
-                                <div class="category-listing-dtl">
-                                    <div class="category-listing-img">
-                                        <img src="~/Content/userassets/vandors/images/305/aa9ac4437b0c711bc6c87630f403d51c.jpg" style="height: 258px;" class="img-responsive" alt="Vendor Image">
-                                    </div>
-                                    <div class="category-info">
-                                        <h6 class="category-dtl-heading">Coalescence</h6>
-                                        <div class="category-dtl-address"><i class="fa fa-map-marker" aria-hidden="true"></i> Lahore, Pakistan</div>
-                                    </div>
-                                </div>
-                                <div class="category-listing-text">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="category-text-heading">
-                                                Photographers
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="category-price text-right">RS.75,000/<span style='font-size:10px;'>Per Day</span> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-
-
-
-                    <div class="col-md-4 col-sm-6" style="padding: 5px;">
-                        <a href="fahad-malik-photography-farooq-studios-3513.html" type="submit" class="analytics" data="3513%2cVendor_Profile.html">
-                            <div class="category-listing-section" style=" max-height: 338px;">
-                                <div class="category-listing-dtl">
-                                    <div class="category-listing-img">
-                                        <img src="~/Content/userassets/vandors/images/3513/26e1736ce5772aa480ca5dab4e8dedcd.jpg" style="height: 258px;" class="img-responsive" alt="Vendor Image">
-                                    </div>
-                                    <div class="category-info">
-                                        <h6 class="category-dtl-heading">Fahad Malik Photography Farooq Studios</h6>
-                                        <div class="category-dtl-address"><i class="fa fa-map-marker" aria-hidden="true"></i> </div>
-                                    </div>
-                                </div>
-                                <div class="category-listing-text">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="category-text-heading">
-                                                Photographers
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="category-price text-right">RS.12,000/<span style='font-size:10px;'>-1</span> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-
-
-
-
-                </div>
-
-
 
             </div>
         </div>
-    </section>
-    <section id="related_vendors" class="upcoming-wedding-main-block profile_section" style="background-color: #fff;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm1-12">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <h4 class="footer-heading"><a style="text-decoration: none;" href="../vendors/all/lahore.html">Vendors in Lahore </a></h4>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/venues/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Venues in Lahore</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/photographers/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Photographers in Lahore</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/caterers/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Caterers in Lahore</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/car-rentals/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Car Rentals in Lahore</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/decorators/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Decorators in Lahore</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/event-managers/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Event Managers in Lahore</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/salons/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Salons in Lahore</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/cakes/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Cakes in Lahore</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/invitations/lahore.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Wedding Invitations in Lahore</a>
-                            </div>
-                        </div>
-                    </div>
+    </div>
+</section>
+</section>
 
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <h4 class="footer-heading"><a style="text-decoration: none;" href="../vendors.html">Vendors in Pakistan</a></h4>
-                        <div class="row">
-
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/venues.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Venues in Pakistan</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/photographers.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Photographers in Pakistan</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/caterers.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Caterers in Pakistan</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/car-rentals.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Car Rentals in Pakistan</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/decorators.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Decorators in Pakistan</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/event-managers.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Event Managers in Pakistan</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/salons.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Salons in Pakistan</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/cakes.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Cakes in Pakistan</a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="padding-right: 0; overflow: hidden; font-size: 12px;">
-                                <a href="../vendors/invitations.html" class="footer-links"> <span class="fa fa-angle-double-right"></span> Best Invitations in Pakistan</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
+    

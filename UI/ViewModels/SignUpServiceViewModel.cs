@@ -21,6 +21,8 @@ namespace UI.ViewModels {
 			get => _ServiceCategories;
 		}
 
+		#region SELECT LIST ITEMS
+
 		public List<SelectListItem> CitiesSelectList
 		{
 			get
@@ -66,11 +68,59 @@ namespace UI.ViewModels {
 			}
 		}
 
+		public List<SelectListItem> ServiceTypesSelectList
+		{
+			get
+			{
+				var list = new List<SelectListItem>();
+				list.Add(new SelectListItem() {
+					Text = "Select Service Type",
+					Value = ""
+				});
+				foreach (var item in cHelper.GeServiceTypes()) {
+					list.Add(new SelectListItem() {
+						Value = item.Id.ToString(),
+						Text = item.Name
+					});
+				}
+
+				return list;
+			}
+		}	
+		public List<SelectListItem> RentTypesSelectList
+		{
+			get
+			{
+				var list = new List<SelectListItem>();
+				list.Add(new SelectListItem() {
+					Text = "Select Rent Type",
+					Value = ""
+				});
+				foreach (var item in cHelper.GetRentTypes()) {
+					list.Add(new SelectListItem() {
+						Value = item.Id.ToString(),
+						Text = item.Name
+					});
+				}
+
+				return list;
+			}
+		}
+
+		#endregion
+
+
+
 		public string ServiceName { get; set; }
 		public string Email { get; set; }
 		public string Phone { get; set; }
 		public int CityId { get; set; }
 		public int CategoryId { get; set; }
+		public int ServiceTypeId { get; set; }
+		public int RentTypeId { get; set; }
+		public float Rent { get; set; }
+		public string ErrorMessage { get; set; }
+		public string SuccessMessage { get; set; }
 
 	}
 }

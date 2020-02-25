@@ -145,6 +145,7 @@
     <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
     <Compile Include="ViewModels\IndexServiceProviderViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\ProfileIndexViewModel.cs" />
     <Compile Include="ViewModels\SearchViewModel.cs" />
     <Compile Include="ViewModels\ServiceProfileViewModel.cs" />
     <Compile Include="ViewModels\SignUpServiceViewModel.cs" />
@@ -1984,11 +1985,11 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Booking\" />
-    <Folder Include="Views\Profile\" />
     <Folder Include="Views\Review\" />
   </ItemGroup>
   <ItemGroup>

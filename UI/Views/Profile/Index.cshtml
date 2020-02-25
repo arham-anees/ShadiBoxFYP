@@ -1,0 +1,535 @@
+﻿@using UI.Models
+@model UI.ViewModels.ProfileIndexViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<style type="text/css">
+    .search-style {
+        -moz-transition: transform 1s;
+        -webkit-transition: transform 1s;
+        transition: transform 1s;
+    }
+
+    .flip {
+        transform: rotate(720deg) translate(1px);
+    }
+</style>
+<style type="text/css">
+    .section_for_page {
+        background-color: #faf9f5;
+    }
+
+    .stars-container {
+        position: relative;
+        display: inline-block;
+        color: transparent;
+    }
+
+        .stars-container:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '★★★★★';
+            color: lightgray;
+        }
+
+        .stars-container:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '★★★★★';
+            color: #ff1985;
+            overflow: hidden;
+        }
+</style>
+<section id="page-banner" class="page-banner" style="background-image: url('../Content/userassets/vandors/images/689/6846d8628aa5a99e71a99ca6349aa65c.jpg');">
+    <div class="overlay-bg"></div>
+    <div class="container">
+
+        <div class="banner-dtl text-center">
+
+            <div class="breadcrumb-block">
+                <ol class="breadcrumb">
+                    <li>
+                        <div class="tags-clr-one" style="padding: 4px 10px 5px 12px; font-size: 16px; background-color: #ff1985; ">Featured</div>
+                    </li>
+                </ol>
+            </div>
+            <h2 class="banner-heading">@Model.ServiceName</h2>
+            <div class="breadcrumb-block">
+                <ol class="breadcrumb">
+                    <li>
+                        City : @Model.City &nbsp;|&nbsp;Category : @Model.Category &nbsp;|&nbsp;Types : @Model.ServiceType &nbsp;|&nbsp;Starting From :
+                        @Model.Rent
+                    </li>
+                </ol>
+            </div>
+            <div class="breadcrumb-block">
+                <ol class="breadcrumb">
+                    <li>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="star-rating">
+                                    <style type="text/css">
+                                        .stars-rating:after {
+                                            width: 0%;
+                                        }
+                                    </style>
+                                    <div style="font-size: 25px;">
+                                        <span class="stars-container stars-rating">★★★★★</span>
+                                        <span style="font-size: 20px; vertical-align: bottom;">&nbsp; ( NR )</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section_for_page">
+    <div class="container">
+        <nav class="breadcrumb" style="margin-bottom: 0px !important; height: 36px;">
+
+            <li><a href="@Url.Action("Index","Home")">Home</a></li>
+            <li><a href="@Url.Action("Index","ServiceProvider")">Vendors</a></li>
+            <li>
+                <a href="@Url.Action("Index", "ServiceProvider",
+                             new {categoryId = Model._ServiceProvider.ServiceCategoryId})">
+                    @Model.Category
+                </a>
+            </li>
+            <li class="active"><a href="">@Model.ServiceName</a></li>
+
+
+        </nav>
+    </div>
+</section>
+
+
+<style type="text/css">
+    .breadcrumb li {
+        padding: 2px 0 2px 0;
+        color: white;
+    }
+
+        .breadcrumb li a {
+            color: black;
+            font-size: 12px;
+            padding: 0px;
+        }
+
+            .breadcrumb li a:hover {
+                color: #ff1985;
+            }
+
+        .breadcrumb li.active a {
+            color: #ff1985;
+        }
+</style>
+<style type="text/css">
+    body {
+        background-color: #faf9f5;
+    }
+
+    hr {
+        border: 0 !important;
+    }
+
+
+
+    .section-for-page {
+        background-color: #faf9f5;
+    }
+
+    .owl-item {
+        width: 320px !important;
+    }
+
+    #related-vendors .owl-item {
+        /*width: 230px !important;*/
+    }
+
+    label:hover {
+        background-color: transparent;
+    }
+
+    .owl-stage {
+        min-width: 100% !important;
+        width: 100%;
+    }
+
+    .owl-stage-outer {
+        height: 280px;
+        width: 100%;
+    }
+
+    @@media only screen and (max-width: 530px) {
+        .review-badges {
+            width: 30% !important;
+            margin-right: 0 !important;
+        }
+
+        .review-rating {
+            text-align: left !important;
+            padding-left: 0;
+            margin-top: -10px;
+            margin-bottom: 16px;
+        }
+    }
+
+    @@media only screen and (min-width: 530px) {
+        .profile-navbar-fixed {
+            top: 0;
+            z-index: 100;
+            position: fixed;
+            background-color: #faf9f5;
+            margin: 0;
+            transition: all .5s;
+            padding: 35px 0px 0px 0px;
+            color: white;
+            margin-top: -35px;
+            width: 100%;
+        }
+    }
+
+    .navebar-row {
+        background-color: #faf9f5;
+        opacity: 1;
+        width: 100%;
+    }
+
+    .profile-navbar-fixed li a {
+        background-color: #white;
+        margin-bottom: 0 !important;
+        color: white;
+    }
+
+        .profile-navbar-fixed li a span {
+            color: white !important;
+        }
+
+    .border {
+        border-bottom: 4px solid #ff1985;
+    }
+
+    #shadibox-contact:hover {
+        color: #ff1985;
+    }
+
+    .vendor-profile-img iframe {
+        max-width: 96%;
+        width: 96%;
+        height: 300px;
+    }
+
+    .profile_section {
+        padding: 0px 0 20px 0px !important;
+    }
+
+    .pakage_box {
+    }
+
+    .uper_box {
+        background-color: rgba(57, 45, 72, 0.9);
+        transition: all .4s;
+        padding: 40px;
+        height: 215px !important;
+        min-height: 215px !important;
+    }
+
+    .pakage_box:hover .uper_box {
+        background-color: #ff1985;
+    }
+
+    .uper_box_h2 {
+        color: white;
+        font-weight: 700;
+    }
+
+    .uper_box_p {
+        color: white;
+    }
+
+    .pricing-table-heading {
+        font-size: 22px !important;
+    }
+
+    .thumbnail {
+        position: relative;
+        height: 150px;
+        border: none;
+        overflow: hidden;
+        background-color: transparent;
+    }
+
+        .thumbnail > img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+
+
+    .next_img_1 > a {
+        font-size: 45px;
+        font-weight: 900;
+    }
+
+    .next_img_1 {
+        position: absolute;
+        top: 5px;
+        right: 7px;
+        height: 200px;
+        width: 97%;
+        left: 5px;
+        background-color: rgba(0,0,0,.5);
+    }
+
+    .next_video_1 {
+        position: absolute;
+        top: 4px;
+        right: 0px;
+        height: 200px;
+        width: 97%;
+        left: 6px;
+        background-color: rgba(0,0,0,.5);
+    }
+
+    .thumbnail-albums {
+        border: none;
+        padding: 0px;
+        position: relative;
+        transition: all .3s;
+    }
+
+    .album-images {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 235px;
+    }
+
+    .thumbnail-albums > .caption {
+        padding: 20px;
+    }
+
+    .thumbnail-albums:hover {
+        box-shadow: 0px 2px 65px rgba(200, 197, 197, 1);
+        margin-top: -2px;
+    }
+
+    .album_display_image {
+        width: 100%;
+        height: auto;
+        min-height: 235px;
+    }
+
+    .footer-links {
+        color: #505050 !important;
+    }
+
+        .footer-links:hover {
+            color: #ff1985 !important;
+        }
+
+    .package_modal_btn_Close {
+        color: #0e0404;
+        margin: -15px 5px 0px 0px;
+        font-size: 60px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        right: 25px;
+    }
+
+    .vendor-pro-section {
+        height: 280px;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 25%;
+    }
+</style>
+
+<section id="vendor-profile" class="section-for-page vendor-profile-main-page  web-section profile_section">
+    <div class="" id="border">
+        <div class="container">
+            <div class="row" id="navbar-row">
+                <div class="col-md-12">
+                    <ul class="new-listing-nav-tabs tabs" id="profile_nav_bar" style="background-color: #faf9f5;">
+                        @foreach (var item in Model.ProfileSectionDistinct) {
+                            <li><a href="#@item.Name" class="active btn btn-default"><span class="badge">@item.Name</span></a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<section id="services" class="upcoming-wedding-main-block profile_section" style="background-color: #fff;">
+    <div class="container">
+
+        <div class="row">
+
+            <hr>
+            <h3 class="vendor-profile-listing-heading">Update Sections</h3>
+
+            <div class="col-md-12">
+                <div class="panel-group faq-panel" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    <div class="col-md-6" style="padding: 5px;">
+                        <div class="panel panel-default" style="min-height: 100%;height: 100%; margin-bottom: 0; padding: 5px;">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h6 class="panel-title question-heading">
+
+                                    @using (Html.BeginForm("AddContent", "Profile", FormMethod.Post)) {
+                                        <div class="row">
+                                                @Html.HiddenFor(x => x.ServiceProviderId)
+                                                @Html.DropDownListFor(x => x.NewContentHeadId, Model.ContentHeadSelectionList,new {@class="form-control"})
+                                                <br/>
+                                                @Html.DropDownListFor(x => x.NewContentTypeId, Model.ContentTypeSelectionList,new {@class="form-control"})
+                                                <br/>
+                                                @Html.TextBoxFor(x => x.NewContentBody,new {@class="form-control", @placeholder="Text"})
+                                                <br/>
+                                                <input type="submit" value="Add" class="btn btn-block" />
+                                            </div>
+
+                                    }
+
+                                </h6>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12" style="min-height: 100%;overflow: hidden; padding: 5px;">
+                        @using (Html.BeginForm("AddContent", "Profile", FormMethod.Post))
+                        {
+                            @Html.HiddenFor(x=>x._ServiceProvider);
+                            @Html.HiddenFor(x=>x.ServiceProviderId);
+                            @Html.HiddenFor(x=>x.NewContentTypeId,new{@value="3"});
+                            @Html.HiddenFor(x=>x.NewContentHeadId,new{@value="4"});
+                            <div class="" style="background-color: white;">
+                                <div class="uper_box" style="text-align: center; word-wrap: break-word;">
+                                    <h3 style="font-size: 31px;" class="pricing-table-heading">@Html.TextBoxFor(x => x.NewPackageName, new {@placeholder = "Package Name",@style="color:#000"})</h3><br>
+                                    <h3 class="uper_box_h2"><span style="margin-right: -10px; font-size: 10px;">RS&nbsp; </span>
+                                        @Html.TextBoxFor(x => x.NewPackageRate, new {@style = "width:150px;margin:10px;color:#000", @class = "", @placeholder = "Price"})
+                                        <span style="margin-left: -10px; font-size: 10px;">
+                                            /@Model._ServiceProvider.RentType.Name
+                                        </span></h3><br>
+                                    <p class="uper_box_p">TAX EXCLUSIVE </p>
+                                    <p class="uper_box_h2" id="click_package_info_1608">
+                                        <span style="margin-left: -10px; font-size: 10px; text-transform: uppercase;">Click to view details</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <input type="submit" class="btn btn-large btn-pink" style="width: 100%;" value="Save Package"/>
+                        }
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+@if (Model._ProfileSection != null) {
+    foreach (var item in Model.ProfileSectionDistinct) {
+        <section id="questions" class="upcoming-wedding-main-block profile_section" style="background-color: #faf9f5;">
+            <div class="container">
+                <div class="row">
+                    <hr>
+                    <h3 class="vendor-profile-listing-heading">@item.Name</h3>
+                    @foreach (var profileSection in Model.ProfileSection.Where(x => x.SectionHeadId == item.Id)) {
+
+                        if (profileSection.SectionContent.ContentTypeId == 1)//text
+                        {
+                            <div class="col-md-4" style="padding: 5px;">
+                                <div class="panel panel-default" style="min-height: 100%; height: 100%; margin-bottom: 0; padding: 5px;">
+                                    <div class="panel-heading" role="tab" id="headingFour">
+                                        <h6 class="panel-title question-heading">
+                                            <i style="color: #ff1783;" class="fa fa-check"></i>&nbsp;
+                                            @profileSection.SectionContent.Content
+                                        </h6>
+                                    </div>
+
+                                </div>
+                            </div>
+                        }
+                        else if (profileSection.SectionContent.ContentTypeId == 2) //images
+                        {
+                            <div class="col-lg-3 col-md-3 col-sm-3" style=" padding: 0; ">
+                                <div class="gallery-block" style="border: 5px solid transparent;">
+                                    <div class="thumbnail" style="height: 200px; padding: 0; margin-bottom: 0; border-radius: 0px;">
+                                        <a href="" style="color: #ff1985;" title=" ">
+                                            <img src="@profileSection.SectionContent.Content" class="img-responsive" alt="gallery" style="width: 100%; height: auto;min-height: 200px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                        else if (profileSection.SectionContent.ContentTypeId == 3) //Packages
+                        {
+
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="min-height: 100%;overflow: hidden; padding: 5px;">
+
+                                <a href="javascript:;" class="analytics" id="package_1608">
+                                    <div class="pakage_box" style="background-color: white;">
+                                        <div class="uper_box" style="text-align: center;word-wrap: break-word;">
+                                            <h3 style="font-size: 31px;" class="pricing-table-heading">@profileSection.SectionContent.Content.Substring(0,profileSection.SectionContent.Content.IndexOf("+-*-+"))</h3><br>
+                                            <h3 class="uper_box_h2"><span style="margin-right: -10px; font-size: 10px;">RS&nbsp;</span> @profileSection.SectionContent.Content.Substring( profileSection.SectionContent.Content.IndexOf("+-*-+")+5) <span style="margin-left: -10px; font-size: 10px;">/@Model._ServiceProvider.RentType.Name</span></h3><br>
+                                            <p class="uper_box_p">TAX EXCLUSIVE </p>
+                                            <p class="uper_box_h2" id="click_package_info_1608">
+                                                <span style="margin-left: -10px; font-size: 10px; text-transform: uppercase;">Click to view details</span>
+                                            </p>
+                                            <br>
+
+                                        </div>
+                                        <ul class="list-group" style="margin-bottom: 0px;border: none; display: none;">
+                                            <li style="background-color: white;text-align: left;border-bottom:1px solid #ccc; border-left:none; border-right:none " class="list-group-item"><span style="float: left; color: #ff1985;" class="fa fa-check-circle-o"></span>&nbsp;&nbsp;1 Photographer</li>
+                                            <li style="background-color: white;text-align: left;border-bottom:1px solid #ccc; border-left:none; border-right:none " class="list-group-item"><span style="float: left; color: #ff1985;" class="fa fa-check-circle-o"></span>&nbsp;&nbsp;1 Videographer</li>
+                                            <li style="background-color: white;text-align: left;border-bottom:1px solid #ccc; border-left:none; border-right:none " class="list-group-item"><span style="float: left; color: #ff1985;" class="fa fa-check-circle-o"></span>&nbsp;&nbsp;10 Page Story-book </li>
+                                            <li><div class="btn btn-large btn-pink" style=" width: 100%; " onclick='open_book_package_modal(this,1608,"Basic Package");'>Book Package</div></li>
+                                        </ul>
+
+                                    </div>
+                                </a>
+                                <div class="btn btn-large btn-pink" style=" width: 100%; " onclick='open_book_package_modal(this,1608,"Basic Package");'>Book Package</div>
+                            </div>
+
+                        }
+                        else {
+                            <div class="col-md-12">
+                                <div class="panel-group faq-panel" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="col-md-6" style="padding: 5px;">
+                                        <div class="panel panel-default" style="min-height: 100%; height: 100%; margin-bottom: 0; padding: 5px;">
+                                            <div class="panel-heading" role="tab" id="headingFour">
+                                                <h6 class="panel-title question-heading" style="font-weight: 700;">
+                                                    @profileSection.SectionContent.Content
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+    }
+}
+
+
+    

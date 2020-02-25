@@ -25,7 +25,7 @@ namespace UI.ViewModels {
 
 		public string Category
 		{
-			get => _ServiceProvider.Name;
+			get => _ServiceProvider.ServiceCategory.Name;
 		}
 
 		public string ServiceType
@@ -44,6 +44,7 @@ namespace UI.ViewModels {
 		}
 
 		public ICollection<cServiceProvider> RelatedServiceProviders { get; set; }
+		public string NewService { get; set; }
 
 		public class Booking
 		{
