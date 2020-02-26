@@ -49,6 +49,7 @@ namespace UI.Controllers {
 
 			serviceProfile._ServiceProvider = _ProviderRepository.Get(id);
 			serviceProfile._ProfileSection = _ProfileSectionRepository.GetAll(serviceProfile._ServiceProvider.Id).ToList();
+			serviceProfile.ServiceProviderId = id;
 			//serviceProfile.RelatedServiceProviders
 			return View(serviceProfile);
 		}
@@ -94,11 +95,30 @@ namespace UI.Controllers {
 		}
 		#endregion
 
-
-		public ActionResult AddComment(ServiceProfileViewModel viewModel)
+		[HttpPost]
+		public ActionResult AddReviews(ServiceProfileViewModel viewModel)
 		{
+			try
+			{
+					cReview review = new cReview();
+					review.Date = DateTime.Now;
+					review.ServiceProviderId = viewModel.ServiceProviderId;
+					review.Message = viewModel.NewComment;
+					review.StarCount = viewModel.NewStartCount;
+					review.UserId = cHelper.CurrentUser.Id;
 
-			return RedirectToAction("Index", viewModel);
+					using (var unit = new cUnitOfWork(new AppDbContext()))
+					{
+						unit.ReviewRepository.Add(review);
+						unit.SaveChanges();
+					}
+			}
+			catch (Exception exception)
+			{
+				
+			}
+
+			return RedirectToAction("Profile","ServiceProvider",new{ @id = viewModel.ServiceProviderId });
 		}
 	}
 }

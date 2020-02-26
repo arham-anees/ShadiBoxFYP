@@ -9,10 +9,10 @@ using Repositories;
 namespace UI.ViewModels {
 	public class ServiceProfileViewModel
 	{
-
-		public cServiceProvider _ServiceProvider;
-		public ICollection<cProfileSection> _ProfileSection;
-
+		public int ServiceProviderId { get; set; }
+		public cServiceProvider _ServiceProvider { get; set; }
+		public ICollection<cProfileSection> _ProfileSection { get; set; }
+		public int NewStartCount { get; set; }
 		public string ServiceName
 		{
 			get => _ServiceProvider.Name;

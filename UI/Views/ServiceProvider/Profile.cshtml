@@ -508,12 +508,17 @@
             </div>
 
             <div class="col-sm-8 col-md-8 col-xs-12" id="previous-reviews" style="max-height: 600px; overflow-x: hidden; overflow-y: auto; min-height: 400px;">
-                <div>
-                    @using (Html.BeginForm("", "", FormMethod.Post)) {
-                        @Html.TextAreaFor(x => x.NewComment, new { @rows = "4", @class = "form-control", @placeholder = "Write Review" })
-                        <input type="submit" value="Submit" class="btn btn-pink" style="float: right; margin-top: 5px; " />
-                    }
-                </div>
+                @if (cHelper.CurrentUser != null)
+                {
+                    <div>
+                        @using (Html.BeginForm("AddReviews", "ServiceProvider", FormMethod.Post))
+                        {
+                            @Html.HiddenFor(x => x.ServiceProviderId)
+                            @Html.TextAreaFor(x => x.NewComment, new {@rows = "4", @class = "form-control", @placeholder = "Write Review"})
+                            <input type="submit" value="Submit" class="btn btn-pink" style="float: right; margin-top: 5px;"/>
+                        }
+                    </div>
+                }
                 <hr/>
 
                 <h3 id="no-review" style="text-align:center; margin-top:15%;">No review to show.</h3>
