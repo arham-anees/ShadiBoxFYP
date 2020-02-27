@@ -17,11 +17,15 @@ namespace UI.Controllers {
 		private AppDbContext _Context;
 		private cServiceProviderRepository _ProviderRepository;
 		private cProfileSectionRepository _ProfileSectionRepository;
+		private cReviewRepository _ReviewRepository;
+		private cFunctionTimeRepository _FunctionTimeRepository;
 
 		public ServiceProviderController() {
 			_Context = new AppDbContext();
 			_ProviderRepository = new cServiceProviderRepository(_Context);
 			_ProfileSectionRepository = new cProfileSectionRepository(_Context);
+			_ReviewRepository=new cReviewRepository(_Context);
+			_FunctionTimeRepository=new cFunctionTimeRepository(_Context);
 		}
 
 		public ActionResult Index(int? categoryId, int? cityId) {
@@ -44,12 +48,15 @@ namespace UI.Controllers {
 			return View(viewModel);
 		}
 
-		public ActionResult Profile(int id) {
+		public ActionResult Profile(int id,string Message) {
 			ServiceProfileViewModel serviceProfile = new ServiceProfileViewModel();
 
 			serviceProfile._ServiceProvider = _ProviderRepository.Get(id);
 			serviceProfile._ProfileSection = _ProfileSectionRepository.GetAll(serviceProfile._ServiceProvider.Id).ToList();
+			serviceProfile.Reviews = _ReviewRepository.GetAll().Where(x => x.ServiceProviderId == serviceProfile._ServiceProvider.Id).ToList();
+			serviceProfile.FunctionTimes = _FunctionTimeRepository.GetAll().ToList();
 			serviceProfile.ServiceProviderId = id;
+			serviceProfile.DisplayMessage = Message;
 			//serviceProfile.RelatedServiceProviders
 			return View(serviceProfile);
 		}
@@ -96,15 +103,15 @@ namespace UI.Controllers {
 		#endregion
 
 		[HttpPost]
-		public ActionResult AddReviews(ServiceProfileViewModel viewModel)
+		public ActionResult AddReview(ServiceProfileViewModel viewModel)
 		{
 			try
 			{
 					cReview review = new cReview();
 					review.Date = DateTime.Now;
 					review.ServiceProviderId = viewModel.ServiceProviderId;
-					review.Message = viewModel.NewComment;
-					review.StarCount = viewModel.NewStartCount;
+					review.Message = viewModel.FeedbackMessage;
+					review.StarCount = viewModel.StarCount;
 					review.UserId = cHelper.CurrentUser.Id;
 
 					using (var unit = new cUnitOfWork(new AppDbContext()))
@@ -115,7 +122,7 @@ namespace UI.Controllers {
 			}
 			catch (Exception exception)
 			{
-				
+				viewModel.DisplayMessage = exception.Message;
 			}
 
 			return RedirectToAction("Profile","ServiceProvider",new{ @id = viewModel.ServiceProviderId });

@@ -106,5 +106,15 @@ namespace UI.Controllers {
 		public ActionResult ResetPassword() {
 			return View();
 		}
+
+		public ActionResult Profile()
+		{
+			return View();
+		}
+
+		public ActionResult Dashboard()
+		{
+			return View();
+		}
 	}
 }

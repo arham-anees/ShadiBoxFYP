@@ -47,19 +47,60 @@ namespace UI.ViewModels {
 			get => _ProfileSection.GroupBy(x=>x.SectionHead).Select(x=>x.Key);
 		}
 
-		public ICollection<cServiceProvider> RelatedServiceProviders { get; set; }
-		public string NewService { get; set; }
-		public string NewComment { get; set; }
+		#region REVIEWS
 
-		public class Booking
+		public ICollection<cReview> Reviews { get; set; }
+
+		public int TotalReview
 		{
-			public string Name { get; set; }
-			public string Email { get; set; }
-			public string Phone { get; set; }
+			get
+			{
+				return Reviews == null ? 0 : Reviews.Count;
+			}
+		}
+
+		public double AverageRate
+		{
+			get
+			{
+				if (Reviews == null) return 0;
+				return Reviews.Average(x => x.StarCount); }
+		}
+
+		public int StarCount { get; set; }
+		public string FeedbackMessage { get; set; }
+
+		public int Stars1
+		{
+			get { return Reviews?.Where(x => x.StarCount == 1).Count() ?? 0; }
+		}
+		public int Stars2 {
+			get { return Reviews?.Where(x => x.StarCount == 2).Count() ?? 0; }
+		}
+		public int Stars3 {
+			get { return Reviews?.Where(x => x.StarCount == 3).Count() ?? 0; }
+		}
+		public int Stars4 {
+			get { return Reviews?.Where(x => x.StarCount == 4).Count() ?? 0; }
+		}
+		public int Stars5 {
+			get { return Reviews?.Where(x => x.StarCount == 5).Count() ?? 0; }
+		}
+		#endregion
+
+		public ICollection<cServiceProvider> RelatedServiceProviders { get; set; }
+		public ICollection<cFunctionTime> FunctionTimes { get; set; }
+
+
 			public int Guests { get; set; }
 			public DateTime Date { get; set; }
 			public string Message { get; set; }
 			public int FunctionTime { get; set; }
-		}
+			public string ErrorMessage { get; set; }
+			public string DisplayMessage { get; set; }
+
+
+
+
 	}
 }

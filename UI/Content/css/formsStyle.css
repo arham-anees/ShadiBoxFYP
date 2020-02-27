@@ -30,7 +30,7 @@
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../assets/web/images/Customer_Log.jpg");
+    background-image: url("../~/Content/assets/web/images/Customer_Log.jpg");
 }
 
 .form-image-vendor {
@@ -39,7 +39,7 @@
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../assets/web/images/Business_log.jpg");
+    background-image: url("../~/Content/assets/web/images/Business_log.jpg");
 }
 
 .form-section {

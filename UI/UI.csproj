@@ -134,7 +134,6 @@
     <Compile Include="Controllers\CityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
-    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\ServiceProviderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,6 +213,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\cities.css" />
+    <Content Include="Content\css\dashboard.css" />
     <Content Include="Content\css\datepicker.css" />
     <Content Include="Content\css\flaticon.css" />
     <Content Include="Content\css\Flaticon.html" />
@@ -1949,6 +1949,8 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\userdashboard.js" />
+    <Compile Include="ViewModels\DashboardCoverViewModel.cs" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1986,11 +1988,14 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Account\Profile.cshtml" />
+    <Content Include="Views\Account\Dashboard.cshtml" />
+    <Content Include="Views\Account\_CoverSection.cshtml" />
+    <Content Include="Views\Account\_NavigationButtons.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Booking\" />
-    <Folder Include="Views\Review\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

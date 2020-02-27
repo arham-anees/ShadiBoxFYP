@@ -55,6 +55,7 @@
     <Compile Include="cBookingRequestRepository.cs" />
     <Compile Include="cBookingResponseRepository.cs" />
     <Compile Include="cCityRepository.cs" />
+    <Compile Include="cFunctionTimeRepository.cs" />
     <Compile Include="cProfileSectionRepository.cs" />
     <Compile Include="cRentTypeRepository.cs" />
     <Compile Include="cRepository.cs" />
