@@ -1,4 +1,4 @@
-﻿
+﻿@model UI.ViewModels.UserDashboardViewModel
 @{
     ViewBag.Title = "Dashboard";
     Layout = "~/Views/Shared/_Layout2.cshtml";
@@ -11,7 +11,7 @@
     <div class="container-fluid">
         @Html.Partial("_NavigationButtons")
         <div class="couple-dashboard-block body_section">
-            <h3 class="couple-dashboard-heading dashboard-heading">My Dashboard</h3>
+            <h3 class="dashboard-heading">My Dashboard</h3>
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="my-dashboard">
@@ -19,8 +19,8 @@
                             <i class="flaticon-wedding-day"></i>
                         </div>
                         <div class="facts-block dashboard-dtl">
-                            <h2 class="facts-number ">RS. 0.00</h2>
-                            <div class="dashboard-text">Total Payable</div>
+                            <h2 class="facts-number ">@Model.TotalRequests</h2>
+                            <div class="dashboard-text">Total Requests</div>
                         </div>
                     </div>
                 </div>
@@ -31,8 +31,8 @@
                         </div>
 
                         <div class="facts-block dashboard-dtl">
-                            <h2 class="facts-number ">RS. 0.00</h2>
-                            <div class="dashboard-text">Paid Amount</div>
+                            <h2 class="facts-number ">@Model.TotalResponses</h2>
+                            <div class="dashboard-text">Responses</div>
                         </div>
                     </div>
                 </div>
@@ -42,11 +42,12 @@
                             <i class="flaticon-honeymoon-luggage"></i>
                         </div>
                         <div class="facts-block dashboard-dtl">
-                            <h2 class="facts-number ">RS. 0.00</h2>
-                            <div class="dashboard-text">Unpaid Amount</div>
+                            <h2 class="facts-number ">@Model.Pending</h2>
+                            <div class="dashboard-text">Pending Requests</div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4 col-sm-6">
                     <div class="my-dashboard">
                         <div class="background-image">
@@ -54,7 +55,7 @@
                         </div>
 
                         <div class="facts-block dashboard-dtl">
-                            <h2 class="facts-number counter">0</h2>
+                            <h2 class="facts-number counter">@Model.TotalEvents</h2>
                             <div class="dashboard-text">Total Events</div>
                         </div>
                     </div>
@@ -66,7 +67,7 @@
                         </div>
 
                         <div class="facts-block dashboard-dtl">
-                            <h2 class="facts-number counter">0</h2>
+                            <h2 class="facts-number counter">@Model.EventsDone</h2>
                             <div class="dashboard-text">Completed Events</div>
                         </div>
                     </div>
@@ -78,65 +79,12 @@
                         </div>
 
                         <div class="facts-block dashboard-dtl">
-                            <h2 class="facts-number counter">0</h2>
+                            <h2 class="facts-number counter">@Model.EventsUpcoming</h2>
                             <div class="dashboard-text">Ongoing Events</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="my-dashboard">
-                        <div class="background-image">
-                            <i class="flaticon-heart-shaped-padlock"></i>
-                        </div>
-
-                        <div class="facts-block dashboard-dtl">
-                            <h2 class="facts-number ">0 <button onclick="load_user_media('liked-photos')" class="btn btn-small" style="float: right;">VIEW PHOTOS</button></h2>
-                            <div class="dashboard-text">Picture Likes</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="my-dashboard">
-                        <div class="background-image">
-                            <i class="flaticon-wedding-invitation"></i>
-                        </div>
-
-                        <div class="facts-block dashboard-dtl">
-                            <h2 class="facts-number ">0 <button onclick="load_user_media('liked-vendors')" class="btn btn-small" style="float: right;">VIEW PROFILES</button></h2>
-                            <div class="dashboard-text">Profile Likes</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="my-dashboard">
-                        <div class="background-image">
-                            <i class="flaticon-wedding-invitation"></i>
-                        </div>
-                        <div class="facts-block dashboard-dtl">
-                            <h2 class="facts-number counter">0</h2>
-                            <div class="dashboard-text">Inquiries Sent</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="my-progress-dashboard text-center">
-                        <h4 class="progress-bar-heading">Profile Completed</h4>
-                        <div class="progress-pie-chart gt-50" data-percent="20">
-                            <div class="ppc-progress">
-                                <div class="ppc-progress-fill" style="transform: rotate(72deg);"></div>
-                            </div>
-                            <div class="ppc-percents">
-                                <div class="pcc-percents-wrapper">
-                                    <span>20%</span>
-                                    <div class="text">completed</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

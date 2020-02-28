@@ -1,10 +1,14 @@
-﻿<ul class="couple-dashboard-tabs general-nav-tabs tabs">
-    <li><a href="@Url.Action("Dashboard","Account")" class="active btn btn-default"><span class="badge">Home</span></a></li>
-    <li><a href="@Url.Action("Profile","Account")" class="btn btn-default"><span class="badge">Profile</span></a></li>
-    <li><a href="javascript:;" class="btn btn-default"><span class="badge">Inquiries</span></a></li>
-    <li><a href="javascript:;" class="btn btn-default"><span class="badge">Events</span></a></li>
-    <li><a href="javascript:;" class="btn btn-default"><span class="badge"> Guests</span></a></li>
-    <li><a href="javascript:;" class="btn btn-default"><span class="badge"> Budget</span></a></li>
-    <li><a href="javascript:;" class="btn btn-default"><span class="badge">Checklist</span></a></li>
-    <li><a href="javascript:;" class="btn btn-default"><span class="badge">Notifications</span></a></li>
+﻿<ul class="couple-dashboard-tabs general-nav-tabs tabs" id="navigation-btnlist">
+    <li><a href="@Url.Action("Dashboard","Account")" class="btn btn-default" id="Dashboard"><span class="badge">Home</span></a></li>
+    <li><a href="@Url.Action("Profile","Account")" class="btn btn-default" id="Profile"><span class="badge">Profile</span></a></li>
+    <li><a href="@Url.Action("Requests","Account")" class="btn btn-default" id="Requests"><span class="badge">Requests</span></a></li>
+    <li><a href="@Url.Action("Responses","Account")"  class="btn btn-default" id="Responses"><span class="badge">Responses</span></a></li>
+    <li><a href="@Url.Action("Events","Account")" class="btn btn-default" id="Events"><span class="badge">Events</span></a></li>
+    <li><a href="@Url.Action("Reviews","Account")" class="btn btn-default" id="Reviews"><span class="badge">Reviews</span></a></li>
 </ul>
+
+
+<script>
+    var url = document.URL.split('/')[4];
+    document.getElementById(url).classList.add('active');
+</script>

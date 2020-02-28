@@ -31,7 +31,43 @@
     <link href="~/Content/css/new/new-style.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/css/new/jquerysctipttop.css" rel="stylesheet" type="text/css" /> <!-- custom css -->
     <!-- end theme style -->
+    <!--newly added-->
 
+    <link href="~/Content/css/demo_stylebc34.css" rel="stylesheet" />
+    <link href="~/Content/css/final_style_sheet.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min19ce.css" rel="stylesheet" />
+    <link href="~/Content/css/form.minf022.css" rel="stylesheet" />
+    <link href="~/Content/css/frontend19ce.css" rel="stylesheet" />
+    <link href="~/Content/css/gridrotator19ce.css" rel="stylesheet" />
+    <link href="~/Content/css/jquerysctipttop.css" rel="stylesheet" />
+    <link href="~/Content/css/layers.css" rel="stylesheet" />
+    <link href="~/Content/css/lightbox19ce.css" rel="stylesheet" />
+    <link href="~/Content/css/modal-video.min.css" rel="stylesheet" />
+    <link href="~/Content/css/new-style.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.carousel19ce.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.theme.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.theme19ce.css" rel="stylesheet" />
+    <link href="~/Content/css/popup.css" rel="stylesheet" />
+    <link href="~/Content/css/settings.css" rel="stylesheet" />
+    <link href="~/Content/css/settings9009.css" rel="stylesheet" />
+    <link href="~/Content/css/style64ff.css" rel="stylesheet" />
+    <link href="~/Content/css/stylebc34.css" rel="stylesheet" />
+
+
+    <script src="~/Content/assets/web/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="~/Content/assets/web/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/Content/assets/web/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/Content/assets/web/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/Content/assets/web/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/Content/assets/web/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/Content/assets/web/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/Content/assets/web/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    @*<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>*@
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--end of newly added-->
 
     <link rel="stylesheet" type="text/css" href="~/Content/css/new/final_style_sheet.css">
     <link rel="stylesheet" type="text/css" href="~/Content/css/new/owl.theme.css">
@@ -73,18 +109,18 @@
 </head>
 <body>
 
-@RenderPage("_ThinNav.cshtml")
-<div class="container-fluid body-content">
-    @RenderBody()
-    <hr />
-    <footer>
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-    </footer>
-</div>
+    @RenderPage("_ThinNav.cshtml")
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
 
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
-@RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
 

@@ -1,0 +1,105 @@
+﻿@model UI.ViewModels.ProfileResponsesViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+
+@Html.Partial("_CoverSection")
+<section id="couple-dashboard" class="couple-dashboard-main-block">
+    <div class="container-fluid">
+        @Html.Partial("_NavigationButtons")
+        <div class="couple-dashboard-block body_section">
+
+
+            <section id="category-listing" class="section_for_page category-listing-main-block  web-section upload-photos" style="padding-top: 0;">
+
+                <h3 class="couple-dashboard-heading dashboard-heading">Responses You Received</h3>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 notifications padding_0">
+                        <div class="budget-category-full-table">
+                            <div class="panel-group faq-panel" id="accordion1" role="tablist" aria-multiselectable="false">
+                                <table>
+                                    <tbody>
+                                    @if(Model.BookingResponses.Count>0)
+                                    {
+                                    foreach (var item in Model.BookingResponses)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" onclick="Collapse(@item.Id)">
+                                                        <h4 class="panel-title to-do-list-heading">
+                                                            <a class="collapsed" role="button">
+                                                                <span class="faq-btn faq-btn-plus hidden-xs"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+                                                                <span class="faq-btn faq-btn-minus hidden-xs"><i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
+                                                                &nbsp;&nbsp;&nbsp;
+                                                                @item.BookingRequest.ServiceProvider.Name &nbsp;|&nbsp; @item.BookingRequest.ServiceProvider.ServiceCategory.Name
+                                                            </a>
+
+                                                        </h4>
+                                                    </div>
+                                                    <div id="@item.Id" class="panel-collapse collapse">
+                                                        <div class="panel-body budget-category-table-block">
+                                                            <table>
+                                                                <tbody class="inquiry-info">
+
+                                                                <tr class="data-table-heading">
+                                                                    <th>Vendor Detail</th>
+                                                                    <td>
+                                                                        <a href="@Url.Action("Profile", "ServiceProvider", new {@id = item.BookingRequest.ServiceProviderId})">
+                                                                            @item.BookingRequest.ServiceProvider.Name
+                                                                        </a>
+                                                                    </td>
+                                                                    <th>Service Category</th>
+                                                                    <td>@item.BookingRequest.ServiceProvider.ServiceCategory.Name</td>
+                                                                </tr>
+                                                                <tr class="data-table-heading">
+                                                                    <th>Function Date</th>
+                                                                    <td>@item.BookingRequest.BookingDate.ToLongDateString()</td>
+                                                                    <th>Function Time</th>
+                                                                    <td>@item.BookingRequest.FunctionTime.Name</td>
+                                                                </tr>
+                                                                <tr class="data-table-heading">
+                                                                    <th>Guests</th>
+                                                                    <td>@item.BookingRequest.NumberOfGuests</td>
+                                                                    <th>Request Date</th>
+                                                                    <td>@item.Date.ToLongDateString()</td>
+                                                                </tr>
+                                                                <tr class="data-table-heading">
+                                                                    <th>Message</th>
+                                                                    <td colspan="3">
+                                                                        <p> @item.Message</p>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                    }
+                                    else
+                                    {
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 col-xs-12 " style="padding-top: 50px;">
+                                            <h3 style="text-align: center;">Sorry! There is no record found. </h3>
+                                            <img src="~/Content/assets/web/images/no.jpeg" class="no-data-img" style="margin-left: 35%;">
+                                        </div>
+                                    </div>
+                                    }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

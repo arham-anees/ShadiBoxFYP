@@ -21,12 +21,21 @@ namespace UI.Models {
 		private static readonly cRentTypeRepository _RentTypeRepository=new cRentTypeRepository(_Context);
 		private static readonly cSectionContentTypeRepository _SectionContentTypeRepository=new cSectionContentTypeRepository(_Context);
 		private static readonly cSectionHeadRepository _SectionHeadRepository=new cSectionHeadRepository(_Context);
-
+		private  static readonly cUserRepository _UserRepository=new cUserRepository(_Context);
 		#endregion
 
 		#region PROPERTIES
 
-		public static cUser CurrentUser { get; set; }
+		private static cUser _CurrentUser;
+		public static cUser CurrentUser {
+			get
+			{
+				if (_CurrentUser == null)
+					_CurrentUser = _UserRepository.Get(1);
+				return _CurrentUser;
+			}
+			set { _CurrentUser = value; }
+		}
 
 		public static bool IsServiceProvider
 		{

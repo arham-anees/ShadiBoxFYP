@@ -1,4 +1,4 @@
-﻿@model UI.ViewModels.DashboardCoverViewModel
+﻿@using UI.Models
 
 <section id="page-banner" class="page-banner bg-dark profile_cover_picture" style="height: 294px; background-image: url('~/Content/assets/web/images/cover-img.jpg') !important">
     <div class="overlay-bg"></div>
@@ -9,20 +9,20 @@
                     <div class="row">
                         <div class="col-sm-3 col-sm-3 col-xs-3" style="padding-right: 0px;">
                             <div class="couple-img" style="margin-top: 10px; height: 150px; max-height: 150px;">
-                                <img class="profile_pic" src="~/Content/~/Content/assets/web/images/reviewer.png" alt="Test Name" style="width: 100%; height: 100%;">
+                                <img class="profile_pic" src="~/Content/assets/web/images/reviewer.png" alt="Test Name" style="width: 100%; height: 100%;">
                             </div>
                         </div>
                         <div class="col-sm-9 col-sm-9 col-xs-9">
                             <div class="couple-dtl">
                                 <div class="row">
                                     <div class="col-md-7 col-sm-7 col-xs-12 pad-rt-0">
-                                        <h3 class="couple-name">Test Name</h3>
+                                        <h3 class="couple-name">@cHelper.CurrentUser.Name</h3>
                                     </div>
                                 </div>
                                 <div class="couple-contact">
-                                    <div><i class="fa fa-envelope"></i>test@gmail.com</div>
-                                    <div><i class="fa fa-calendar"></i>Wednesday 07, 2018</div>
-                                    <div><i class="fa fa-phone"></i>12345678910</div>
+                                    <div><i class="fa fa-envelope"></i>@cHelper.CurrentUser.Email</div>
+                                    <div><i class="fa fa-user"></i>@cHelper.CurrentUser.Username</div>
+                                    <div><i class="fa fa-phone"></i>@cHelper.CurrentUser.Phone</div>
 
                                 </div>
                             </div>
@@ -33,3 +33,10 @@
         </div>
     </div>
 </section>
+
+
+<script>
+    function Collapse(id) {
+        document.getElementById(id).classList.toggle('collapse');
+    }
+</script>

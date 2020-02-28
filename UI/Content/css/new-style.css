@@ -1,0 +1,100 @@
+
+.loading {
+      background: white url("../../images/img-loading.html") center no-repeat;
+    }
+
+
+#waterfall { margin: 10px; }
+
+#waterfall li {
+  /*position: absolute;*/
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+#waterfall li.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s, top 1s;
+}
+
+#waterfall li > div {
+  color: rgba(0,0,0,0.6);
+  font-size: 32px;
+  border-radius: 3px;
+/*  margin: 10px;
+  padding: 15px;*/
+  /*background: rgb(255,255,255);*/
+  border: 1px solid rgba(038, 191, 64, 0);
+  transition: all 0.5s;
+}
+
+#waterfall li > div:hover {
+ /* transform: translateY(-10px);
+  border: 1px solid rgba(038, 191, 64, 1);
+  box-shadow: 0 10px 15px rgba(038, 191, 64, 0.1);
+  transition: all 0.3s;*/
+}
+h1 {  text-align:center}
+
+ 
+  .img_category{
+    position: relative;
+    height: 70px;
+    max-height: 70px;
+    overflow:hidden;
+    width: 100%;
+  }
+  .foreground_text_for_category{
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 25px 20px;
+    width: 100%;
+    font-weight:bold;
+    margin: 0px;
+    text-transform: uppercase;
+  }
+.foreground_text_for_category:hover .img_category > img{
+  transform: scale(1.5);
+}
+  
+  .img_category:hover .img_category > img{
+    transform: scale(1.5);
+  }
+  .img_border{
+    border:2px solid #ff1985;
+  }
+  .active_cat{
+    background-color: rgba(255,25,133,.7);
+  }
+  #columns_gap{
+    padding: 2px;
+  }
+  /*.over_lay_img{
+    background-color: rgba(0,0,0,.5);
+  }*/
+ .carousel-inner .active.left { left: -25%; }
+.carousel-inner .next        { left:  25%; }
+.carousel-inner .prev    { left: -25%; }
+.carousel-control        { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;} 
+ 
+
+.item_in_Center
+{
+  float: none; margin: 0 auto; display:inline-block; width: 16%;
+}
+
+.colors_in_Center
+{
+    margin: 30px auto !important;
+    float: none !important;
+    display: inherit !important;
+    height: auto;
+    max-width: 70em;
+}

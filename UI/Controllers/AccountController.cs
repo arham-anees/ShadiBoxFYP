@@ -114,7 +114,30 @@ namespace UI.Controllers {
 
 		public ActionResult Dashboard()
 		{
-			return View();
+			UserDashboardViewModel userDashboardViewModel=new UserDashboardViewModel(new AppDbContext());
+			return View(userDashboardViewModel);
+		}
+
+		public ActionResult Requests()
+		{
+			ProfileRequestsViewModel viewModel=new ProfileRequestsViewModel();
+			return View(viewModel);
+		}
+		public ActionResult Responses()
+		{
+			ProfileResponsesViewModel viewModel=new ProfileResponsesViewModel();
+			return View(viewModel);
+		}
+		public ActionResult Events()
+		{
+			ProfileEventsViewModel viewModel=new ProfileEventsViewModel();
+			return View(viewModel);
+		}
+
+		public ActionResult Reviews()
+		{
+			ProfileReviewsViewModel viewModel=new ProfileReviewsViewModel();
+			return View(viewModel);
 		}
 	}
 }
