@@ -37,6 +37,16 @@ namespace UI.Models {
 			set { _CurrentUser = value; }
 		}
 
+		public static cServiceProvider ServiceProvider
+		{
+			get
+			{
+				if(IsServiceProvider)
+					return _ServiceProviderRepository.GetAll().Where(x => x.UserAddedById == cHelper.CurrentUser.Id).Single();
+				return null;
+			}
+		}
+
 		public static bool IsServiceProvider
 		{
 			get

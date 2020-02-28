@@ -16,13 +16,13 @@
                             <div class="couple-dtl">
                                 <div class="row">
                                     <div class="col-md-7 col-sm-7 col-xs-12 pad-rt-0">
-                                        <h3 class="couple-name">@cHelper.CurrentUser.Name</h3>
+                                        <h3 class="couple-name">@cHelper.ServiceProvider.Name</h3>
                                     </div>
                                 </div>
                                 <div class="couple-contact">
-                                    <div><i class="fa fa-envelope"></i>@cHelper.CurrentUser.Email</div>
-                                    <div><i class="fa fa-user"></i>@cHelper.CurrentUser.Username</div>
-                                    <div><i class="fa fa-phone"></i>@cHelper.CurrentUser.Phone</div>
+                                    <div><i class="fa fa-envelope"></i>@cHelper.ServiceProvider.Email</div>
+                                    <div><i class="fa fa-user"></i>@cHelper.ServiceProvider.Rent / @cHelper.ServiceProvider.RentType.Name</div>
+                                    <div><i class="fa fa-phone"></i>@cHelper.ServiceProvider.Phone</div>
 
                                 </div>
                             </div>
@@ -33,6 +33,3 @@
         </div>
     </div>
 </section>
-
-
-

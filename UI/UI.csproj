@@ -135,6 +135,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ServiceProviderController.cs" />
+    <Compile Include="Controllers\ServiceProviderProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -151,6 +152,11 @@
     <Compile Include="ViewModels\ProfileReviewsViewModel.cs" />
     <Compile Include="ViewModels\SearchViewModel.cs" />
     <Compile Include="ViewModels\ServiceProfileViewModel.cs" />
+    <Compile Include="ViewModels\ServiceProviderEventsViewModel.cs" />
+    <Compile Include="ViewModels\ServiceProviderProfileViewModel.cs" />
+    <Compile Include="ViewModels\ServiceProviderRequestsViewModel.cs" />
+    <Compile Include="ViewModels\ServiceProviderResponsesViewModel.cs" />
+    <Compile Include="ViewModels\ServiceProviderReviewsVeiwModel.cs" />
     <Compile Include="ViewModels\SignUpServiceViewModel.cs" />
     <Compile Include="ViewModels\SignUpViewModel.cs" />
   </ItemGroup>
@@ -2029,6 +2035,13 @@
     <Content Include="Views\Account\Responses.cshtml" />
     <Content Include="Views\Account\Events.cshtml" />
     <Content Include="Views\Account\Reviews.cshtml" />
+    <Content Include="Views\ServiceProviderProfile\Index.cshtml" />
+    <Content Include="Views\ServiceProviderProfile\_NavigationButtonList.cshtml" />
+    <Content Include="Views\ServiceProviderProfile\_CoverSection.cshtml" />
+    <Content Include="Views\ServiceProviderProfile\Requests.cshtml" />
+    <Content Include="Views\ServiceProviderProfile\Responses.cshtml" />
+    <Content Include="Views\ServiceProviderProfile\Events.cshtml" />
+    <Content Include="Views\ServiceProviderProfile\Reviews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

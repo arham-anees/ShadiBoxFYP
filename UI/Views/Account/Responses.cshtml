@@ -34,10 +34,10 @@
                                                     <div class="panel-heading" onclick="Collapse(@item.Id)">
                                                         <h4 class="panel-title to-do-list-heading">
                                                             <a class="collapsed" role="button">
-                                                                <span class="faq-btn faq-btn-plus hidden-xs"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
-                                                                <span class="faq-btn faq-btn-minus hidden-xs"><i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
-                                                                &nbsp;&nbsp;&nbsp;
-                                                                @item.BookingRequest.ServiceProvider.Name &nbsp;|&nbsp; @item.BookingRequest.ServiceProvider.ServiceCategory.Name
+                                                                @item.BookingRequest.ServiceProvider.Name &nbsp;|&nbsp; 
+                                                                @item.BookingRequest.ServiceProvider.ServiceCategory.Name &nbsp;|&nbsp;
+                                                                @if (item.IsAccepted) {<span>True</span>}
+                                                                else {<span>Rejected</span>}
                                                             </a>
 
                                                         </h4>
