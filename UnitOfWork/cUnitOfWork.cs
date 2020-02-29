@@ -34,6 +34,7 @@ namespace UnitOfWork {
 		public cSectionContentRepository SectionContentRepository { get; set; }
 
 		public cServiceProviderRepository ServiceProviderRepository { get; set; }
+		public cServiceCategoryRepository ServiceCategoryRepository { get; set; }
 
 		#endregion
 
@@ -51,6 +52,7 @@ namespace UnitOfWork {
 			ReviewRepository = new cReviewRepository(_Context);
 			SectionContentRepository = new cSectionContentRepository(_Context);
 			ServiceProviderRepository = new cServiceProviderRepository(_Context);
+			ServiceCategoryRepository = new cServiceCategoryRepository(_Context);
 		}
 
 		public void SaveChanges()

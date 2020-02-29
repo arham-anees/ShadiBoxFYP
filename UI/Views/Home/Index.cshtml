@@ -717,7 +717,12 @@
                         <div class="category-listing-section">
                             <div class="category-listing-dtl">
                                 <div class="category-listing-img">
-                                    <img src="@item.Picture" class="img-responsive" alt="vendor-category">
+                                    @if (item.Picture != null) {
+                                        <img src="@item.Picture" class="img-responsive" alt="vendor-category">
+                                    }
+                                    else {
+                                        <img src="https://www.hamarishadi.com/wp-content/uploads/2012/12/Pakistan-shadi.gif" class="img-responsive" alt="vendor-category">
+                                    }
                                 </div>
                                 <div class="category-info"> </div>
                             </div>

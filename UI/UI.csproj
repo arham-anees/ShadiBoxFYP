@@ -130,9 +130,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
-    <Compile Include="Controllers\CityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ServiceProviderController.cs" />
@@ -142,6 +142,9 @@
     </Compile>
     <Compile Include="Models\cHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AdminCategoriesViewModel.cs" />
+    <Compile Include="ViewModels\AdminIndexViewModel.cs" />
+    <Compile Include="ViewModels\AdminListViewModel.cs" />
     <Compile Include="ViewModels\CityViewModel.cs" />
     <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
     <Compile Include="ViewModels\HomeIndexViewModel.cs" />
@@ -2018,7 +2021,6 @@
     <Content Include="Views\Auth\SignUp.cshtml" />
     <Content Include="Views\Auth\ForgotPassword.cshtml" />
     <Content Include="Views\Auth\ResetPassword.cshtml" />
-    <Content Include="Views\City\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.js.flow" />
@@ -2047,6 +2049,10 @@
     <Content Include="Views\ServiceProviderProfile\Reviews.cshtml" />
     <Content Include="Views\ServiceProviderProfile\Profile.cshtml" />
     <Content Include="Views\Auth\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Categories.cshtml" />
+    <Content Include="Views\Admin\Cities.cshtml" />
+    <Content Include="Views\Admin\Admins.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

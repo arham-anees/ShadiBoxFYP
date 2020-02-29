@@ -1,0 +1,194 @@
+﻿@model UI.ViewModels.AdminIndexViewModel
+
+@{
+    ViewBag.Title = "Admin Panel";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<section class="new_arrival mt-5">
+
+    <div class="container-fluid mt-2">
+        @if (Model.SuccessMessage!= null) {
+            <div class="alert alert-danger">
+                @Model.SuccessMessage
+            </div>
+        }
+        @if (Model.ErrorMessage!= null) {
+            <div class="alert alert-danger">
+                @Model.ErrorMessage
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-6">
+
+
+                <div class="row p-3 m-2" style="background-color: #eae5e5; ">
+                    <div class="col-6">
+                        <h2 class="ml-5">All Cities</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="float-right">
+                            <button type="button" class="btn_3" data-toggle="modal" data-target="#cityModal">
+                                Add City
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                @if (Model.Cities == null || Model.Cities.Count == 0) {
+                    <div class="alert alert-success">
+                        <strong>No Cities exists</strong>
+                    </div>
+                }
+                else {
+
+                    {
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                @if (true) {
+                                    <ul class="list-group">
+
+                                        @foreach (var a in Model.Cities) {
+                                            <li class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="d-flex justify-content-between">
+                                                            <div>
+                                                                Name :
+                                                                <span style="font-size: 1.2em; font-weight: 500">@a</span>
+                                                            </div>
+                                                            <div class="float-right">
+                                                                @using (Html.BeginForm("DeleteCity", "Admin", FormMethod.Post)) {
+                                                                    @*@Html.HiddenFor(x => a.id)*@
+                                                                    <input type="hidden" name="cityId" value="@a." />
+                                                                    <input type="submit" class="btn btn-danger float-right" value="Delete" />
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        }
+                                    </ul>
+                                }
+                            </div>
+                        </div>
+                        <hr />
+                    }
+                }
+            </div>
+            <div class="col-md-6">
+
+
+                <div class="row p-3 m-2" style="background-color: #eae5e5; ">
+                    <div class="col-6">
+                        <h2 class="ml-5">All Categories</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="float-right">
+                            <button type="button" class="btn_3" data-toggle="modal" data-target="#categoryModal">
+                                Add Category
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                @if (Model.Categories == null || Model.Categories.Count == 0) {
+                    <div class="alert alert-success">
+                        <strong>Categories are yet to be added</strong>
+                    </div>
+                }
+                else {
+
+                    {
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                @if (true) {
+                                    <ul class="list-group">
+
+                                        @foreach (var a in Model.Categories) {
+                                            <li class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="d-flex justify-content-between">
+                                                            <div>
+                                                                Name :
+                                                                <span style="font-size: 1.2em; font-weight: 500">@a</span>
+                                                                <br />
+                                                                Description :
+                                                                <span style="font-size: 1.2em; font-weight: 500">@a</span>
+                                                            </div>
+
+                                                            <div class="float-right">
+                                                                @using (Html.BeginForm("DeleteCategory", "Admin", FormMethod.Post)) {
+                                                                    @*@Html.HiddenFor(x => a.id)*@
+                                                                    <input type="hidden" name="categoryId" value="@a." />
+                                                                    <input type="submit" class="btn btn-danger float-right" value="Delete" />
+                                                                }
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        }
+                                    </ul>
+                                }
+                            </div>
+                        </div>
+                        <hr />
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--modal for adding new admin-->
+
+<div class="modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="cityModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">New City</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("NewCity", "Admin", FormMethod.Post)) {
+                    <input type="text" name="cityName" placeholder="City Name" class="form-control my-1" />
+                    <div class="mt-2 float-right">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">New Category</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("NewCategory", "Admin", FormMethod.Post)) {
+                    <input type="text" name="name" placeholder="Category Name" class="form-control my-1" />
+                    <textarea type="text" name="description" placeholder="Description" rows="4" class="form-control my-1"></textarea>
+
+                    <div class="mt-2 float-right">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,6 +4,7 @@
     ViewBag.Title = "Cities";
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
+
 <link rel="stylesheet" href="~/Content/css/cities.css" />
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -59,19 +60,14 @@
                                     <span class="glyphicon glyphicon-chevron-right"></span>
                                 </span>
                                 <ul class="list-group-submenu">
-                                    <li class="list-group-submenu-item danger">
-                                        @using (Html.BeginForm("Delete", "City", FormMethod.Post)) {
-                                            <span type="submit" data-toggle="modal" data-target="#categoryModalDelete2">
+                                    @using (Html.BeginForm("DeleteCity", "Admin", FormMethod.Post)) {
+                                        <li class="list-group-submenu-item danger">
+                                            <button type="submit" class="btn" style="height: 44px; height: 44px">
                                                 <input type="hidden" value="@city.Id" name="cityId" />
                                                 <span class="glyphicon glyphicon-remove" type="submit"></span>
-                                            </span>
-                                        }
-                                    </li>
-                                    @*<li class="list-group-submenu-item success">
-                                        <span type="button" data-toggle="modal" data-target="#categoryModalUpdate">
-                                            <img src="~/Content/update.png" height="15" width="15" />
-                                        </span>
-                                    </li>*@
+                                            </button>
+                                        </li>
+                                    }
                                 </ul>
                             </li>
                         }
@@ -82,66 +78,7 @@
     </div>
 </div>
 
-
-
-
-<!--TO OPEN MODALS-->
-
-@*<button type="button" class="btn_3" data-toggle="modal" data-target="#categoryModalUpdate">
-    update Category
-</button>*@
-
-
 <!--MODALS FOR DELETING AND UPDATING-->
-
-<div class="modal fade" id="categoryModalDelete" tabindex="-1" role="dialog" aria-labelledby="categoryModalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Delete City</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                @using (Html.BeginForm("", "", FormMethod.Post)) {
-                    <p>
-                        Do you really want to delete city?
-                    </p>
-                    <hr/>
-                    <div class="mt-2 ml-auto">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-secondary" style="color: #fff">Confirm</button>
-                    </div>
-                }
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="categoryModalUpdate" tabindex="-1" role="dialog" aria-labelledby="categoryModalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Update City</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                @using (Html.BeginForm("", "", FormMethod.Post)) {
-                    <input type="text" name="name" placeholder="Category Name" class="form-control my-1" />
-                    <textarea type="text" name="description" placeholder="Description" rows="4" class="form-control my-1"></textarea>
-
-                    <div class="mt-2 ml-auto">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-secondary" style="color: #fff">Add</button>
-                    </div>
-                }
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -153,11 +90,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                @using (Html.BeginForm("Create", "City", FormMethod.Post)) {
-                    @Html.TextBoxFor(x=>x.NewCityName,new {@class="form-control my-1", @placeholder="City Name"})
-                    @Html.TextAreaFor(x=>x.NewCityDescription,new {@class="form-control my-1", @placeholder="Description",@rows="4"})
+                @using (Html.BeginForm("AddCity", "Admin", FormMethod.Post)) {
+                    @Html.TextBoxFor(x => x.NewCityName, new { @class = "form-control my-1", @placeholder = "City Name" })
+                    @Html.TextAreaFor(x => x.NewCityDescription, new { @class = "form-control my-1", @placeholder = "Description", @rows = "4" })
 
-                    <hr/>
+                    <hr />
                     <div class="mt-2 ml-auto">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-secondary" style="color: #fff">Add</button>
@@ -167,8 +104,5 @@
         </div>
     </div>
 </div>
-
-
-
 
 <script src="~/Scripts/cities.js"></script>

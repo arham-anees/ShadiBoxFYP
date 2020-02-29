@@ -52,6 +52,11 @@ namespace Repositories {
 			return GetAll().Where(x => x.Username == username && x.Password == password).FirstOrDefault();
 		}
 
+		public List<cUser> GetAdminList()
+		{
+			return GetAll().ToList();
+		}
+
 		private bool IsUsernameUnique(string username)
 		{
 			return !_Context.Users.Where(x => x.Username == username).Any();
