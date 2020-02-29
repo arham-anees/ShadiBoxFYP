@@ -44,14 +44,16 @@ namespace UI.ViewModels {
 		}
 		public int TotalEvents
 		{
-			get { return _BookingRepository.GetAll().Where(x => x.ServiceProviderId == cHelper.ServiceProvider.Id).Count(); }
+			get {
+				return _BookingResponseRepository.GetAll()
+					.Where(x => x.BookingRequest.ServiceProviderId == cHelper.ServiceProvider.Id && x.IsAccepted).ToList().Count;
+			}
 		}
 		public int CompletedEvents
 		{
-			get
-			{
-				return _BookingRepository.GetAll().Where(x => x.ServiceProviderId == cHelper.ServiceProvider.Id)
-					.Where(x => x.BookingDate< DateTime.Now).Count();
+			get {
+				return _BookingResponseRepository.GetAll()
+					.Where(x => x.BookingRequest.ServiceProviderId == cHelper.ServiceProvider.Id && x.IsAccepted && x.BookingRequest.BookingDate<DateTime.Now).ToList().Count;
 			}
 		}
 		public int UpcomingEvents

@@ -37,7 +37,7 @@
                                                                             <span class="faq-btn faq-btn-plus hidden-xs"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
                                                                             <span class="faq-btn faq-btn-minus hidden-xs"><i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
                                                                             &nbsp;&nbsp;&nbsp;
-                                                                            @item.ServiceProvider.Name &nbsp;|&nbsp; @item.ServiceProvider.ServiceCategory.Name
+                                                                            @item.User.Name &nbsp;|&nbsp; @item.User.Username
                                                                         </a>
 
                                                                     </h4>
@@ -48,14 +48,20 @@
                                                                             <tbody class="inquiry-info">
 
                                                                             <tr class="data-table-heading">
-                                                                                <th>Vendor Detail</th>
+                                                                                <th>Customer</th>
                                                                                 <td>
-                                                                                    <a href="@Url.Action("Profile", "ServiceProvider", new {@id = item.ServiceProviderId})">
-                                                                                        @item.ServiceProvider.Name
+                                                                                    <a>
+                                                                                        @item.User.Name
                                                                                     </a>
                                                                                 </td>
                                                                                 <th>Customer Username</th>
                                                                                 <td>@item.User.Username</td>
+                                                                            </tr>
+                                                                            <tr class="data-table-heading">
+                                                                                <th>Email</th>
+                                                                                <td>@item.User.Email</td>
+                                                                                <th>Phone</th>
+                                                                                <td>@item.User.Phone</td>
                                                                             </tr>
                                                                             <tr class="data-table-heading">
                                                                                 <th>Function Date</th>

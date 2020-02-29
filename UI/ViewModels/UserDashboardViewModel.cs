@@ -61,18 +61,23 @@ namespace UI.ViewModels {
 
 		public int TotalEvents
 		{
-			get { return _BookingRepository.GetAll().Where(x => x.UserId == cHelper.CurrentUser.Id)?.Count() ?? 0; }
+			get {
+				return _BookingResponseRepository.GetAll()
+					.Where(x => x.BookingRequest.UserId == cHelper.CurrentUser.Id && x.IsAccepted).ToList().Count;
+			}
 		}
 		public int EventsUpcoming
 		{
-			get { return _BookingRepository.GetAll().Where(x => x.UserId == cHelper.CurrentUser.Id)?.Where(x=>x.BookingDate>DateTime.Now).Count()??0; }
+			get {
+				return _BookingResponseRepository.GetAll()
+					.Where(x => x.BookingRequest.UserId == cHelper.CurrentUser.Id && x.IsAccepted && x.BookingRequest.BookingDate>=DateTime.Now).ToList().Count;
+			}
 		}
 		public int EventsDone
 		{
-			get
-			{
-				return _BookingRepository.GetAll().Where(x => x.UserId == cHelper.CurrentUser.Id)
-					       ?.Where(x => !(x.BookingDate > DateTime.Now)).Count() ?? 0;
+			get {
+				return _BookingResponseRepository.GetAll()
+					.Where(x => x.BookingRequest.UserId == cHelper.CurrentUser.Id && x.IsAccepted && x.BookingRequest.BookingDate < DateTime.Now).ToList().Count;
 			}
 		}
 	}
