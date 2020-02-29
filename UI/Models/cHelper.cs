@@ -30,8 +30,8 @@ namespace UI.Models {
 		public static cUser CurrentUser {
 			get
 			{
-				if (_CurrentUser == null)
-					_CurrentUser = _UserRepository.Get(1);
+				//if (_CurrentUser == null)
+				//	_CurrentUser = _UserRepository.Get(1);
 				return _CurrentUser;
 			}
 			set { _CurrentUser = value; }
