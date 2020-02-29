@@ -368,6 +368,7 @@
                         @foreach (var item in Model.ProfileSectionDistinct) {
                             <li><a href="#@item.Name" class="active btn btn-default"><span class="badge">@item.Name</span></a></li>
                         }
+                        <li><a href="@Url.Action("Index","ServiceProviderProfile")" class="active btn btn-default"><span class="badge">Dashboard</span></a></li>
                     </ul>
                 </div>
             </div>

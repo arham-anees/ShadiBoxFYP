@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BusinessLogicLayer;
 using PersistenceLayer;
+using Repositories;
+using UI.Models;
 using UI.ViewModels;
 using UnitOfWork;
 
@@ -52,5 +55,51 @@ namespace UI.Controllers {
 			ServiceProviderReviewsVeiwModel viewModel = new ServiceProviderReviewsVeiwModel();
 			return View(viewModel);
 		}
+
+		public ActionResult Profile(ServiceProfileUpdateViewModel viewModel)
+		{
+			if (viewModel == null)
+				viewModel = new ServiceProfileUpdateViewModel();
+			return View(viewModel);
+		}
+
+		public ActionResult UpdateServiceDetails(ServiceProfileUpdateViewModel viewModel,HttpPostedFileBase  file)
+		{
+			try
+			{
+				if (Request.Files.Count > 0)
+				{
+
+					if (file != null && file.ContentLength > 0)
+					{
+						var fileName = Path.GetFileName(file.FileName);
+						var path = Path.Combine(Server.MapPath("~/Images/"), fileName);
+						file.SaveAs(path);
+						viewModel.ServiceProvider.CoverPicture = path;
+					}
+				}
+				else
+				{
+					if (file == null)
+						viewModel.ErrorMessage = "No file uploaded";
+				}
+
+
+				using (var unit = new cUnitOfWork(new AppDbContext()))
+				{
+					unit.ServiceProviderRepository.Update(viewModel.ServiceProvider);
+					unit.SaveChanges();
+
+				}
+
+				viewModel.SuccessMessage = "Details updated successfully";
+			}
+			catch (Exception exception)
+			{
+				viewModel.ErrorMessage = exception.Message;
+			}
+			return RedirectToAction("Profile", viewModel);
+		}
+
 	}
 }

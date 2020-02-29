@@ -1,6 +1,6 @@
 ﻿@using UI.Models
 
-<section id="page-banner" class="page-banner bg-dark profile_cover_picture" style="height: 294px; background-image: url('~/Content/assets/web/images/cover-img.jpg') !important">
+<section id="page-banner" class="page-banner bg-dark profile_cover_picture" style="height: 294px; background-image: url('@cHelper.ServiceProvider.CoverPicture') !important">
     <div class="overlay-bg"></div>
     <div class="container">
         <div class="banner-dtl" style="margin-top: 20px;">
@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="col-sm-3 col-sm-3 col-xs-3" style="padding-right: 0px;">
                             <div class="couple-img" style="margin-top: 10px; height: 150px; max-height: 150px;">
-                                <img class="profile_pic" src="~/Content/assets/web/images/reviewer.png" alt="Test Name" style="width: 100%; height: 100%;">
+                                <img class="profile_pic img-circle" src="@cHelper.ServiceProvider.CoverPicture" alt="Test Name" style="width: 100%; height: 100%;">
                             </div>
                         </div>
                         <div class="col-sm-9 col-sm-9 col-xs-9">
@@ -23,6 +23,8 @@
                                     <div><i class="fa fa-envelope"></i>@cHelper.ServiceProvider.Email</div>
                                     <div><i class="fa fa-user"></i>@cHelper.ServiceProvider.Rent / @cHelper.ServiceProvider.RentType.Name</div>
                                     <div><i class="fa fa-phone"></i>@cHelper.ServiceProvider.Phone</div>
+                                    <div><i class="fa fa-address-card"></i>@cHelper.ServiceProvider.City.Name</div>
+                                    <div><i class="fa fa-phone" style="visibility: hidden"></i>@cHelper.ServiceProvider.ServiceCategory.Name</div>
 
                                 </div>
                             </div>

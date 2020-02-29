@@ -34,7 +34,7 @@
                                                                         <span class="faq-btn faq-btn-plus hidden-xs"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
                                                                         <span class="faq-btn faq-btn-minus hidden-xs"><i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
                                                                         &nbsp;&nbsp;&nbsp;
-                                                                        @item.BookingRequest.ServiceProvider.Name &nbsp;|&nbsp; @item.BookingRequest.ServiceProvider.ServiceCategory.Name
+                                                                        @item.BookingRequest.User.Name &nbsp;|&nbsp; @item.BookingRequest.User.Username
                                                                     </a>
 
                                                                 </h4>
@@ -44,27 +44,24 @@
                                                                     <table>
                                                                         <tbody class="inquiry-info">
 
-                                                                            <tr class="data-table-heading">
-                                                                                <th>Vendor Detail</th>
-                                                                                <td>
-                                                                                    <a href="@Url.Action("Profile", "ServiceProvider", new {@id = item.BookingRequest.ServiceProviderId})">
-                                                                                        @item.BookingRequest.ServiceProvider.Name
-                                                                                    </a>
-                                                                                </td>
-                                                                                <th>Service Category</th>
-                                                                                <td>@item.BookingRequest.ServiceProvider.ServiceCategory.Name</td>
-                                                                            </tr>
+
+                                                                        <tr class="data-table-heading">
+                                                                            <th>Customer</th>
+                                                                            <td>@item.BookingRequest.User.Name</td>
+                                                                            <th>Customer Username</th>
+                                                                            <td>@item.BookingRequest.User.Username</td>
+                                                                        </tr>
+                                                                        <tr class="data-table-heading">
+                                                                            <th>Email</th>
+                                                                            <td>@item.BookingRequest.User.Email</td>
+                                                                            <th>Phone</th>
+                                                                            <td>@item.BookingRequest.User.Phone</td>
+                                                                        </tr>
                                                                             <tr class="data-table-heading">
                                                                                 <th>Function Date</th>
                                                                                 <td>@item.BookingRequest.BookingDate.ToLongDateString()</td>
                                                                                 <th>Function Time</th>
                                                                                 <td>@item.BookingRequest.FunctionTime.Name</td>
-                                                                            </tr>
-                                                                            <tr class="data-table-heading">
-                                                                                <th>Guests</th>
-                                                                                <td></td>
-                                                                                <th>Request Date</th>
-                                                                                <td>@item.Date.ToLongDateString()</td>
                                                                             </tr>
                                                                         </tbody>
                                                                     </table>

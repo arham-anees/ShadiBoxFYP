@@ -107,9 +107,11 @@ namespace UI.Controllers {
 			return View();
 		}
 
-		public ActionResult Profile()
+		public ActionResult Profile(UpdateProfileViewModel viewModel)
 		{
-			return View();
+			if (viewModel == null)
+				viewModel = new UpdateProfileViewModel();
+			return View(viewModel);
 		}
 
 		public ActionResult Dashboard()
@@ -138,6 +140,56 @@ namespace UI.Controllers {
 		{
 			ProfileReviewsViewModel viewModel=new ProfileReviewsViewModel();
 			return View(viewModel);
+		}
+
+		public ActionResult UpdateProfile(UpdateProfileViewModel viewModel)
+		{
+			try
+			{
+				cUser user = cHelper.CurrentUser;
+				user.Name = viewModel.User.Name;
+				user.Email = viewModel.User.Email;
+				user.Phone = viewModel.User.Phone;
+				using (var unit=new cUnitOfWork(new AppDbContext()))
+				{
+					unit.UserRepository.Update(user);
+					unit.SaveChanges();
+				}
+				viewModel.SuccessMessage = "Profile updated successfully";
+			}
+			catch (Exception exception)
+			{
+				viewModel.ErrorMessage=exception.Message;
+			}
+			return RedirectToAction("Profile", viewModel);
+		}
+
+		public ActionResult UpdatePassword(UpdateProfileViewModel viewModel) {
+			try {
+				if (viewModel.NewPasswornd == viewModel.ConfirmNewPassword) {
+					if (viewModel.OldPassword == cHelper.CurrentUser.Password) {
+						using (var unit=new cUnitOfWork(new AppDbContext()))
+						{
+							cUser user = cHelper.CurrentUser;
+							user.Password = viewModel.NewPasswornd;
+							unit.UserRepository.Update(user);
+							unit.SaveChanges();
+						}
+
+						viewModel.SuccessMessage = "Password updated successfully";
+					}
+					else {
+						viewModel.ErrorMessage = "Invalid old password. Please insert a valid password";
+					}
+				}
+				else {
+					viewModel.ErrorMessage = "New passwords do not match. Please enter identical passwords";
+				}
+			}
+			catch (Exception exception) {
+				viewModel.ErrorMessage = exception.Message;
+			}
+			return RedirectToAction("Profile", viewModel);
 		}
 	}
 }

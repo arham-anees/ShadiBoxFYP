@@ -1,0 +1,233 @@
+﻿@model UI.ViewModels.ServiceProfileUpdateViewModel
+
+@{
+    ViewBag.Title = "Update Profile";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+@Html.Partial("_CoverSection")
+
+
+<section id="couple-dashboard" class="couple-dashboard-main-block">
+<div class="container-fluid">
+@Html.Partial("_NavigationButtonList")
+<div class="couple-dashboard-block body_section">
+
+
+
+<h3 class="couple-dashboard-heading dashboard-heading">My Profile </h3>
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no_padding">
+    @if (Model.SuccessMessage != null)
+    {
+        <div class="alert alert-success">@Model.SuccessMessage</div>
+    }
+    @if (Model.ErrorMessage!= null)
+    {
+        <div class="alert alert-danger">@Model.ErrorMessage</div>
+    }
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no_padding">
+<div class="col-md-6 card-main no_padding" style="padding: 0;">
+
+    <div class="col-md-12 col-sm-12 col-xs-12  card-main">
+        <div class="card">
+            <div class="card-body">
+                <div class="row" style="margin: 0;">
+                    @using (Html.BeginForm("UpdateServiceDetails", "ServiceProviderProfile", FormMethod.Post))
+                    {
+                        <div class="col-md-12 card-title">
+                            <h5 class="card-title-heading">SERVICE INFORMATION</h5>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12  card-content">
+                            <div id="update-status"></div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="row">
+                                            <label for="" class="col-sm-4 control-label">Service Name</label>
+                                            <div class="col-sm-8">
+                                                @Html.TextBoxFor(x => x.ServiceProvider.Name, new {@class = "form-control", @placeholder = "Service Name"})
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="row">
+                                            <label for="" class="col-sm-4 control-label">Email</label>
+                                            <div class="col-sm-8">
+                                                <div >
+                                                    @Html.TextBoxFor(x => x.ServiceProvider.Email, new {@class = "form-control", @placeholder = "Email"})
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="row">
+                                            <label for="" class="col-sm-4 control-label">Phone</label>
+                                            <div class="col-sm-8">
+                                                @Html.TextBoxFor(x => x.ServiceProvider.Phone, new {@class = "form-control", @placeholder = "Phone"})
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="row">
+                                            <label for="" class="col-sm-4 control-label">Rent</label>
+                                            <div class="col-sm-8">
+                                                @Html.TextBoxFor(x => x.ServiceProvider.Rent, new {@class = "form-control", @placeholder = "Rent"})
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="row">
+                                            <label for="" class="col-sm-4 control-label">Rent Type</label>
+                                            <div class="col-sm-8">
+                                                @Html.DropDownListFor(x => x.ServiceProvider.RentTypeId, Model.RentTypesSelectList,new {@class = "form-control"})
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="row">
+                                            <label for="" class="col-sm-4 control-label">Address</label>
+                                            <div class="col-sm-8">
+                                                @Html.TextBoxFor(x => x.ServiceProvider.Address, new {@class = "form-control", @placeholder = "Address",@rows="3"})
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="row">
+                                            <label for="" class="col-sm-4 control-label">City</label>
+                                            <div class="col-sm-8">
+                                                @Html.DropDownListFor(x => x.ServiceProvider.CityId,Model.CitiesSelectList, new {@class = "form-control"})
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="row">
+                                            <label for="" class="col-sm-4 control-label">Service Category</label>
+                                            <div class="col-sm-8">
+                                                @Html.DropDownListFor(x => x.ServiceProvider.ServiceCategoryId,Model.CategoriesSelectList, new {@class = "form-control"})
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="row">
+                                            <label for="" class="col-sm-4 control-label">Service Type</label>
+                                            <div class="col-sm-8">
+                                                @Html.DropDownListFor(x => x.ServiceProvider.ServiceTypeId,Model.ServiceTypesSelectList, new {@class = "form-control"})
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="row">
+                                            <label for="" class="col-sm-4 control-label">Profile Cover Photo</label>
+                                            <div class="col-sm-8">
+                                                <input type="file" name="FileBase" id="file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12  card-footer">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <input type="submit" class=" btn btn-pink submit-btn " id="update_business_info" placeholder="Update" value="Save">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12  card-main no_padding" style="padding: 0;">
+            
+    <div class="col-md-12 col-sm-12 col-xs-12  card-main">
+        <div class="card">
+            <div class="card-body">
+                <div class="row" style="margin: 0;">
+                    <form id="changeCoverPic" method="post" action="@Url.Action("UploadFile","ServiceProviderProfile")" class="common_form">
+                        <div class="col-md-12 col-sm-12 col-xs-12  card-title">
+                            <h5 class="card-title-heading">CHANGE PASSWORD</h5>
+                        </div>
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                    <div class="row">
+                                        <label for="" class="col-sm-4 control-label">Profile Cover Photo</label>
+                                        <div class="col-sm-8">
+                                            <input type="file" name="FileBase" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12  card-footer">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <input type="submit" class=" btn btn-pink" id="updateFile" placeholder="Update" value="Save">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+

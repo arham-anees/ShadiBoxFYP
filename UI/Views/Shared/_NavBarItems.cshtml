@@ -12,10 +12,12 @@
                 {
                     <li><a href="@Url.Action("Index","ServiceProvider",new {@categoryId=item.Id})">@item.Name</a></li>
                 }
-
+                
+                @if(!cHelper.IsServiceProvider){
                 <li style="border-top: 1px solid #ff1985;">
                     <a style="color: #ff1985;" href="@Url.Action("SignUp", "ServiceProvider")">Are you vendor? Join Us</a>
                 </li>
+                }
             </ul>
         </li>
         <li style="border:none;margin-bottom: -3px;" class="hover ">

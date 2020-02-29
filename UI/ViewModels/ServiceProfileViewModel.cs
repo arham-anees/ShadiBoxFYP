@@ -33,6 +33,16 @@ namespace UI.ViewModels {
 			get => _ServiceProvider.ServiceType.Name;
 		}
 
+		public string Cover
+		{
+			get
+			{
+				if (_ServiceProvider.CoverPicture == null)
+					return "https://www.apsa.co.za/xenforo/styles/brivium/ProfileCover/default.jpg";
+				return _ServiceProvider.CoverPicture;
+			}
+		}
+
 		public string Rent
 		{
 			get => _ServiceProvider.Rent.ToString("0.0");

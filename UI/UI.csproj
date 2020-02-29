@@ -152,6 +152,7 @@
     <Compile Include="ViewModels\ProfileResponsesViewModel.cs" />
     <Compile Include="ViewModels\ProfileReviewsViewModel.cs" />
     <Compile Include="ViewModels\SearchViewModel.cs" />
+    <Compile Include="ViewModels\ServiceProfileUpdateViewModel.cs" />
     <Compile Include="ViewModels\ServiceProfileViewModel.cs" />
     <Compile Include="ViewModels\ServiceProviderEventsViewModel.cs" />
     <Compile Include="ViewModels\ServiceProviderProfileViewModel.cs" />
@@ -1990,6 +1991,7 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Scripts\userdashboard.js" />
     <Compile Include="ViewModels\DashboardCoverViewModel.cs" />
+    <Compile Include="ViewModels\UpdateProfileViewModel.cs" />
     <Compile Include="ViewModels\UserDashboardViewModel.cs" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -2043,6 +2045,7 @@
     <Content Include="Views\ServiceProviderProfile\Responses.cshtml" />
     <Content Include="Views\ServiceProviderProfile\Events.cshtml" />
     <Content Include="Views\ServiceProviderProfile\Reviews.cshtml" />
+    <Content Include="Views\ServiceProviderProfile\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

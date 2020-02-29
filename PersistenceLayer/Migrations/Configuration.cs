@@ -80,8 +80,6 @@ namespace PersistenceLayer.Migrations {
 
 			#endregion
 
-
-
 			#region Service Type
 
 			context.ServiceTypes.AddOrUpdate(x => x.Id,
