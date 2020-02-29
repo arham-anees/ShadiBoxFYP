@@ -128,6 +128,10 @@
     <Compile Include="Migrations\202002220949192_serviceProviderToCategoryRelationModified.designer.cs">
       <DependentUpon>202002220949192_serviceProviderToCategoryRelationModified.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002290502285_CoverPicToCategory.cs" />
+    <Compile Include="Migrations\202002290502285_CoverPicToCategory.designer.cs">
+      <DependentUpon>202002290502285_CoverPicToCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -202,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002220949192_serviceProviderToCategoryRelationModified.resx">
       <DependentUpon>202002220949192_serviceProviderToCategoryRelationModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002290502285_CoverPicToCategory.resx">
+      <DependentUpon>202002290502285_CoverPicToCategory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

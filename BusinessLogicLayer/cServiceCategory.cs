@@ -6,6 +6,7 @@ namespace BusinessLogicLayer {
 	    private string _Name;
 	    private string _Description;
 	    private ICollection<cServiceProvider> _ServiceProviders;
+	    private string _Picture;
 
 	    public int Id
 	    {
@@ -23,6 +24,12 @@ namespace BusinessLogicLayer {
 	    {
 		    get => _Description;
 		    set => _Description = value;
+	    }
+
+	    public string Picture
+	    {
+		    get => _Picture;
+		    set => _Picture = value;
 	    }
 
 	    public ICollection<cServiceProvider> ServiceProviders

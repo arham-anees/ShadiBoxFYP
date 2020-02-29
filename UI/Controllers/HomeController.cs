@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UI.ViewModels;
 
 namespace UI.Controllers {
 	public class HomeController : Controller {
 		public ActionResult Index() {
-			return View();
+			HomeIndexViewModel viewModel=new HomeIndexViewModel();
+			return View(viewModel);
 		}
 
 		public ActionResult About() {
