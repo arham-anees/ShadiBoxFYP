@@ -27,7 +27,7 @@
     <ul class="nav abt_nav navbar-nav navbar-right">
 
         @if (cHelper.CurrentUser == null) {
-            <li class=""><a href="@Url.Action("Login", "Account")" class="li_res">LOG IN</a></li>
+            <li class=""><a href="@Url.Action("Index", "Auth")" class="li_res">LOG IN</a></li>
         }
         else {
             if (cHelper.IsServiceProvider) {
@@ -36,7 +36,8 @@
             else {
                 <li class=""><a href="@Url.Action("SignUp", "ServiceProvider")">JOIN AS VENDOR</a></li>
             }
-            <li class=""><a href="@Url.Action("Profile", "Account")" class="li_res">@cHelper.CurrentUser.Username</a></li>
+            <li class=""><a href="@Url.Action("Index", "Auth")" class="li_res">@cHelper.CurrentUser.Username</a></li>
+            <li class=""><a href="@Url.Action("LogOut", "Auth")" class="li_res">Log out</a></li>
         }
     </ul>
 

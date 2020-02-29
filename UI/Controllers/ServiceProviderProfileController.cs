@@ -14,18 +14,28 @@ using UnitOfWork;
 namespace UI.Controllers {
 	[Authorize]
 	public class ServiceProviderProfileController : Controller {
-		// GET: ServiceProviderProfile
-		public ActionResult Index() {
+		public ActionResult Index()
+		{
+			//AuthenticateServiceProvider();
+
+			if (!cHelper.IsServiceProvider)
+				return RedirectToAction("Dashboard", "Account");
 			ServiceProviderProfileViewModel viewModel = new ServiceProviderProfileViewModel();
 			return View(viewModel);
 		}
 
 		public ActionResult Requests() {
+
+			if (!cHelper.IsServiceProvider)
+				return RedirectToAction("Dashboard", "Account");
 			ServiceProviderRequestsViewModel viewModel = new ServiceProviderRequestsViewModel();
 			return View(viewModel);
 		}
 
 		public ActionResult PostResponse(ServiceProviderRequestsViewModel viewModel) {
+
+			if (!cHelper.IsServiceProvider)
+				return RedirectToAction("Dashboard", "Account");
 			try {
 				cBookingResponse response = new cBookingResponse();
 				response.BookingRequestId = viewModel.BookingRequestId;
@@ -43,29 +53,42 @@ namespace UI.Controllers {
 		}
 
 		public ActionResult Responses() {
+
+			if (!cHelper.IsServiceProvider)
+				return RedirectToAction("Dashboard", "Account");
 			ServiceProviderResponsesViewModel viewModel = new ServiceProviderResponsesViewModel();
 			return View(viewModel);
 		}
 
 		public ActionResult Events() {
+
+			if (!cHelper.IsServiceProvider)
+				return RedirectToAction("Dashboard", "Account");
 			ServiceProviderEventsViewModel viewModel = new ServiceProviderEventsViewModel();
 			return View(viewModel);
 		}
 
 		public ActionResult Reviews() {
+
+			if (!cHelper.IsServiceProvider)
+				return RedirectToAction("Dashboard", "Account");
 			ServiceProviderReviewsVeiwModel viewModel = new ServiceProviderReviewsVeiwModel();
 			return View(viewModel);
 		}
 
-		public ActionResult Profile(ServiceProfileUpdateViewModel viewModel)
-		{
+		public ActionResult Profile(ServiceProfileUpdateViewModel viewModel) {
+
+			if (!cHelper.IsServiceProvider)
+				return RedirectToAction("Dashboard", "Account");
 			if (viewModel == null)
 				viewModel = new ServiceProfileUpdateViewModel();
 			return View(viewModel);
 		}
 
-		public ActionResult UpdateServiceDetails(ServiceProfileUpdateViewModel viewModel,HttpPostedFileBase  file)
-		{
+		public ActionResult UpdateServiceDetails(ServiceProfileUpdateViewModel viewModel,HttpPostedFileBase  file) {
+
+			if (!cHelper.IsServiceProvider)
+				return RedirectToAction("Dashboard", "Account");
 			try
 			{
 				if (Request.Files.Count > 0)
@@ -101,6 +124,5 @@ namespace UI.Controllers {
 			}
 			return RedirectToAction("Profile", viewModel);
 		}
-
 	}
 }
