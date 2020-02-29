@@ -28,11 +28,14 @@ namespace UI.Models {
 
 		private static cUser _CurrentUser;
 		public static cUser CurrentUser {
-			get
-			{
-				//if (_CurrentUser == null)
-				//	_CurrentUser = _UserRepository.Get(1);
-				return _CurrentUser;
+			get {
+				if(HttpContext.Current.User.Identity.IsAuthenticated)
+					if (_CurrentUser == null)
+						_CurrentUser = _UserRepository.Get(
+							Convert.ToInt32(System.Web.HttpContext.Current.User.Identity.Name));
+					else
+						return _CurrentUser;
+				return null;
 			}
 			set { _CurrentUser = value; }
 		}

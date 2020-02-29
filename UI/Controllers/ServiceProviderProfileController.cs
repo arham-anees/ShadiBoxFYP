@@ -12,6 +12,7 @@ using UI.ViewModels;
 using UnitOfWork;
 
 namespace UI.Controllers {
+	[Authorize]
 	public class ServiceProviderProfileController : Controller {
 		// GET: ServiceProviderProfile
 		public ActionResult Index() {
