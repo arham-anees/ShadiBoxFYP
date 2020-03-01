@@ -49,8 +49,7 @@ namespace PersistenceLayer.Migrations {
 
 			context.Roles.AddOrUpdate(x=>x.Id,
 				new cRole(){Id = 1,Name = "Customer"},
-				new cRole(){Id = 2,Name = "Admin"},
-				new cRole(){Id = 3,Name = "ServiceProvider"}
+				new cRole(){Id = 2,Name = "Admin"}
 				);
 
 			#endregion
@@ -91,8 +90,8 @@ namespace PersistenceLayer.Migrations {
 
 			#region USERS
 
-			context.Users.AddOrUpdate(x=>x.Id,
-				new cUser(){Id = 1,Username = "as",Password = "as",Email = "as@as.as",Name = "As",Phone = "as"});
+			context.Users.AddOrUpdate(x => x.Id,
+				new cUser() { Id = 1, Username = "as", Password = "as", Email = "as@as.as", Name = "As", Phone = "as", RoleId = 1 });
 
 			#endregion
 

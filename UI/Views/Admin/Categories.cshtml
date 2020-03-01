@@ -50,7 +50,9 @@
             <div class="row">
                 <div class="">
                     <ul class="list-group">
-                        @foreach (var c in Model.Categories) {
+                        @if(Model.Categories!=null){
+                        foreach (var c in Model.Categories)
+                        {
                             <li class="list-group-item">
                                 @c.Name
                                 <span style="font-style: italic; color: gray">
@@ -60,10 +62,11 @@
                                     <span class="glyphicon glyphicon-chevron-right"></span>
                                 </span>
                                 <ul class="list-group-submenu">
-                                    @using (Html.BeginForm("DeleteCategory", "Admin", FormMethod.Post)) {
+                                    @using (Html.BeginForm("DeleteCategory", "Admin", FormMethod.Post))
+                                    {
                                         <li class="list-group-submenu-item danger">
                                             <button type="submit" class="btn" style="height: 44px; height: 44px">
-                                                <input type="hidden" value="@c.Id" name="id" />
+                                                <input type="hidden" value="@c.Id" name="id"/>
                                                 <span class="glyphicon glyphicon-remove" type="submit"></span>
                                             </button>
                                         </li>
@@ -71,7 +74,11 @@
                                 </ul>
                             </li>
                         }
-                    </ul>
+                        }
+                        else{
+                            <p>Please Add Categories</p>
+                        }
+                        </ul>
                 </div>
             </div>
         </div>

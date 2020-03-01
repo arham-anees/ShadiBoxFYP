@@ -17,6 +17,11 @@ namespace Mapper {
 				.IsOptional()
 				.HasMaxLength(100);
 
-		}
+
+			this.HasMany(x => x.Users)
+				.WithRequired(x=>x.Role)
+				.HasForeignKey(x=>x.RoleId)
+				.WillCascadeOnDelete(false);
+	    }
 	}
 }

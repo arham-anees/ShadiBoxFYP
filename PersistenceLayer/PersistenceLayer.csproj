@@ -132,6 +132,14 @@
     <Compile Include="Migrations\202002290502285_CoverPicToCategory.designer.cs">
       <DependentUpon>202002290502285_CoverPicToCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003010523352_roleAddedToUser.cs" />
+    <Compile Include="Migrations\202003010523352_roleAddedToUser.designer.cs">
+      <DependentUpon>202003010523352_roleAddedToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003010552217_UsersRemvedFromRole.cs" />
+    <Compile Include="Migrations\202003010552217_UsersRemvedFromRole.designer.cs">
+      <DependentUpon>202003010552217_UsersRemvedFromRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -209,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002290502285_CoverPicToCategory.resx">
       <DependentUpon>202002290502285_CoverPicToCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003010523352_roleAddedToUser.resx">
+      <DependentUpon>202003010523352_roleAddedToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003010552217_UsersRemvedFromRole.resx">
+      <DependentUpon>202003010552217_UsersRemvedFromRole.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -23,6 +23,7 @@ namespace UI.ViewModels {
 		public string ErrorMessage { get; set; }
 		public string SuccessMessage { get; set; }
 		public List<cUser> Admins { get; set; }
+		public cUser NewAdmin { get; set; }
 
 	}
 }

@@ -5,7 +5,7 @@ namespace BusinessLogicLayer {
 	    private int _Id;
 	    private string _Name;
 	    private string _Description;
-	    private ICollection<cUser> _Users;
+	    private List<cUser> _Users;
 
 	    public int Id
 	    {
@@ -25,7 +25,7 @@ namespace BusinessLogicLayer {
 		    set => _Description = value;
 	    }
 
-	    public virtual ICollection<cUser> Users
+	    public virtual List<cUser> Users
 	    {
 		    get => _Users;
 		    set => _Users = value;

@@ -30,13 +30,19 @@
             <li class=""><a href="@Url.Action("Index", "Auth")" class="li_res">LOG IN</a></li>
         }
         else {
-            if (cHelper.IsServiceProvider) {
-                <li class=""><a href="@Url.Action("Index", "Profile")">Service Profile</a></li>
+            if (!cHelper.IsAdmin) {
+                if (cHelper.IsServiceProvider) {
+                    <li class=""><a href="@Url.Action("Index", "Profile")">Service Profile</a></li>
+                }
+                else {
+                    <li class=""><a href="@Url.Action("SignUp", "ServiceProvider")">JOIN AS VENDOR</a></li>
+                }
+                <li class=""><a href="@Url.Action("Dashboard", "Account")" class="li_res">@cHelper.CurrentUser.Username</a></li>
             }
             else {
-                <li class=""><a href="@Url.Action("SignUp", "ServiceProvider")">JOIN AS VENDOR</a></li>
+
+                <li class=""><a href="@Url.Action("Index", "Admin")" class="li_res">@cHelper.CurrentUser.Username</a></li>
             }
-            <li class=""><a href="@Url.Action("Index", "Auth")" class="li_res">@cHelper.CurrentUser.Username</a></li>
             <li class=""><a href="@Url.Action("LogOut", "Auth")" class="li_res">Log out</a></li>
         }
     </ul>

@@ -54,7 +54,7 @@ namespace Repositories {
 
 		public List<cUser> GetAdminList()
 		{
-			return GetAll().ToList();
+			return GetAll().Where(x=>x.RoleId==2).ToList();
 		}
 
 		private bool IsUsernameUnique(string username)

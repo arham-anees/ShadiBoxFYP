@@ -20,6 +20,10 @@ namespace Mapper {
 				.HasMaxLength(30)
 				.HasColumnAnnotation("Index2", 
 					new IndexAnnotation(new[] {new IndexAttribute("Index") {IsUnique = true},}));
+			this.HasRequired(x=>x.Role)
+				.WithMany()
+				.HasForeignKey(x=>x.RoleId)
+				.WillCascadeOnDelete(false);
 
 			this.Property(x => x.Password)
 				.IsRequired();

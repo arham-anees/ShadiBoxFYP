@@ -50,7 +50,9 @@
             <div class="row">
                 <div class="">
                     <ul class="list-group">
-                        @foreach (var city in Model.Cities) {
+                        @if (Model.Cities!=null) { 
+                        foreach (var city in Model.Cities)
+                        {
                             <li class="list-group-item">
                                 @city.Name
                                 <span style="font-style: italic; color: gray">
@@ -60,16 +62,21 @@
                                     <span class="glyphicon glyphicon-chevron-right"></span>
                                 </span>
                                 <ul class="list-group-submenu">
-                                    @using (Html.BeginForm("DeleteCity", "Admin", FormMethod.Post)) {
+                                    @using (Html.BeginForm("DeleteCity", "Admin", FormMethod.Post))
+                                    {
                                         <li class="list-group-submenu-item danger">
                                             <button type="submit" class="btn" style="height: 44px; height: 44px">
-                                                <input type="hidden" value="@city.Id" name="cityId" />
+                                                <input type="hidden" value="@city.Id" name="cityId"/>
                                                 <span class="glyphicon glyphicon-remove" type="submit"></span>
                                             </button>
                                         </li>
                                     }
                                 </ul>
                             </li>
+                        }
+                        }
+                        else{
+                        <p>Please Add Cities</p>
                         }
                     </ul>
                 </div>

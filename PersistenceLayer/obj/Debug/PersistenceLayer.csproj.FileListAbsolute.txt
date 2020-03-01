@@ -41,3 +41,5 @@ D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\Persisten
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.unknownChanges.resources
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.serviceProviderToCategoryRelationModified.resources
 D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.CoverPicToCategory.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.roleAddedToUser.resources
+D:\Freelancing\SohailFyp\Cloned\ShadiBoxFYP\PersistenceLayer\obj\Debug\PersistenceLayer.Migrations.UsersRemvedFromRole.resources

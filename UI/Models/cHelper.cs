@@ -60,6 +60,14 @@ namespace UI.Models {
 			}
 		}
 
+		public static  bool IsAdmin
+		{
+			get { return CurrentUser?.RoleId == 2; }
+		}
+		public static  bool IsLoggedIn
+		{
+			get { return CurrentUser!=null ; }
+		}
 		#endregion
 
 		#region METHODS

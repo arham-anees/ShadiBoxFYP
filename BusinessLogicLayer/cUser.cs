@@ -6,6 +6,7 @@
 	    private string _Email;
 	    private string _Username;
 	    private string _Password;
+	    private bool _IsAdmin = false;
 
 	    public int Id
 	    {
@@ -42,5 +43,9 @@
 		    get => _Password;
 		    set => _Password = value;
 	    }
-    }
+
+	    public int RoleId { get; set; } 
+	    public virtual cRole Role { get; set; }
+
+	}
 }

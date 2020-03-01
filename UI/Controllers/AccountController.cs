@@ -50,41 +50,62 @@ namespace UI.Controllers {
 
 		public ActionResult Profile(UpdateProfileViewModel viewModel)
 		{
+			if (!cHelper.IsLoggedIn)
+				return RedirectToAction("Index", "Home");
+			if (cHelper.IsAdmin)
+				return RedirectToAction("Index", "Admin");
 			if (viewModel == null)
 				viewModel = new UpdateProfileViewModel();
 			return View(viewModel);
 		}
-
-		public ActionResult Dashboard()
-		{
+		public ActionResult Dashboard() {
+			if (!cHelper.IsLoggedIn)
+				return RedirectToAction("Index", "Home");
+			if (cHelper.IsAdmin)
+				return RedirectToAction("Index", "Admin");
 			UserDashboardViewModel userDashboardViewModel=new UserDashboardViewModel(new AppDbContext());
 			return View(userDashboardViewModel);
 		}
 
-		public ActionResult Requests()
-		{
+		public ActionResult Requests() {
+			if (!cHelper.IsLoggedIn)
+				return RedirectToAction("Index", "Home");
+			if (cHelper.IsAdmin)
+				return RedirectToAction("Index", "Admin");
 			ProfileRequestsViewModel viewModel=new ProfileRequestsViewModel();
 			return View(viewModel);
 		}
-		public ActionResult Responses()
-		{
+		public ActionResult Responses() {
+			if (!cHelper.IsLoggedIn)
+				return RedirectToAction("Index", "Home");
+			if (cHelper.IsAdmin)
+				return RedirectToAction("Index", "Admin");
 			ProfileResponsesViewModel viewModel=new ProfileResponsesViewModel();
 			return View(viewModel);
 		}
-		public ActionResult Events()
-		{
+		public ActionResult Events() {
+			if (!cHelper.IsLoggedIn)
+				return RedirectToAction("Index", "Home");
+			if (cHelper.IsAdmin)
+				return RedirectToAction("Index", "Admin");
 			ProfileEventsViewModel viewModel=new ProfileEventsViewModel();
 			return View(viewModel);
 		}
 
-		public ActionResult Reviews()
-		{
+		public ActionResult Reviews() {
+			if (!cHelper.IsLoggedIn)
+				return RedirectToAction("Index", "Home");
+			if (cHelper.IsAdmin)
+				return RedirectToAction("Index", "Admin");
 			ProfileReviewsViewModel viewModel=new ProfileReviewsViewModel();
 			return View(viewModel);
 		}
 
-		public ActionResult UpdateProfile(UpdateProfileViewModel viewModel)
-		{
+		public ActionResult UpdateProfile(UpdateProfileViewModel viewModel) {
+			if (!cHelper.IsLoggedIn)
+				return RedirectToAction("Index", "Home");
+			if (cHelper.IsAdmin)
+				return RedirectToAction("Index", "Admin");
 			try
 			{
 				cUser user = cHelper.CurrentUser;
@@ -106,6 +127,10 @@ namespace UI.Controllers {
 		}
 
 		public ActionResult UpdatePassword(UpdateProfileViewModel viewModel) {
+			if (!cHelper.IsLoggedIn)
+					return RedirectToAction("Index", "Home");
+			if (cHelper.IsAdmin)
+				return RedirectToAction("Index", "Admin");
 			try {
 				if (viewModel.NewPasswornd == viewModel.ConfirmNewPassword) {
 					if (viewModel.OldPassword == cHelper.CurrentUser.Password) {
@@ -132,5 +157,6 @@ namespace UI.Controllers {
 			}
 			return RedirectToAction("Profile", viewModel);
 		}
+
 	}
 }
