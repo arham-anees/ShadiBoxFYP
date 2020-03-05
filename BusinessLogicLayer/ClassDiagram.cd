@@ -1,132 +1,229 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BusinessLogicLayer.cBooking" Collapsed="true">
-    <Position X="0.5" Y="1.25" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cBooking">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <Members>
+      <Field Name="_BookingDate" Hidden="true" />
+      <Field Name="_BookingResponse" Hidden="true" />
+      <Field Name="_Date" Hidden="true" />
+      <Field Name="_FunctionTime" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_ServiceProvider" Hidden="true" />
+      <Field Name="_User" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAADAAAAAAAAAIAAAAoAAAABAAAAAAABBQAAAAAEAAA=</HashCode>
+      <HashCode>BCALAAAAAAAAAIEAAAoAAAgBAEAAAAABBQAAAAAEAAA=</HashCode>
       <FileName>cBooking.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cBookingRequest" Collapsed="true">
-    <Position X="0.75" Y="2.25" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cBookingRequest">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_BookingDate" Hidden="true" />
+      <Field Name="_Date" Hidden="true" />
+      <Field Name="_FunctionTime" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Message" Hidden="true" />
+      <Field Name="_NumberOfGuests" Hidden="true" />
+      <Field Name="_ServiceProvider" Hidden="true" />
+      <Field Name="_User" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAADAAAAEAAAAIAAAAoAAAABABAAAAABBQAAIAEEAAA=</HashCode>
+      <HashCode>AAALAAAAEAAAAIAAAAoAAAgBAFAAAAABBQAAIAEEAAA=</HashCode>
       <FileName>cBookingRequest.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cBookingResponse" Collapsed="true">
-    <Position X="2.75" Y="1.75" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cBookingResponse">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <Members>
+      <Field Name="_BookingRequest" Hidden="true" />
+      <Field Name="_Date" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_IsAccepted" Hidden="true" />
+      <Field Name="_Message" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAACAAEAAAAAAAABAAAAAAAAABCAAAABBAAAIAAEAAA=</HashCode>
+      <HashCode>AAACAAkAAAAAAAABAAAAAAAAABCAAAABBAAAIAAEAAA=</HashCode>
       <FileName>cBookingResponse.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cCity" Collapsed="true">
-    <Position X="2.75" Y="3.25" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cCity">
+    <Position X="4.75" Y="2.25" Width="1.5" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Name" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAIAQAAAAAAAAEAAAAAAAEAAA=</HashCode>
       <FileName>cCity.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cFunctionTime" Collapsed="true">
-    <Position X="1.25" Y="4" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cFunctionTime">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Name" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAIAQAAAAAAAAEAAAAAAAEAAA=</HashCode>
       <FileName>cFunctionTime.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cProfileSection" Collapsed="true">
-    <Position X="5" Y="2.5" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cProfileSection">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <Members>
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_SectionContent" Hidden="true" />
+      <Field Name="_SectionHead" Hidden="true" />
+      <Field Name="_ServiceProvider" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAABAAAAAABAAEAEAAEAQAAAAAEAAA=</HashCode>
+      <HashCode>AAAKAAAAAAQAAAAABAAAAAABAAEAEAAEAQAAAAAEAEA=</HashCode>
       <FileName>cProfileSection.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cRentType" Collapsed="true">
-    <Position X="4.75" Y="4.5" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cRentType">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Name" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAIAQAAAAAAAAEAAAAAAAEAAA=</HashCode>
       <FileName>cRentType.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cReview" Collapsed="true">
-    <Position X="5.25" Y="3.5" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cReview">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_Date" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Message" Hidden="true" />
+      <Field Name="_ServiceProvider" Hidden="true" />
+      <Field Name="_StarCount" Hidden="true" />
+      <Field Name="_User" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAADAAAAAAAIAIAAAAAgAAABABAAAAABBQAAIAAEAAA=</HashCode>
+      <HashCode>AAALAAAAAAAIAIAAAAAgAAgBABAAAAABBQAAIAAEAAA=</HashCode>
       <FileName>cReview.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cRole" Collapsed="true">
-    <Position X="5.25" Y="1.25" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cRole">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Name" Hidden="true" />
+      <Field Name="_Users" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>AAACACAAAAAgAIAAAAAAIAQAAAAAAAAEAAAAAAAEAAA=</HashCode>
       <FileName>cRole.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cSectionContent" Collapsed="true">
-    <Position X="7.75" Y="1.5" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cSectionContent">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_Content" Hidden="true" />
+      <Field Name="_ContentType" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_ServiceProvider" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAECAAAAAgAAAAAAAAACAAABAAAAAAAAAQAQAAAEAAA=</HashCode>
+      <HashCode>AAEKAAAAAgAAAAAAAAACAAABAAAAAAABAQAQAAAEAAA=</HashCode>
       <FileName>cSectionContent.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cSectionContentType" Collapsed="true">
-    <Position X="7.75" Y="2.5" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cSectionContentType">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Name" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgAAAAAAAAIAQAAAAAAAAEAAAAAAAEAAA=</HashCode>
+      <HashCode>AAACAAAAAAAgAAAABAAAIAQAAAAAAAAEAAAAAAAEAAA=</HashCode>
       <FileName>cSectionContentType.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cSectionHead" Collapsed="true">
-    <Position X="7.75" Y="3.5" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cSectionHead">
+    <Position X="14" Y="4.25" Width="1.5" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Name" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAIAQAAAAAAAAEAAAAAAAEAAA=</HashCode>
       <FileName>cSectionHead.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cServiceCategory" Collapsed="true">
-    <Position X="9.75" Y="1.5" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cServiceCategory">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Name" Hidden="true" />
+      <Field Name="_Picture" Hidden="true" />
+      <Field Name="_ServiceProviders" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgAAAAAAAAIAQACgAAAAAEAAAAAAAEAAA=</HashCode>
+      <HashCode>AAACgAAAAAAgAAAAAAAAIAYACgAAAAAEAAAAAAAEAAA=</HashCode>
       <FileName>cServiceCategory.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cServiceProvider" Collapsed="true">
-    <Position X="9.75" Y="2.5" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cServiceProvider">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_AddedBy" Hidden="true" />
+      <Field Name="_Address" Hidden="true" />
+      <Field Name="_City" Hidden="true" />
+      <Field Name="_CoverPicture" Hidden="true" />
+      <Field Name="_DateAddedOn" Hidden="true" />
+      <Field Name="_Email" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Name" Hidden="true" />
+      <Field Name="_Phone" Hidden="true" />
+      <Field Name="_Rent" Hidden="true" />
+      <Field Name="_RentType" Hidden="true" />
+      <Field Name="_ServiceCategory" Hidden="true" />
+      <Field Name="_ServiceType" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>ABEKAACAACAAAgAYAAAwIkYAACEICQACAAAAKAAUAAA=</HashCode>
+      <HashCode>ABcKAACBACAAAgAYAAIwIkQAACEIARACAAAAKAAUEgA=</HashCode>
       <FileName>cServiceProvider.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BusinessLogicLayer.cServiceType" Collapsed="true">
-    <Position X="9.75" Y="3.5" Width="1.5" />
+  <Class Name="BusinessLogicLayer.cServiceType">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_Name" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAIAQAAAAAAAAEAAAAAAAEAAA=</HashCode>
       <FileName>cServiceType.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessLogicLayer.cUser">
-    <Position X="8" Y="4.5" Width="1.5" />
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <Members>
+      <Field Name="_Email" Hidden="true" />
+      <Field Name="_Id" Hidden="true" />
+      <Field Name="_IsAdmin" Hidden="true" />
+      <Field Name="_Name" Hidden="true" />
+      <Field Name="_Password" Hidden="true" />
+      <Field Name="_Phone" Hidden="true" />
+      <Field Name="_Username" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAACAAAAACAAAEAQAQIAIAQAAAEAAAACAAAAIAAEAAA=</HashCode>
+      <HashCode>AAACAAIAACAAAEAQEQIAIAQAAAEAAAACAAAAIAAEAQA=</HashCode>
       <FileName>cUser.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

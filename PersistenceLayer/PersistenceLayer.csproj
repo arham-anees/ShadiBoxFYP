@@ -140,6 +140,10 @@
     <Compile Include="Migrations\202003010552217_UsersRemvedFromRole.designer.cs">
       <DependentUpon>202003010552217_UsersRemvedFromRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003050657178_bookingRemoved.cs" />
+    <Compile Include="Migrations\202003050657178_bookingRemoved.designer.cs">
+      <DependentUpon>202003050657178_bookingRemoved.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -223,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003010552217_UsersRemvedFromRole.resx">
       <DependentUpon>202003010552217_UsersRemvedFromRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003050657178_bookingRemoved.resx">
+      <DependentUpon>202003050657178_bookingRemoved.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

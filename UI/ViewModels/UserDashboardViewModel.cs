@@ -12,14 +12,14 @@ namespace UI.ViewModels {
 	{
 		private AppDbContext _Context;
 		private cBookingRequestRepository _BookingRequestRepository;
-		private cBookingRepository _BookingRepository;
+		//private cBookingRepository _BookingRepository;
 		private cBookingResponseRepository _BookingResponseRepository;
 
 		public UserDashboardViewModel(AppDbContext context)
 		{
 			_Context = context;
 			_BookingRequestRepository = new cBookingRequestRepository(context);
-			_BookingRepository = new cBookingRepository(context);
+			//_BookingRepository = new cBookingRepository(context);
 			_BookingResponseRepository = new cBookingResponseRepository(context);
 		}
 

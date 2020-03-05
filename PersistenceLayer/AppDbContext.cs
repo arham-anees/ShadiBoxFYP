@@ -19,7 +19,7 @@ namespace PersistenceLayer {
 		public DbSet<cServiceProvider> ServiceProviders { get; set; }
 		public DbSet<cSectionContent> SectionContents { get; set; }
 		public DbSet<cReview> Reviews { get; set; }
-		public DbSet<cBooking> Bookings { get; set; }
+		//public DbSet<cBooking> Bookings { get; set; }
 		public DbSet<cBookingResponse> BookingsResponses { get; set; }
 		public DbSet<cBookingRequest> BookingsRequests { get; set; }
 		public DbSet<cProfileSection> ProfileSections { get; set; }
@@ -42,7 +42,7 @@ namespace PersistenceLayer {
 				.Add(new cProfileSectionMapper())
 				.Add(new cSectionContentMapper())
 				.Add(new cReviewMapper())
-				.Add(new cBookingMapper())
+				//.Add(new cBookingMapper())
 				.Add(new cBookingRequestMapper())
 				.Add(new cBookingResponseMapper())
 				.Add(new cRoleMapper())

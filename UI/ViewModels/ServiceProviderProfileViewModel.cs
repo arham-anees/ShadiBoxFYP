@@ -11,13 +11,13 @@ using UI.Models;
 namespace UI.ViewModels {
 	public class ServiceProviderProfileViewModel
 	{
-		private cBookingRepository _BookingRepository;
+		//private cBookingRepository _BookingRepository;
 		private cBookingResponseRepository _BookingResponseRepository;
 		private cBookingRequestRepository _BookingRequestRepository;
 		public ServiceProviderProfileViewModel()
 		{
 			var context=new AppDbContext();
-			_BookingRepository=new cBookingRepository(context);
+			//_BookingRepository=new cBookingRepository(context);
 			_BookingRequestRepository=new cBookingRequestRepository(context);
 			_BookingResponseRepository=new cBookingResponseRepository(context);
 		}

@@ -19,7 +19,7 @@ namespace UnitOfWork {
 
 		public cUserRepository UserRepository { get; set; }
 
-		public cBookingRepository BookingRepository { get; set; }
+		//public cBookingRepository BookingRepository { get; set; }
 
 		public cBookingResponseRepository BookingResponseRepository { get; set; }
 
@@ -44,7 +44,7 @@ namespace UnitOfWork {
 		{
 			_Context = context;
 			UserRepository = new cUserRepository(_Context);
-			BookingRepository = new cBookingRepository(_Context);
+			//BookingRepository = new cBookingRepository(_Context);
 			BookingResponseRepository = new cBookingResponseRepository(_Context);
 			BookingRequestRepository = new cBookingRequestRepository(_Context);
 			CityRepository = new cCityRepository(_Context);

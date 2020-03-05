@@ -41,6 +41,7 @@ namespace UI.Controllers {
 					serviceProviders = serviceProviders.Where(x => x.CityId == cityId.Value);
 				if (cHelper.IsLoggedIn)
 					serviceProviders = serviceProviders.Where(x => x.UserAddedById != cHelper.CurrentUser.Id);
+
 				viewModel.ServiceProviders = serviceProviders.ToList();
 			}
 			catch (Exception e)
