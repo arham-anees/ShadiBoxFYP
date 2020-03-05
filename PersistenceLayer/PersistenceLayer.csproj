@@ -144,6 +144,10 @@
     <Compile Include="Migrations\202003050657178_bookingRemoved.designer.cs">
       <DependentUpon>202003050657178_bookingRemoved.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003050717262_ResovlingRoleTableIssue.cs" />
+    <Compile Include="Migrations\202003050717262_ResovlingRoleTableIssue.designer.cs">
+      <DependentUpon>202003050717262_ResovlingRoleTableIssue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -230,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003050657178_bookingRemoved.resx">
       <DependentUpon>202003050657178_bookingRemoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003050717262_ResovlingRoleTableIssue.resx">
+      <DependentUpon>202003050717262_ResovlingRoleTableIssue.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -198,6 +198,7 @@
     <Content Include="Content\assets\web\images\loader.gif" />
     <Content Include="Content\assets\web\images\logo-2-white.png" />
     <Content Include="Content\assets\web\images\logo-2.png" />
+    <Content Include="Content\assets\web\images\Logo.jpg" />
     <Content Include="Content\assets\web\images\logo.png" />
     <Content Include="Content\assets\web\images\nav.png" />
     <Content Include="Content\assets\web\images\no.jpeg" />

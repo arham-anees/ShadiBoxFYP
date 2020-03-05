@@ -19,9 +19,9 @@ namespace Mapper {
 
 
 			this.HasMany(x => x.Users)
-				.WithRequired(x=>x.Role)
-				.HasForeignKey(x=>x.RoleId)
+				.WithRequired(x => x.Role)
+				.HasForeignKey(x => x.RoleId)
 				.WillCascadeOnDelete(false);
-	    }
+		}
 	}
 }
