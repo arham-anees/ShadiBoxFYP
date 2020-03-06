@@ -52,5 +52,10 @@ namespace Repositories {
 		{
 			return GetAll().Where(x => x.ServiceCategoryId== categoryId).ToList();
 		}
+
+		public cServiceProvider GetByUser(int userId)
+		{
+			return GetAll().Where(x => x.UserAddedById == userId)?.SingleOrDefault();
+		}
 	}
 }

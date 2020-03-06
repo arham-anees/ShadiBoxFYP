@@ -1062,7 +1062,7 @@ input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styl
   .vendor-profile { background-color: #fff; padding: 20px; border: 1px solid #e9e6e0; }
   .vendor-profile-info { height: 360px; }
   .vendor-profile-title { color: #fff; margin-bottom: 30px; font-size: 52px; font-weight: 600; }
-  /*.vendor-profile-img { background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.57)), rgba(0, 0, 0, 0.58) url("https://www.shadibox.com/~/Content/assets/web/css/images/vendor-profile-img.jpg") no-repeat center; background-size: cover; height: 460px; }*/
+  /*.vendor-profile-img { background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.57)), rgba(0, 0, 0, 0.58) url("~/Content/assets/web/css/images/vendor-profile-img.jpg") no-repeat center; background-size: cover; height: 460px; }*/
   .profile-meta { color: #fff; }
   .meta-call i, .meta-address i, .meta-website i, .meta-email i { padding-right: 10px; }
   .meta-call { }

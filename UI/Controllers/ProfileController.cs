@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using BusinessLogicLayer;
 using PersistenceLayer;
 using Repositories;
+using UI.Models;
 using UI.ViewModels;
 using UnitOfWork;
 
@@ -25,11 +26,10 @@ namespace UI.Controllers {
 		}
 		// GET: Profile
 		public ActionResult Index(ProfileIndexViewModel indexViewModel) {
-			int id = 4;//todo: replace this with proper id for service provider
 			if (indexViewModel == null)
 				indexViewModel = new ProfileIndexViewModel();
 			
-			indexViewModel._ServiceProvider = _ProviderRepository.Get(id);
+			indexViewModel._ServiceProvider = _ProviderRepository.GetByUser(cHelper.CurrentUser.Id);
 			indexViewModel._ProfileSection = _ProfileSectionRepository
 				.GetAll(indexViewModel._ServiceProvider.Id)
 				.Include(x=>x.SectionContent)
